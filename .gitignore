@@ -4,7 +4,7 @@ backup/*.tar.bz2
 .idea
 .vscode
 cache
-vendor/
+./vendor/
 bin/
 !bin/e
 !bin/cs
@@ -21,7 +21,6 @@ tmp*
 
 # Drupal 8 specific.
 drush/contrib
-vendor
 web/.*
 web/themes/contrib
 web/update.php
