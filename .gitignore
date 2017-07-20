@@ -52,3 +52,4 @@ docker-compose.ci.deploy.yml
 
 node_modules
 bower_components
+*.retry
