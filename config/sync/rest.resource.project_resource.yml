@@ -1,0 +1,17 @@
+uuid: 5f205022-6475-4e48-b9ed-895b74c79901
+langcode: it
+status: true
+dependencies:
+  module:
+    - dashboard_project
+    - serialization
+    - user
+id: project_resource
+plugin_id: project_resource
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - json
+    supported_auth:
+      - cookie

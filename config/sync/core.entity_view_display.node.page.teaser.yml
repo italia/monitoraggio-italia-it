@@ -1,0 +1,24 @@
+uuid: ffd50840-a9b0-462c-a09a-ca948036c71b
+langcode: it
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.page.field_has_social_share
+    - field.field.node.page.field_meta_tag
+    - field.field.node.page.field_page_body
+    - node.type.page
+  module:
+    - user
+id: node.page.teaser
+targetEntityType: node
+bundle: page
+mode: teaser
+content:
+  links:
+    weight: 100
+hidden:
+  field_has_social_share: true
+  field_meta_tag: true
+  field_page_body: true
+  langcode: true

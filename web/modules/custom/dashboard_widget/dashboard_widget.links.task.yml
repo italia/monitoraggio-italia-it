@@ -1,0 +1,23 @@
+# Dashboard widget routing definition
+entity.dashboard_widget.canonical:
+  route_name: entity.dashboard_widget.canonical
+  base_route: entity.dashboard_widget.canonical
+  title: 'View'
+
+entity.dashboard_widget.edit_form:
+  route_name: entity.dashboard_widget.edit_form
+  base_route: entity.dashboard_widget.canonical
+  title: Edit
+
+entity.dashboard_widget.delete_form:
+  route_name:  entity.dashboard_widget.delete_form
+  base_route:  entity.dashboard_widget.canonical
+  title: Delete
+  weight: 10
+
+# Dashboard widget list inside admin/content.
+entity.dashboard_widget_type.collection:
+  route_name: entity.dashboard_widget.collection
+  title: 'Widgets'
+  base_route: system.admin_content
+  weight: 4

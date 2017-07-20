@@ -1,0 +1,19 @@
+uuid: 947cc63a-c0d2-4a68-a95c-c3c67f0f0f22
+langcode: it
+status: true
+dependencies:
+  config:
+    - dashboard_indicator.dashboard_indicator_type.monitoring_indicator
+    - field.storage.dashboard_indicator.field_indicator_cb_description
+id: dashboard_indicator.monitoring_indicator.field_indicator_cb_description
+field_name: field_indicator_cb_description
+entity_type: dashboard_indicator
+bundle: monitoring_indicator
+label: 'Box personalizzato - descrizione'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

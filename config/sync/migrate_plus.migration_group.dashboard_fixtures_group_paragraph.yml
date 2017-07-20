@@ -1,0 +1,10 @@
+uuid: 98d75d61-4197-4e6e-a040-d459ee7d43f7
+langcode: it
+status: true
+dependencies: {  }
+id: dashboard_fixtures_group_paragraph
+label: dashboard_fixtures_group_paragraph
+description: ''
+source_type: null
+module: null
+shared_configuration: null

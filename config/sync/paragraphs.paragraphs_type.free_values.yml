@@ -1,0 +1,7 @@
+uuid: d682f574-47aa-4361-aaef-a3c660f53b97
+langcode: it
+status: true
+dependencies: {  }
+id: free_values
+label: 'Free Values'
+behavior_plugins: {  }

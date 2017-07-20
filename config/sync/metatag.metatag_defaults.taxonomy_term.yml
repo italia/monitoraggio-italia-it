@@ -1,0 +1,11 @@
+uuid: 6066bde0-1f0c-4093-be00-a25720fb6add
+langcode: it
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: ShncZd3oX-UZDBGDUrgbRiZ2BmIJYSLHvIIPjq6tRAQ
+id: taxonomy_term
+label: 'Termine della tassonomia'
+tags:
+  title: '[term:name] | [site:name]'
+  description: '[term:description]'

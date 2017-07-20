@@ -1,0 +1,55 @@
+global:
+  css:
+    theme:
+      css/dashboard.css: {}
+      css/highcharts-theme.css: {}
+  js:
+    js/scripts.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - dashboard/highcharts
+
+highcharts:
+  version: 5.0.10
+  css:
+    theme:
+      css/highcharts.css: {}
+  js:
+    vendor/highcharts/highcharts.js: {}
+    vendor/proj4js/proj4.js: {}
+    vendor/highcharts/modules/data.js: {}
+    vendor/highcharts/modules/map.js: {}
+    vendor/highcharts/modules/heatmap.js: {}
+    vendor/highcharts/maps/it/it-regions.js: {}
+    vendor/highcharts/modules/exporting.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings
+
+highcharts_accessibility:
+  version: 5.0.10
+  js:
+    vendor/highcharts/modules/accessibility.js: {}
+    vendor/export-csv/export-csv.js: {}
+  dependencies:
+    - dashboard/highcharts
+
+counterup:
+  version: 1.0
+  js:
+    vendor/waypoints/jquery.waypoints.min.js: {}
+    vendor/counter-up/jquery.counterup.min.js: {}
+  dependencies:
+    - core/jquery
+
+pace:
+  version: 1.0.2
+  header: true
+  js:
+    js/pace.config.js: {}
+    vendor/pace/pace.min.js: {}
+  css:
+    component:
+      css/pace.css: {}

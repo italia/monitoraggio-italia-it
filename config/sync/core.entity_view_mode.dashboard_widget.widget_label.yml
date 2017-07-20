@@ -1,0 +1,10 @@
+uuid: 90d252a4-6e75-49f9-b672-d12e7bd7b405
+langcode: it
+status: true
+dependencies:
+  module:
+    - dashboard_widget
+id: dashboard_widget.widget_label
+label: 'Widget label'
+targetEntityType: dashboard_widget
+cache: true

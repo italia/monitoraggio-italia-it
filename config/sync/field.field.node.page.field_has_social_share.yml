@@ -1,0 +1,23 @@
+uuid: 4551a131-6922-45cd-9872-cc5521d7a6ca
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_has_social_share
+    - node.type.page
+id: node.page.field_has_social_share
+field_name: field_has_social_share
+entity_type: node
+bundle: page
+label: 'Stampa i link di share sui canali social'
+description: 'Seleziona "Sì" se desideri aggiungere i link di share sui canali social per la pagina corrente.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Sì
+  off_label: 'No'
+field_type: boolean

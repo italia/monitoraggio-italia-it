@@ -1,0 +1,11 @@
+uuid: 96e746e1-2dbb-40ac-9329-8ad8d968b645
+langcode: it
+status: true
+dependencies: {  }
+id: node__page
+label: 'Content: Page'
+tags:
+  description: '[dashboard:description:200]'
+  og_description: '[dashboard:description:200]'
+  og_type: article
+  twitter_cards_description: '[dashboard:description:200]'

@@ -1,0 +1,23 @@
+uuid: f5ce290b-87a7-4c1f-af77-d3ec6f8d563b
+langcode: it
+status: true
+dependencies:
+  config:
+    - dashboard_project.project_type.monitoring
+    - field.storage.project.field_monitor_link
+  module:
+    - link
+id: project.monitoring.field_monitor_link
+field_name: field_monitor_link
+entity_type: project
+bundle: monitoring
+label: 'Links at bottom of page'
+description: 'Use the link field to place additional page bottom links to the default links (below the link to the JSON API and before the link to the data page).'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

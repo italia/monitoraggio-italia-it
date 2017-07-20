@@ -1,0 +1,689 @@
+/**
+ * Toolkit fix / overrides.
+ */
+.Prose a {
+  /*Fix problems of long links breaking layout (horizontal scroll) on mobile devices*/
+  word-wrap: break-word;
+}
+
+/**
+ * Commons elements.
+ */
+.MainSection:not(.MainSection--front) {
+  background-color: #E6E9F2;
+}
+
+.MainSection a:not(.Button) {
+  color: #0066CC;
+}
+
+.MainSection a:not(.Button):visited {
+  color: #551A8B;
+}
+
+.MainSection a:not(.Button):hover,
+.MainSection a:not(.Button):focus {
+  color: #003366;
+}
+
+.Header-titleLink a {
+  font-weight: 600 !important;
+}
+
+.Footer-logo {
+  padding-right: 0 !important;
+}
+
+/** Fix Drupal tabs color*/
+.drupalTabs a:visited {
+  color: #0066CC;
+}
+
+.drupalTabs a:hover,
+.drupalTabs a:focus {
+  color: #003366;
+}
+
+.drupalTabs .is-pressed:hover,
+.drupalTabs .is-pressed:visited,
+.drupalTabs .is-pressed:focus,
+.drupalTabs a:active {
+  color: #FFF;
+}
+
+/**
+ * Home page.
+ */
+.MainContent--front header {
+  padding-top: 2.8em;
+}
+
+.MainContent--front header span {
+  font-size: 1.425em;
+  display: block;
+}
+
+/**
+ * Style for Header.
+ */
+.Header-banner {
+  background-color: #013366;
+}
+
+/**
+ * Styles for the Header Megamenu.
+ */
+.wrapper-megamenu,
+.Megamenu--default {
+  background-color: #0066CC;
+}
+
+.Megamenu--default .Megamenu-item > a {
+  font-weight: 600 !important;
+}
+
+.Megamenu--default > .Megamenu-list {
+  padding: 0 0.3em !important;
+}
+
+.Megamenu--default .Megamenu-subnavGroup > li {
+  margin-right: 5em !important;
+}
+
+.Megamenu--default .Megamenu-subnavGroup > li a {
+  color: #1C2024 !important;
+}
+
+.Megamenu--default .Megamenu-subnavGroup > li > ul li {
+  padding-top: 0.8rem !important;
+}
+
+.Megamenu--default .Megamenu-subnavGroup > li > ul li a {
+  font-size: 1em !important;
+  color: #1C2024 !important;
+}
+
+/*If we want the  descendant menu voices vertically aligned we must assign
+the Megamenu-item--verticalGroups class to the parent link*/
+.Megamenu-item--verticalGroups + .Megamenu-subnav .Megamenu-subnavGroup {
+  display: block !important;
+}
+
+.Megamenu-item--verticalGroups + .Megamenu-subnav .Megamenu-subnavGroup li {
+  margin-right: 0 !important;
+}
+
+/**
+ * Style for Sidebar left.
+ */
+.SidebarLeft {
+  -webkit-box-shadow: 5px 5px 5px 0 rgba(50,50,50,.15) !important;
+  box-shadow: 5px 5px 5px 0 rgba(50, 50, 50, 0.15) !important;
+  z-index: 2;
+}
+
+.SidebarMenu li {
+  border-bottom: 0.1rem solid #DDD !important;
+}
+
+.SidebarMenu li a {
+  color: #1B1F23 !important;
+  text-decoration: none !important;
+}
+
+.SidebarMenu li a:hover {
+  text-decoration: underline !important;
+}
+
+.SidebarMenu-item--active-trail {
+  border-right: 7px solid #0066CC !important;
+}
+
+li.SidebarMenu-item--active-trail a {
+  color: #0066CC !important;
+}
+
+/**
+ * Style for tab main navigation.
+ */
+.container-sidebar .drupalTabs {
+  margin-left: 2em;
+}
+
+/**
+ * Styles for the ProjectCard component.
+ */
+.ProjectCard-value {
+  border-bottom: 1px solid #DEDEDE;
+}
+
+/**
+ * Form override
+ */
+.Form-field--choose .Form-label--block,
+.Form-field--choose .Form-label--block:last-child {
+  border-width: 0;
+}
+
+/**
+ * Override Footer elements style.
+ */
+.Footer-subBlock {
+  padding: 0 !important;
+  color: #004080 !important;
+}
+
+.Footer-subBlock p {
+  color: #FFF !important;
+  font-weight: 300;
+}
+
+.Footer-block li {
+  border-top: none !important;
+  border-bottom: 0.1rem solid #004080;
+}
+
+.Footer-links {
+  border-top: 0.1rem solid #004080 !important;
+}
+
+.Footer-links li a {
+  text-decoration: underline !important;
+}
+
+/**
+ * Responsive tables customization
+ */
+.Table--responsive th {
+  background: #F2F3F7;
+}
+
+/**
+ * Data area tables.
+ */
+.DataArea.Table--responsive th:first-child,
+.DataArea.Table--responsive td:first-child,
+.DataArea.Table--responsive th:nth-of-type(1) {
+  width: 14em;
+  max-width: 14em;
+  white-space: normal;
+}
+
+.DataArea.Table--responsive th:nth-of-type(2),
+.DataArea.Table--responsive td:nth-of-type(2) {
+  width: 12em;
+}
+
+/**
+ * Node pages with sidebar override.
+ */
+.container-sidebar .PageTitle,
+.container-sidebar .StaticPages,
+.container-sidebar .views-element-container {
+  padding: 3.2rem !important;
+}
+
+.container-sidebar .StaticPages {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/**
+ * Styles for the ProjectCard component.
+ */
+.ProjectCard-value {
+  border-bottom: 1px solid #DEDEDE;
+}
+
+.ProjectCard-link .Icon-chevron-right {
+  font-size: 1.1rem !important;
+}
+
+/**
+ * Styles for the monitoring project component.
+ */
+.MonitoringProject {
+  overflow: hidden;
+  position: relative;
+}
+
+.MonitoringProject-logo img {
+  width: 100%;
+  height: auto;
+}
+
+.MonitoringProject-desi img {
+  width: 50px;
+  height: auto;
+  margin-right: 1em;
+}
+
+.MonitoringProject-desi a {
+  vertical-align: middle;
+}
+
+/**
+ * Styles for the monitoring indicator component.
+ */
+.MonitoringProject-indicators {
+  z-index: -2;
+  border-bottom: 1px solid #DDDDDD;
+}
+
+.MonitoringProject-indicators .Accordion-header {
+  padding-left: 2em !important;
+  background-position: left 1em center;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32' fill='%23000'%3E%3Cpath d='M3.733 6.133L0 9.866l16 16 16-16-3.733-3.733L16 18.4 3.733 6.133z'/%3E%3C/svg%3E");
+}
+
+.MonitoringProject-indicators .Accordion-header[aria-expanded="true"] {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32' fill='%23000'%3E%3Cpath d='M28.267 25.867L32 22.134l-16-16-16 16 3.733 3.733L16 13.6l12.267 12.267z'/%3E%3C/svg%3E");
+  background-color: #F2F3F7;
+}
+
+.Accordion-panel[aria-hidden="false"] {
+  background-color: #F2F3F7;
+}
+
+.MonitoringProject-indicators .Accordion-header:first-of-type {
+  margin-top: 0;
+}
+
+.Accordion--default .Accordion-header:hover {
+  background-color: #F2F3F7 !important;
+}
+
+.MonitoringProject-indicators .Accordion-link {
+  color: #1C2024 !important;
+}
+
+/**
+ * Styles for the monitoring indicator component.
+ */
+.MonitoringIndicator {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 5rem;
+}
+
+.MonitoringIndicator-description {
+  padding-left: 0.4em;
+  padding-right: 0.4em;
+}
+
+.MonitoringIndicator-header {
+  padding-left: 4rem;
+}
+
+/**
+ * Styles for Custom box.
+ */
+.CustomBox-element-link {
+  font-size: 1.6rem !important;
+}
+
+.CustomBox-element-link > .Icon {
+  color: #1C2024;
+}
+
+/**
+ * Styles for the [High]Chart box.
+ */
+.ChartBox-header {
+  border-bottom-left-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+  background-color: #D2D3D9;
+}
+
+.ChartBox-header h3 {
+  color: #1C2024;
+}
+
+.ChartBox-content {
+  padding: 2.6em 1em 0.5em;
+}
+
+.ChartBox-contentWithOutDescription {
+  padding-top: 2.6em;
+  padding-bottom: 3em;
+}
+
+.ChartBox-value {
+  font-size: 2.75em;
+}
+
+/**
+ * Colors for single project.
+ */
+.ProjectCard-header {
+  background-color: #06C;
+}
+
+/* SPID */
+.Project--spid .ProjectCard-header {
+  background-color: #0066CC;
+}
+
+.Project--spid .ProjectCard-value-number,
+.Project--spid .ProjectCard-link a:link,
+.Project--spid .ProjectCard-link a:visited,
+.Project--spid .ChartBox-value {
+  color: #0056AC;
+}
+
+/* PAGO PA */
+.Project--pagopa .ProjectCard-header {
+  background-color: #009540;
+}
+
+.Project--pagopa .ProjectCard-value-number,
+.Project--pagopa .ProjectCard-link a:link,
+.Project--pagopa .ProjectCard-link a:visited,
+.Project--pagopa .ChartBox-value {
+  color: #007432;
+}
+
+/* FE */
+.Project--fatturazione_elettronica .ProjectCard-header {
+  background-color: #AA3772;
+}
+
+.Project--fatturazione_elettronica .ProjectCard-value-number,
+.Project--fatturazione_elettronica .ProjectCard-link a:link,
+.Project--fatturazione_elettronica .ProjectCard-link a:visited,
+.Project--fatturazione_elettronica .ChartBox-value {
+  color: #912F62;
+}
+
+/* OPEN DATA */
+.Project--open_data .ProjectCard-header {
+  background-color: #18A595;
+}
+
+.Project--open_data .ProjectCard-value-number,
+.Project--open_data .ProjectCard-link a:link,
+.Project--open_data .ProjectCard-link a:visited,
+.Project--open_data .ChartBox-value {
+  color: #106E63;
+}
+
+/* FSE */
+.Project--fse .ProjectCard-header {
+  background-color: #004181;
+}
+
+.Project--fse .ProjectCard-value-number,
+.Project--fse .ProjectCard-link a:link,
+.Project--fse .ProjectCard-link a:visited,
+.Project--fse .ChartBox-value {
+  color: #004181;
+}
+
+/* PADSE */
+.Project--padse .ProjectCard-header {
+  background-color: #CA2E55;
+}
+
+.Project--padse .ProjectCard-value-number,
+.Project--padse .ProjectCard-link a:link,
+.Project--padse .ProjectCard-link a:visited,
+.Project--padse .ChartBox-value {
+  color: #992340;
+}
+
+/* ANPR */
+.Project--anpr .ProjectCard-header {
+  background-color: #007381;
+}
+
+.Project--anpr .ProjectCard-value-number,
+.Project--anpr .ProjectCard-link a:link,
+.Project--anpr .ProjectCard-link a:visited,
+.Project--anpr .ChartBox-value {
+  color: #005460;
+}
+
+/*
+### SOCIAL SHARE
+*/
+.DashboardShare a {
+  text-decoration: none !important;
+  margin-left: 6px;
+  margin-right: 6px;
+  background: #06C;
+  border-radius: 50%;
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  line-height: 32px;
+  text-align: center;
+  font-size: 15px;
+}
+
+.DashboardShare li:last-child a {
+  margin-right: 0;
+}
+
+.DashboardShare .Icon {
+  padding: 0;
+  color: #FFF;
+  font-size: 15px;
+}
+
+/*
+### HIGHCHARTS OVERRIDE
+ */
+/*For problems with reduced vertical height of the target
+value comparison chart, we must hide the export button options*/
+.ChartBox--targetValue .highcharts-button {
+  display: none;
+}
+
+/*
+## HIGHCHARTS DATA TABLE */
+/* Clone default toolkit table styles. */
+.highcharts-data-table table {
+  border: 0;
+  border-collapse: collapse;
+  max-width: 100%;
+  width: 100%;
+}
+
+.highcharts-data-table caption {
+  font-size: 1.4em;
+  font-weight: 600;
+}
+
+.highcharts-data-table table tr {
+  border-bottom: 1px #D6DCE3 solid;
+}
+
+.highcharts-data-table table th,
+.highcharts-data-table table td {
+  padding: 0.5em 1em;
+  text-align: left;
+  border-top: 1px #D6DCE3 solid;
+}
+
+.highcharts-data-table table thead tr:first-child th,
+.highcharts-data-table table thead tr:first-child td {
+  border-top: 0;
+}
+
+.highcharts-data-table table tbody tr:nth-child(odd) {
+  background-color: #F6F7F9;
+}
+
+.highcharts-data-table table > tbody > tr:hover > th,
+.highcharts-data-table table > tbody > tr:hover > td {
+  background-color: #E5F1FA;
+}
+
+/*
+### MEDIA QUERY
+*/
+/**
+ * Offset: breakpoint 0.
+ */
+@media screen and (max-width: 767px) {
+  /**
+   * Commons elements.
+   */
+  .MainSection--internal-container {
+    margin: 0 -1.2rem 0 -1.2rem !important;
+  }
+  
+  /**
+   * Home page.
+   */
+  .MainContent--front header {
+    padding-top: 2em;
+  }
+  
+  .MainContent--front header span {
+    font-size: 1.1em;
+  }
+  
+  /**
+   * Project
+   */
+  .MonitoringProject-logo .u-padding-right-xxl {
+    padding-right: 2rem !important;
+  }
+  
+  .MonitoringProject-logo img {
+    max-height: 100px;
+    width: auto;
+  }
+  
+  .MonitoringIndicator-description {
+    padding-left: 0.6em;
+    padding-right: 0.6em;
+  }
+  
+  .MonitoringProject-name.u-padding-left-xxl,
+  .MonitoringProject-description.u-padding-all-xxl,
+  .MonitoringProject footer.u-padding-all-xxl,
+  .Grid-cell.DashboardShare-at-top {
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+  }
+  
+  /**
+   * Custom box.
+   */
+  .CustomBox-element-icon,
+  .CustomBox-element-link {
+    display: inline-block !important;
+    margin: auto 10px;
+  }
+}
+
+/**
+ * Offset: breakpoint 1 (small).
+ */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  /**
+   * Styles for the monitoring indicator component.
+   */
+  .MonitoringIndicator-description {
+    padding-left: 0.6em;
+    padding-right: 0.6em;
+  }
+  
+  .MonitoringProject-name.u-padding-left-xxl,
+  .MonitoringProject-description.u-padding-all-xxl,
+  .MonitoringProject footer.u-padding-all-xxl,
+  .Grid-cell.DashboardShare-at-top {
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+  }
+  
+  .MonitoringProject-logo .u-padding-right-xxl {
+    padding-right: 2rem !important;
+  }
+}
+
+/**
+ * Offset: breakpoint 2 (medium).
+ */
+@media screen and (min-width: 992px) and (max-width: 1365px) {
+  /**
+   * Home page.
+   */
+  .MainContent--front {
+    margin-left: -1em;
+    margin-right: -1em;
+  }
+  
+  /**
+   * Monitoring indicator.
+   */
+  .MonitoringIndicator {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+  
+  .MonitoringProject-indicators .Accordion-header {
+    padding-left: 4em !important;
+    background-position: left 2.1em center;
+  }
+  
+  .MonitoringIndicator-description {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  /**
+   * Custom box.
+   */
+  .CustomBox-element-icon {
+    margin-bottom: 1.6rem;
+  }
+}
+
+/**
+ * Offset: breakpoint 3 (large).
+ */
+@media screen and (min-width: 1366px) {
+  /**
+   * Home page.
+   */
+  .MainContent--front {
+    margin-left: -1em;
+    margin-right: -1em;
+  }
+  
+  /**
+   * Monitoring indicator.
+   */
+  .MonitoringIndicator {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+  
+  .MonitoringProject-indicators .Accordion-header {
+    padding-left: 4em !important;
+    background-position: left 2.1em center;
+  }
+  
+  .MonitoringIndicator-description {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  /**
+   * Custom box.
+   */
+  .CustomBox-element-icon {
+    margin-bottom: 1.6rem;
+  }
+}
+
+/*
+### AD HOC RULES
+*/
+/*# Hide actual value box for "Gestori di identità attivi" in the SPID project*/
+#monitoring_indicator-spid_providers_accredited .ChartBox--actualValue {
+  display: none !important;
+}

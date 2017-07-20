@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the dashboard_base module.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function dashboard_base_install() {
+  module_set_weight('dashboard_base', 99);
+}

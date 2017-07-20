@@ -1,0 +1,10 @@
+uuid: 076d7e38-6be0-40c0-b7ff-11a92b8c5f50
+langcode: it
+status: true
+dependencies:
+  module:
+    - dashboard_dataset
+id: dataset.token
+label: Token
+targetEntityType: dataset
+cache: true

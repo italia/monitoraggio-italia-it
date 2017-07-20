@@ -1,0 +1,32 @@
+uuid: dbecd465-32e7-443f-85bc-8f6f8f772e4e
+langcode: it
+status: true
+dependencies:
+  config:
+    - dashboard_indicator.dashboard_indicator_type.monitoring_indicator
+    - field.storage.dashboard_indicator.field_indicator_value_title
+  module:
+    - geocoder_field
+third_party_settings:
+  geocoder_field:
+    method: none
+    field: name
+    plugins: {  }
+    dumper: wkt
+    delta_handling: default
+    failure:
+      handling: preserve
+      status_message: true
+      log: true
+id: dashboard_indicator.monitoring_indicator.field_indicator_value_title
+field_name: field_indicator_value_title
+entity_type: dashboard_indicator
+bundle: monitoring_indicator
+label: 'Valore - titolo'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

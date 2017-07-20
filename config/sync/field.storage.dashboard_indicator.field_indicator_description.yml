@@ -1,0 +1,19 @@
+uuid: f9389d75-3dd5-4025-bac8-45cb77868ede
+langcode: it
+status: true
+dependencies:
+  module:
+    - dashboard_indicator
+    - text
+id: dashboard_indicator.field_indicator_description
+field_name: field_indicator_description
+entity_type: dashboard_indicator
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

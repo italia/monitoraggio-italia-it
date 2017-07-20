@@ -1,0 +1,38 @@
+uuid: ec90ef9e-fdf8-4c83-81e2-cb6720f9ab5d
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cb_icon_link_img
+    - paragraphs.paragraphs_type.pg_cb_icon_link
+  module:
+    - image
+id: paragraph.pg_cb_icon_link.field_cb_icon_link_img
+field_name: field_cb_icon_link_img
+entity_type: paragraph
+bundle: pg_cb_icon_link
+label: Icona
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: indicator/custom-box
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: false
+  title_field: true
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

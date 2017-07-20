@@ -1,0 +1,22 @@
+uuid: b56d403f-7240-43c1-a6b6-432000472430
+langcode: it
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - italiagov
+_core:
+  default_config_hash: lQiR2sMNJAbWI2dW-MMpBcDKzkluYu9rijSSWKsixI4
+id: mainpagecontent
+theme: italiagov
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Contenuto della pagina principale'
+  provider: system
+  label_display: '0'
+visibility: {  }

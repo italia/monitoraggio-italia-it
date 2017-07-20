@@ -1,0 +1,21 @@
+uuid: 41d116a0-f807-4bc4-acaf-9b02f477df92
+langcode: it
+status: true
+dependencies:
+  module:
+    - dashboard_base
+    - paragraphs
+id: paragraph.field_decimal_value
+field_name: field_decimal_value
+entity_type: paragraph
+type: decimal_percentage_field_type
+settings:
+  precision: '14'
+  scale: '2'
+module: dashboard_base
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

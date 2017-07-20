@@ -1,0 +1,10 @@
+uuid: fd0bcea3-befb-4f63-9918-ea65b9dbf7ba
+langcode: it
+status: true
+dependencies:
+  module:
+    - dashboard_indicator
+id: dashboard_indicator.indicator_embedded
+label: 'Indicator embedded'
+targetEntityType: dashboard_indicator
+cache: true

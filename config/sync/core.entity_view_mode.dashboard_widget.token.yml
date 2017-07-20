@@ -1,0 +1,10 @@
+uuid: 5fdef0e0-31b3-4d88-84ed-e57a99e733ed
+langcode: it
+status: true
+dependencies:
+  module:
+    - dashboard_widget
+id: dashboard_widget.token
+label: Token
+targetEntityType: dashboard_widget
+cache: true

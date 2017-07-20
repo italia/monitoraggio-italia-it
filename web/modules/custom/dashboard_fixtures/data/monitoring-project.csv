@@ -1,0 +1,8 @@
+"id","name","key_unique","subtitle","weight","link"
+1,"Spid","spid","sistema pubblico di identità digitale",1,"http://www.agid.gov.it/spid"
+2,"Pago PA","pagoPa","sistema dei pagamenti elettronici",2,"http://www.agid.gov.it/agenda-digitale/pubblica-amministrazione/pagamenti-elettronici"
+3,"Fatturazione elettronica","fatturazione-elettronica","",4,"http://www.agid.gov.it/agenda-digitale/pubblica-amministrazione/fatturazione-elettronica"
+4,"Open Data","open-data","i dati aperti della pubblica amministrazione",5,"http://www.agid.gov.it/agenda-digitale/pubblica-amministrazione/fatturazione-elettronica"
+5,"Facicolo Sanitario elettronico","fse","fascicolo sanitario elettronico",7,"http://www.agid.gov.it/agenda-digitale/pubblica-amministrazione/sanita-digitale"
+6,"Digital security","padse","sistema pubblico di identità digitale",11,"http://www.agid.gov.it/spid"
+7,"ANPR","anpr","anagrafe nazionale popolazione residente",3,"http://www.agid.gov.it/anpr"

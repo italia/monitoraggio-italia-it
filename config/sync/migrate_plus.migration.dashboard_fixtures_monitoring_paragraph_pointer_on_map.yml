@@ -1,0 +1,53 @@
+uuid: b6ecc9cb-5db2-439b-b51d-c64b6deb4a20
+langcode: it
+status: true
+dependencies: {  }
+id: dashboard_fixtures_monitoring_paragraph_pointer_on_map
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: dashboard_fixtures_group_paragraph
+label: 'Import paragraph pointer of map dataset'
+source:
+  plugin: url
+  data_fetcher_plugin: http
+  data_parser_plugin: google_sheets
+  urls: 'https://spreadsheets.google.com/feeds/list/1wTHZOD_Dm7yBt8xuXhU03FplHMbpPikAD9I9vpq_uI4/5/public/values?alt=json'
+  item_selector: null
+  fields:
+    -
+      name: id
+      label: id
+      selector: id
+    -
+      name: location
+      label: location
+      selector: location
+  ids:
+    id:
+      type: string
+process:
+  type:
+    plugin: default_value
+    default_value: pointer_on_map_dataset
+  field_location:
+    -
+      source: location
+      plugin: explode
+      delimiter: '|'
+    -
+      plugin: paragraph_migration
+      migration: dashboard_fixtures_monitoring_paragraph_location
+  created: '@created'
+  sticky:
+    plugin: default_value
+    default_value: 0
+  uid:
+    plugin: default_value
+    default_value: 1
+destination:
+  plugin: 'entity_reference_revisions:paragraph'
+migration_dependencies:
+  required:
+    - dashboard_fixtures_monitoring_paragraph_location

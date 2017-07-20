@@ -1,0 +1,10 @@
+references_modal.open_modal_form:
+  path: '/admin/modal_form/{entity_type}/{bundle}/{id}'
+  defaults:
+    _title: 'Modal Form'
+    _controller: '\Drupal\references_modal\Controller\ReferencesModalController::openModalForm'
+    id: 0
+  requirements:
+    _custom_access: '\Drupal\references_modal\Controller\ReferencesModalController::access'
+  options:
+    _admin_route: TRUE

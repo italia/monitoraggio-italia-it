@@ -1,0 +1,32 @@
+uuid: ab0a4aaf-415f-4be0-8303-92c55efd98a5
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_key
+    - paragraphs.paragraphs_type.free_values
+  module:
+    - geocoder_field
+third_party_settings:
+  geocoder_field:
+    method: none
+    field: parent_id
+    plugins: {  }
+    dumper: wkt
+    delta_handling: default
+    failure:
+      handling: preserve
+      status_message: true
+      log: true
+id: paragraph.free_values.field_key
+field_name: field_key
+entity_type: paragraph
+bundle: free_values
+label: Key
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

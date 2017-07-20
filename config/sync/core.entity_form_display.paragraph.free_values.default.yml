@@ -1,0 +1,33 @@
+uuid: 3de4f14a-2a0b-4a51-b43d-8c9ab411aaf0
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.free_values.field_decimal_value
+    - field.field.paragraph.free_values.field_key
+    - paragraphs.paragraphs_type.free_values
+  module:
+    - dashboard_base
+id: paragraph.free_values.default
+targetEntityType: paragraph
+bundle: free_values
+mode: default
+content:
+  field_decimal_value:
+    weight: 1
+    settings:
+      size: '20'
+      placeholder: ''
+    third_party_settings: {  }
+    type: decimal_percentage_field_widget
+  field_key:
+    weight: 0
+    settings:
+      size: 20
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+hidden:
+  created: true
+  status: true
+  uid: true

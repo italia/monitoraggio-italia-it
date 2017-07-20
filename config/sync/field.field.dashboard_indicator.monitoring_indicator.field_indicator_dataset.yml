@@ -1,0 +1,28 @@
+uuid: 0e597f40-7b49-4dbe-a4e5-0d47ff8e825e
+langcode: it
+status: true
+dependencies:
+  config:
+    - dashboard_dataset.dataset_type.dataset_st
+    - dashboard_indicator.dashboard_indicator_type.monitoring_indicator
+    - field.storage.dashboard_indicator.field_indicator_dataset
+id: dashboard_indicator.monitoring_indicator.field_indicator_dataset
+field_name: field_indicator_dataset
+entity_type: dashboard_indicator
+bundle: monitoring_indicator
+label: Dataset
+description: 'Create a new dataset clicking on "Create Dataset standard", or add an existing one using the autocompletition functions of the field.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:dataset'
+  handler_settings:
+    target_bundles:
+      dataset_st: dataset_st
+    sort:
+      field: _none
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

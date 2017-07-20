@@ -1,0 +1,58 @@
+<?php
+
+/**
+ * @file
+ * Contains dashboard_widget.module..
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function dashboard_widget_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the dashboard_widget module.
+    case 'help.page.dashboard_widget':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function dashboard_widget_theme() {
+  $theme = [];
+  $theme['dashboard_widget'] = [
+    'render element' => 'elements',
+    'file' => 'dashboard_widget.page.inc',
+    'template' => 'dashboard_widget',
+  ];
+  $theme['dashboard_widget_content_add_list'] = [
+    'render element' => 'content',
+    'variables' => ['content' => NULL],
+    'file' => 'dashboard_widget.page.inc',
+  ];
+  return $theme;
+}
+
+/**
+* Implements hook_theme_suggestions_HOOK().
+*/
+function dashboard_widget_theme_suggestions_dashboard_widget(array $variables) {
+  $suggestions = array();
+  $entity = $variables['elements']['#dashboard_widget'];
+  $sanitized_view_mode = strtr($variables['elements']['#view_mode'], '.', '_');
+
+  $suggestions[] = 'dashboard_widget__' . $sanitized_view_mode;
+  $suggestions[] = 'dashboard_widget__' . $entity->bundle();
+  $suggestions[] = 'dashboard_widget__' . $entity->bundle() . '__' . $sanitized_view_mode;
+  $suggestions[] = 'dashboard_widget__' . $entity->id();
+  $suggestions[] = 'dashboard_widget__' . $entity->id() . '__' . $sanitized_view_mode;
+  return $suggestions;
+}

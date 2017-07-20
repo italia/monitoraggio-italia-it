@@ -1,0 +1,10 @@
+uuid: 752271a5-886d-429b-aca5-2386edae6ecb
+langcode: it
+status: true
+dependencies: {  }
+id: dashboard_fixtures_group_taxonomies
+label: 'Taxonomies migrations'
+description: 'taxonomies migrations.'
+source_type: 'Google sheet'
+module: null
+shared_configuration: null

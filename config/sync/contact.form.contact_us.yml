@@ -1,0 +1,13 @@
+uuid: 594d7460-3cca-40bd-8ec8-07210b0bb0a7
+langcode: it
+status: true
+dependencies: {  }
+id: contact_us
+label: Contattaci
+recipients:
+  - test@general.loc
+  - test2@general.loc
+reply: ''
+weight: 0
+message: 'La tua richiesta è stata inoltrata, grazie mille!'
+redirect: /contact/contact_us

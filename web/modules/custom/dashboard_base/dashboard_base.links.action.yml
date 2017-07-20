@@ -1,0 +1,13 @@
+dashboard_base.project_add_form:
+  route_name: 'project.add_page'
+  title: 'Add project'
+  appears_on:
+    - view.dash_admin_projects.page_admin_projects
+dashboard_base.link_add_page:
+  route_name: node.add
+  title: 'Add static page'
+  route_parameters:
+    node_type: 'page'
+  weight: '0'
+  appears_on:
+    - view.dash_admin_pages.page_admin_pages

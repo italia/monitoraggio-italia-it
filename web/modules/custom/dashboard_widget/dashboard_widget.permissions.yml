@@ -1,0 +1,19 @@
+add dashboard widget entities:
+  title: 'Create new Dashboard widget entities'
+
+administer dashboard widget entities:
+  title: 'Administer Dashboard widget entities'
+  description: 'Allow to access the administration form to configure Dashboard widget entities.'
+  restrict access: true
+
+delete dashboard widget entities:
+  title: 'Delete Dashboard widget entities'
+
+edit dashboard widget entities:
+  title: 'Edit Dashboard widget entities'
+
+view published dashboard widget entities:
+  title: 'View published Dashboard widget entities'
+
+view unpublished dashboard widget entities:
+  title: 'View unpublished Dashboard widget entities'

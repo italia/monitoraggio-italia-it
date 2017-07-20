@@ -1,0 +1,26 @@
+uuid: 02660e3e-ad2a-4800-a577-dc812ca6ac4d
+langcode: it
+status: true
+dependencies:
+  config:
+    - system.menu.footer
+  module:
+    - system
+  theme:
+    - italiagov
+_core:
+  default_config_hash: 0gHfsHStG5A0IGN22nv5qSWJ2ZCo4Ph-sS4Jizod8zA
+id: footer
+theme: italiagov
+region: footer_bottom
+weight: 0
+provider: null
+plugin: 'system_menu_block:footer'
+settings:
+  id: 'system_menu_block:footer'
+  label: 'Piè di pagina'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+visibility: {  }

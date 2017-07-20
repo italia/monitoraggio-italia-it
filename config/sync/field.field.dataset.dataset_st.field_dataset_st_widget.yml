@@ -1,0 +1,28 @@
+uuid: 7041b2b1-fdd9-4676-9fcd-483363aa1089
+langcode: it
+status: true
+dependencies:
+  config:
+    - dashboard_dataset.dataset_type.dataset_st
+    - dashboard_widget.dashboard_widget_type.highcharts
+    - field.storage.dataset.field_dataset_st_widget
+id: dataset.dataset_st.field_dataset_st_widget
+field_name: field_dataset_st_widget
+entity_type: dataset
+bundle: dataset_st
+label: Widget
+description: 'Select the widget (chart type) you want to use to plot these data.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:dashboard_widget'
+  handler_settings:
+    target_bundles:
+      highcharts: highcharts
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

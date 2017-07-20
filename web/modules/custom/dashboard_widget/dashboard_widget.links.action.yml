@@ -1,0 +1,11 @@
+entity.dashboard_widget.add_form:
+  route_name: 'dashboard_widget.add_page'
+  title: 'Add Dashboard widget'
+  appears_on:
+    - entity.dashboard_widget.collection
+entity.dashboard_widget_type.add_form:
+  route_name: 'entity.dashboard_widget_type.add_form'
+  title: 'Add Dashboard widget type'
+  appears_on:
+    - entity.dashboard_widget_type.collection
+

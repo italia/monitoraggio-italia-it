@@ -1,0 +1,25 @@
+add dashboard indicator entities:
+  title: 'Create new Dashboard indicator entities'
+
+administer dashboard indicator entities:
+  title: 'Administer Dashboard indicator entities'
+  description: 'Allow to access the administration form to configure Dashboard indicator entities.'
+  restrict access: true
+
+delete dashboard indicator entities:
+  title: 'Delete Dashboard indicator entities'
+
+edit dashboard indicator entities:
+  title: 'Edit Dashboard indicator entities'
+
+view published dashboard indicator entities:
+  title: 'View published Dashboard indicator entities'
+
+view unpublished dashboard indicator entities:
+  title: 'View unpublished Dashboard indicator entities'
+
+access dashboard indicator entities collection:
+  title: 'Access Dashboard indicator entities list'
+
+access dashboard indicator full view:
+  title: 'Access Dashboard indicator full view'

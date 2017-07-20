@@ -1,0 +1,21 @@
+uuid: 62981106-619d-4bca-85e3-3ff33e999bd3
+langcode: it
+status: true
+dependencies:
+  module:
+    - user
+id: user.user.default
+targetEntityType: user
+bundle: user
+mode: default
+content:
+  account:
+    weight: -10
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  contact: true
+  langcode: true
+  language: true
+  path: true
+  translation: true

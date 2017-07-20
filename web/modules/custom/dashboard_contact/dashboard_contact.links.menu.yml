@@ -1,0 +1,6 @@
+dashboard_contact.dashboard_contact_conf:
+  title: 'Contact form settings'
+  route_name: dashboard_contact.dashboard_contact_conf
+  description: 'Contact form configuration settings.'
+  parent: system.admin_config_system
+  weight: 99

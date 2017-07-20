@@ -1,0 +1,20 @@
+uuid: 9cc7bcff-05e5-4379-86c9-981dff708adb
+langcode: it
+status: true
+dependencies:
+  module:
+    - dashboard_dataset
+    - dashboard_indicator
+id: dashboard_indicator.field_indicator_dataset
+field_name: field_indicator_dataset
+entity_type: dashboard_indicator
+type: entity_reference
+settings:
+  target_type: dataset
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

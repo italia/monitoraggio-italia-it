@@ -1,0 +1,30 @@
+# Project routing definition
+entity.project.canonical:
+  route_name: entity.project.canonical
+  base_route: entity.project.canonical
+  title: 'View'
+
+entity.project.edit_form:
+  route_name: entity.project.edit_form
+  base_route: entity.project.canonical
+  title: Edit
+
+entity.project.delete_form:
+  route_name:  entity.project.delete_form
+  base_route:  entity.project.canonical
+  title: Delete
+  weight: 10
+
+# Add Monitoring list inside admin/content.
+entity.project.collection:
+  route_name: entity.project.collection
+  title: 'Projects'
+  base_route: system.admin_content
+  weight: 1
+
+# Add DESI config to general settings form.
+dashboard_project.desi_settings:
+  route_name: dashboard_project.desi_settings
+  title: 'DESI settings'
+  base_route: dashboard_base.general_config_settings
+  weight: 1

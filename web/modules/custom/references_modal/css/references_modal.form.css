@@ -1,0 +1,7 @@
+ul.ui-autocomplete {
+    z-index: 9999;
+}
+
+.references_modal_form_wrapper {
+    position: relative;
+}

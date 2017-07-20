@@ -1,0 +1,23 @@
+uuid: cda2cc74-efbf-47b7-bc1a-436ced2dd604
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cb_icon_link_link
+    - paragraphs.paragraphs_type.pg_cb_icon_link
+  module:
+    - link
+id: paragraph.pg_cb_icon_link.field_cb_icon_link_link
+field_name: field_cb_icon_link_link
+entity_type: paragraph
+bundle: pg_cb_icon_link
+label: Link
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

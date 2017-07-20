@@ -1,0 +1,107 @@
+{#
+/**
+ * @file dashboard_indicator.html.twig
+ * Default theme implementation to present Dashboard indicator data.
+ *
+ * This template is used when viewing Dashboard indicator pages.
+ *
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ * - attributes: HTML attributes for the container element.
+ *
+ * @see template_preprocess_dashboard_indicator()
+ *
+ * @ingroup themeable
+ */
+#}
+{% set has_target = content.field_indicator_targets|render ? true : false %}
+{% set has_description = content.field_indicator_value_descr|render ? true : false %}
+{% set grid_classes = has_target ? ['Grid-cell', 'u-sizeFull', 'u-md-size1of2', 'u-lg-size1of2'] : 'Grid-cell' %}
+<a id="{{ content.key_unique|field_value }}" style="display: none;" aria-hidden="true"></a>
+<h2 class="MonitoringIndicator-header Accordion-header js-fr-accordion__header fr-accordion__header"
+    id="accordion-header-{{ content.key_unique|field_value }}">
+  <span class="Accordion-link u-text-r-xxl u-padding-r-all">{{ content.name|field_value }}</span>
+</h2>
+<div id="accordion-panel-{{ content.key_unique|field_value }}"
+     class="Accordion-panel fr-accordion__panel js-fr-accordion__panel">
+  <div id="monitoring_indicator-{{ content.key_unique|field_value }}"
+       class="MonitoringIndicator"
+       data-api="{{ path('rest.project_resource.GET.json', {'project_key': project_key }) }}?_format=json&indicator={{ content.key_unique|field_value }}">
+    <div class="MonitoringIndicator-description">
+      {% if content.field_indicator_last_update|render %}
+        <div class="u-text-r-xxs">
+          <span class="Icon Icon-calendar u-textWeight-700 u-margin-r-right"></span>
+          {{ 'Last update'|t }} : {{ content.field_indicator_last_update|field_value }}
+        </div>
+      {% endif %}
+      <div class="Prose u-padding-bottom-l u-padding-r-top u-text-r-xs">
+        {{ content.field_indicator_description|field_value }}
+      </div>
+    </div>
+
+    {# Custom Box values. #}
+    {% if content.field_indicator_cb_title|render %}
+    <div class="Grid Grid--withGutter">
+      <div class="Grid-cell">
+        <div class="ChartBox CustomBox u-background-white u-margin-r-bottom u-margin-r-top u-borderRadius-s u-borderShadow-m">
+          <header class="ChartBox-header u-padding-r-all u-borderRadius-s">
+            <h3 class="u-text-r-xs u-textWeight-600">{{ content.field_indicator_cb_title|field_value }}</h3>
+          </header>
+          <div class="ChartBox-content CustomBox-content">
+            <div class="u-textCenter u-textWeight-700 ChartBox-value">
+              <div class="Grid Grid--withGutter Grid--alignCenter js-randomize">
+                {{ content.field_indicator_cb_value|field_value }}
+              </div>
+            </div>
+            {% if content.field_indicator_cb_description %}
+            <div class="u-textCenter u-text-xxs u-padding-r-all ChartBox-description">
+              {{ content.field_indicator_cb_description|field_value }}
+            </div>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+
+    {# If we do not have a value we cannot plot a value/target comparison chart #}
+    {% if content.field_indicator_value|render %}
+    <div class="Grid Grid--withGutter">
+
+      <div class="{{ grid_classes|join(' ') }}">
+        <div class="ChartBox ChartBox--actualValue u-background-white u-margin-r-bottom u-margin-r-top u-borderRadius-s u-borderShadow-m">
+          <header class="ChartBox-header u-padding-r-all u-borderRadius-s">
+            <h3 class="u-text-r-xs u-textWeight-600">{{ content.field_indicator_value_title|field_value }}</h3>
+          </header>
+          <div class="ChartBox-content{% if not has_description %} ChartBox-contentWithOutDescription{% endif %}">
+            <div class="u-textCenter u-textWeight-700 ChartBox-value">
+              {{ content.field_indicator_value|field_value }}
+            </div>
+            {% if has_description %}
+            <div class="u-textCenter u-text-xxs u-padding-r-all ChartBox-description">
+              {{ content.field_indicator_value_descr|field_value }}
+            </div>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+      {% if has_target %}
+      <div class="Grid-cell u-sizeFull u-md-size1of2 u-lg-size1of2">
+        <div class="ChartBox ChartBox--targetValue u-background-white u-margin-r-bottom u-margin-r-top u-borderRadius-s u-borderShadow-m">
+          <header class="ChartBox-header u-padding-r-all u-borderRadius-s">
+            <h3 class="u-text-r-xs u-textWeight-600">{{ 'Progress on Digital Growth target'|t }}</h3>
+          </header>
+          <div class="Dataset u-borderRadius-s" id="monitoring_indicator-{{ content.key_unique|field_value }}-target" role="region"><!-- Target comparison chart here --></div>
+        </div>
+      </div>
+      {% endif %}
+    </div>
+    {% endif %}
+
+    <div class="Grid Grid--withGutter">
+      {{ content.field_indicator_dataset|field_value }}
+    </div>
+
+  </div>
+</div>

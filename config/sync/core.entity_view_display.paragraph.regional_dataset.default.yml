@@ -1,0 +1,23 @@
+uuid: 9e829b92-367f-4353-bc70-33d5fbea6a4e
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.regional_dataset.field_regional_values
+    - paragraphs.paragraphs_type.regional_dataset
+  module:
+    - entity_reference_revisions
+id: paragraph.regional_dataset.default
+targetEntityType: paragraph
+bundle: regional_dataset
+mode: default
+content:
+  field_regional_values:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+hidden: {  }

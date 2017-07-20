@@ -1,0 +1,42 @@
+uuid: aa949fa3-811a-4d17-b75f-3a46d04019a1
+langcode: it
+status: true
+dependencies:
+  config:
+    - dashboard_indicator.dashboard_indicator_type.monitoring_indicator
+    - field.storage.dashboard_indicator.field_indicator_targets
+    - paragraphs.paragraphs_type.target
+  module:
+    - entity_reference_revisions
+id: dashboard_indicator.monitoring_indicator.field_indicator_targets
+field_name: field_indicator_targets
+entity_type: dashboard_indicator
+bundle: monitoring_indicator
+label: Targets
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      target: target
+    target_bundles_drag_drop:
+      location:
+        weight: 6
+        enabled: false
+      name_values:
+        weight: 7
+        enabled: false
+      name_values_year:
+        weight: 8
+        enabled: false
+      target:
+        enabled: true
+        weight: 9
+      year_values:
+        weight: 10
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,34 @@
+uuid: e3722939-f8f1-42b2-bfb5-91b4ddac54b8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_location_coordinates
+    - paragraphs.paragraphs_type.location
+  module:
+    - geocoder_field
+    - geofield
+third_party_settings:
+  geocoder_field:
+    method: source
+    field: field_location_name
+    plugins:
+      - googlemaps
+    dumper: wkt
+    delta_handling: default
+    failure:
+      handling: preserve
+      status_message: true
+      log: true
+id: paragraph.location.field_location_coordinates
+field_name: field_location_coordinates
+entity_type: paragraph
+bundle: location
+label: Coordinates
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: geofield

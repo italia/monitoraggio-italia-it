@@ -1,0 +1,7 @@
+uuid: c5fa3e58-62f7-4a5e-8916-5e237ee2c3d0
+langcode: it
+status: true
+dependencies: {  }
+id: regional_dataset
+label: 'Regional Dataset Serie'
+behavior_plugins: {  }

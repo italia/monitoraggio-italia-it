@@ -1,0 +1,73 @@
+/**
+ * @file
+ * Custom CSS file for pace.js library
+ *
+ * @see dashboard.libraries.yml for library definition.
+ */
+.pace {
+  -webkit-pointer-events: none;
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 6px;
+  width: 100%;
+  -webkit-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  overflow: hidden;
+  -webkit-transition: -webkit-transform .5s ease-out;
+  -ms-transition: -webkit-transform .5s ease-out;
+  transition: transform 0.5s ease-out;
+}
+.pace.pace-active {
+  -webkit-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+.pace .pace-progress {
+  display: block;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  right: 100%;
+  width: 100%;
+  height: 6px;
+  background: #2299DD;
+  pointer-events: none;
+}
+/*
+## Loading indicator per project background color.
+ */
+/* SPID */
+.Project--spid .pace .pace-progress {
+  background-color: #0066CC;
+}
+/* PAGO PA */
+.Project--pagopa .pace .pace-progress {
+  background-color: #009540;
+}
+/* FE */
+.Project--fatturazione_elettronica .pace .pace-progress {
+  background-color: #AA3772;
+}
+/* OPEN DATA */
+.Project--open_data .pace .pace-progress {
+  background-color: #18A595;
+}
+/* FSE */
+.Project--fse .pace .pace-progress {
+  background-color: #004181;
+}
+/* PADSE */
+.Project--padse .pace .pace-progress {
+  background-color: #CA2E55;
+}
+/* ANPR */
+.Project--anpr .pace .pace-progress {
+  background-color: #007381;
+}

@@ -1,0 +1,29 @@
+uuid: 31818029-77c8-4cf6-a3dc-992d4fe33b6d
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.monthly_dataset.field_monthly_values
+    - paragraphs.paragraphs_type.monthly_dataset
+  module:
+    - paragraphs
+id: paragraph.monthly_dataset.default
+targetEntityType: paragraph
+bundle: monthly_dataset
+mode: default
+content:
+  field_monthly_values:
+    type: entity_reference_paragraphs
+    weight: 0
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
+  uid: true

@@ -1,0 +1,5 @@
+name: Dashboard entity project
+type: module
+description: All stuff for entity "Project"
+core: 8.x
+package: Dashboard

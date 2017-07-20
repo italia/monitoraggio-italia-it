@@ -1,0 +1,37 @@
+uuid: d482347c-0249-42a2-ad73-695147795c99
+langcode: it
+status: true
+dependencies:
+  config:
+    - dashboard_widget.dashboard_widget_type.highcharts
+    - field.field.dashboard_widget.highcharts.field_highcharts_subtitle
+    - field.field.dashboard_widget.highcharts.field_highcharts_type
+id: dashboard_widget.highcharts.default
+targetEntityType: dashboard_widget
+bundle: highcharts
+mode: default
+content:
+  field_highcharts_subtitle:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_highcharts_type:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  name:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  langcode: true
+  user_id: true

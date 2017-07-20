@@ -1,0 +1,57 @@
+uuid: 4f1fd53b-ea90-48e1-a429-1f08c7fab610
+langcode: it
+status: true
+dependencies:
+  config:
+    - dashboard_indicator.dashboard_indicator_type.monitoring_indicator
+    - field.storage.dashboard_indicator.field_indicator_cb_value
+    - paragraphs.paragraphs_type.pg_cb_icon_link
+  module:
+    - entity_reference_revisions
+id: dashboard_indicator.monitoring_indicator.field_indicator_cb_value
+field_name: field_indicator_cb_value
+entity_type: dashboard_indicator
+bundle: monitoring_indicator
+label: 'Box personalizzato - valore'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      pg_cb_icon_link: pg_cb_icon_link
+    target_bundles_drag_drop:
+      free_dataset:
+        weight: 10
+        enabled: false
+      free_values:
+        weight: 11
+        enabled: false
+      pg_cb_icon_link:
+        enabled: true
+        weight: 11
+      location:
+        weight: 12
+        enabled: false
+      monthly_dataset:
+        weight: 13
+        enabled: false
+      monthly_values:
+        weight: 14
+        enabled: false
+      pointer_on_map_dataset:
+        weight: 15
+        enabled: false
+      regional_dataset:
+        weight: 16
+        enabled: false
+      regional_values:
+        weight: 17
+        enabled: false
+      target:
+        weight: 18
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,20 @@
+uuid: d1433832-47f0-439f-bab9-9e25d92d1d24
+langcode: it
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - taxonomy
+id: paragraph.field_target_year
+field_name: field_target_year
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

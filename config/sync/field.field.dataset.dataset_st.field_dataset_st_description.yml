@@ -1,0 +1,33 @@
+uuid: 4dd90a50-8738-47e4-8f49-1b198c16f7bb
+langcode: it
+status: true
+dependencies:
+  config:
+    - dashboard_dataset.dataset_type.dataset_st
+    - field.storage.dataset.field_dataset_st_description
+  module:
+    - geocoder_field
+    - text
+third_party_settings:
+  geocoder_field:
+    method: none
+    field: name
+    plugins: {  }
+    dumper: wkt
+    delta_handling: default
+    failure:
+      handling: preserve
+      status_message: true
+      log: true
+id: dataset.dataset_st.field_dataset_st_description
+field_name: field_dataset_st_description
+entity_type: dataset
+bundle: dataset_st
+label: Descrizione
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,94 @@
+<?php
+
+/**
+ * @file
+ * Contains dashboard_dataset.module..
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Entity\EntityInterface;
+
+/**
+ * Implements hook_help().
+ */
+function dashboard_dataset_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the dashboard_dataset module.
+    case 'help.page.dashboard_dataset':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p> </p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function dashboard_dataset_theme() {
+  $theme = [];
+  $theme['dataset'] = [
+    'render element' => 'elements',
+    'file' => 'dataset.page.inc',
+    'template' => 'dataset',
+  ];
+  $theme['dataset_content_add_list'] = [
+    'render element' => 'content',
+    'variables' => ['content' => NULL],
+    'file' => 'dataset.page.inc',
+  ];
+  return $theme;
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK().
+ */
+function dashboard_dataset_theme_suggestions_dataset(array $variables) {
+  $suggestions = [];
+  $entity = $variables['elements']['#dataset'];
+  $sanitized_view_mode = strtr($variables['elements']['#view_mode'], '.', '_');
+
+  $suggestions[] = 'dataset__' . $sanitized_view_mode;
+  $suggestions[] = 'dataset__' . $entity->bundle();
+  $suggestions[] = 'dataset__' . $entity->bundle() . '__' . $sanitized_view_mode;
+  $suggestions[] = 'dataset__' . $entity->id();
+  $suggestions[] = 'dataset__' . $entity->id() . '__' . $sanitized_view_mode;
+  return $suggestions;
+}
+
+/**
+ * Implements hook_field_widget_form_alter().
+ */
+function dashboard_dataset_field_widget_form_alter(&$element, FormStateInterface $form_state, $context) {
+  $build_info = $form_state->getBuildInfo();
+  if ($build_info['base_form_id'] == 'dataset_form') {
+    $element['#attached']['library'][] = 'dashboard_dataset/form';
+  }
+
+  $field_definition = $context['items']->getFieldDefinition();
+  if ($field_definition->getName() == 'field_monthly_value') {
+    $year = date('Y');
+    $month = $element['value']['#delta'] + 1;
+    $date = new \DateTime();
+    $date->setDate($year, $month, 1);
+
+    $element['value']['#title'] = $date->format('F');
+    unset($element['value']['#title_display']);
+  }
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_update().
+ */
+function dashboard_dataset_dataset_update(EntityInterface $entity) {
+  $storage = \Drupal::entityTypeManager()->getStorage('dashboard_indicator');
+  $entities = $storage->loadByProperties([
+    'field_indicator_dataset' => $entity->id(),
+  ]);
+  foreach ($entities as $entity) {
+    $entity->save();
+  }
+}

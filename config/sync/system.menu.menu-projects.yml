@@ -1,0 +1,8 @@
+uuid: 30856b68-33f7-45e8-ae4c-c61426831400
+langcode: it
+status: true
+dependencies: {  }
+id: menu-projects
+label: Progetti
+description: 'Menù con tutti i progetti presenti.'
+locked: false

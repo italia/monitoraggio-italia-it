@@ -1,0 +1,21 @@
+uuid: d92c20b6-6d62-404b-a41c-8d8d635ae4a1
+langcode: it
+status: true
+dependencies:
+  module:
+    - dashboard_widget
+id: dashboard_widget.field_highcharts_subtitle
+field_name: field_highcharts_subtitle
+entity_type: dashboard_widget
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

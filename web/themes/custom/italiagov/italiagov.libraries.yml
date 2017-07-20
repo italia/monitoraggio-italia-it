@@ -1,0 +1,20 @@
+global:
+  version: VERSION
+  css:
+    theme:
+      css/style.css: {}
+
+ita-web-toolkit:
+  version: VERSION
+  css:
+    theme:
+      https://fonts.googleapis.com/css?family=Titillium+Web:300,400,400i,600,700: { type: external, minified: true }
+      ita-web-toolkit-build/build.css: {}
+  js:
+    ita-web-toolkit-build/vendor/modernizr.js: {}
+    js/iwt_settings.js: {}
+    ita-web-toolkit-build/IWT.min.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings

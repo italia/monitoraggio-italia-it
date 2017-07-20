@@ -1,0 +1,7 @@
+uuid: 671917f5-f60f-43ec-95f1-50d98c934122
+langcode: en
+status: true
+dependencies: {  }
+id: location
+label: Location
+behavior_plugins: {  }

@@ -1,0 +1,132 @@
+# Migration configuration for entity dataset.
+id: dashboard_fixtures_monitoring_project
+# A human-friendly description of the migration.
+label: Import monitoring project entity
+migration_group: dashboard_fixtures_group_content
+migration_tags: null
+status: true
+source:
+  plugin: url
+  data_fetcher_plugin: http
+  data_parser_plugin: google_sheets
+  # The feed file for the spreadsheet. The Google Spreadsheet should be either “Public” or set to “Anyone with link can
+  # view” in order for the feed to work. Note that the <SHEET> param is the order of the tabs and WILL change if the
+  # tabs are re-ordered.
+  # Template: 'https://spreadsheets.google.com/feeds/list/<KEY>/<SHEET>/public/values?alt=json'
+  urls: 'https://spreadsheets.google.com/feeds/list/1AkEHcoBlKj3hsIiIgdU83VpCISGl_5EV2c6LMKBHtrk/1/public/values?alt=json'
+  # Under 'fields', we list the data items to be imported. The first level keys
+  # are the source field names we want to populate (the names to be used as
+  # sources in the process configuration below). For each field we're importing,
+  # we provide a label (optional - this is for display in migration tools) and
+  # an selector (xpath) for retrieving that value. It's important to note that this xpath
+  # is relative to the elements retrieved by item_selector.
+  # For Google Spreadsheet XML feeds the actual columns are named with gsx: followed by the cleaned column name (lower,
+  # limited punctuation, etc).
+  item_selector:
+  fields:
+    -
+      name: id
+      label: 'id'
+      selector: 'id'
+    -
+      name: name
+      label: 'name'
+      selector: 'name'
+    -
+      name: uniquekey
+      label: 'uniquekey'
+      selector: 'uniquekey'
+    -
+      name: description
+      label: 'description'
+      selector: 'description'
+    -
+      name: subtitle
+      label: 'subtitle'
+      selector: 'subtitle'
+    -
+      name: weight
+      label: 'weight'
+      selector: 'weight'
+    -
+      name: indicators
+      label: 'indicators'
+      selector: 'indicators'
+    -
+      name: updatefreq
+      label: 'updatefreq'
+      selector: 'updatefreq'
+    -
+      name: link
+      label: 'link'
+      selector: 'link'
+    -
+      name: logoimage
+      label: 'logoimage'
+      selector: 'logoimage'
+    -
+      name: desi
+      label: 'desi'
+      selector: 'desi'
+  # Under 'ids', we identify source fields populated above which will uniquely
+  # identify each imported item. The 'type' makes sure the migration map table
+  # uses the proper schema type for stored the IDs.
+  ids:
+    id:
+      type: integer
+
+destination:
+  plugin: entity:project
+process:
+  type:
+    plugin: default_value
+    default_value: 'monitoring'
+  name: name
+  key_unique: uniquekey
+  field_monitor_subtitle: subtitle
+
+  field_monitor_description/value: description
+  field_monitor_description/format:
+    plugin: default_value
+    default_value: 'filtered_text'
+
+  field_monitor_link: link
+
+  'field_monitor_logo/target_id':
+    plugin: migration
+    migration: dashboard_fixtures_dash_images
+    source: logoimage
+  'field_monitor_logo/alt': name
+  'field_monitor_logo/title': name
+
+  field_monitor_weight: weight
+  field_monitor_update_frequency: updatefreq
+
+  field_monitor_desi: desi
+
+  created: '@created'
+
+  sticky:
+    plugin: default_value
+    default_value: 0
+
+  uid:
+    plugin: default_value
+    default_value: 1
+
+  field_monitor_indicator:
+    -
+      source: indicators
+      plugin: explode
+      delimiter: '|'
+    -
+      plugin: migration
+      migration:
+        - dashboard_fixtures_monitoring_indicator
+
+
+# Required stuff.
+migration_dependencies:
+  required:
+    - dashboard_fixtures_monitoring_indicator
+    - dashboard_fixtures_dash_images

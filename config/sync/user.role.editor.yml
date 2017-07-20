@@ -1,0 +1,47 @@
+uuid: de40feb9-a608-4f67-9ad8-1e3f668d706e
+langcode: en
+status: true
+dependencies: {  }
+id: editor
+label: Editor
+weight: 3
+is_admin: null
+permissions:
+  0: 'access toolbar'
+  1: 'add project entities'
+  2: 'delete project entities'
+  3: 'edit project entities'
+  4: 'view published project entities'
+  5: 'view unpublished project entities'
+  7: 'view own unpublished content'
+  8: 'view the administration theme'
+  9: 'administer project entities'
+  10: 'access project entities collection'
+  11: 'access contact form configuration'
+  12: 'add dashboard indicator entities'
+  13: 'delete dashboard indicator entities'
+  14: 'edit dashboard indicator entities'
+  15: 'view published dashboard indicator entities'
+  16: 'view unpublished dashboard indicator entities'
+  17: 'administer dashboard indicator entities'
+  18: 'access dashboard indicator entities collection'
+  19: 'use text format filtered_text'
+  20: 'add dataset entities'
+  21: 'delete dataset entities'
+  22: 'edit dataset entities'
+  23: 'view published dataset entities'
+  24: 'view unpublished dataset entities'
+  25: 'create page content'
+  26: 'delete any page content'
+  27: 'delete own page content'
+  28: 'edit any page content'
+  29: 'edit own page content'
+  33: 'access contact block configuration'
+  34: 'skip CAPTCHA'
+  35: 'bypass honeypot protection'
+  36: 'access desi configuration settings'
+  37: 'access general configuration settings'
+  38: 'access admin content list'
+  39: 'administer eu cookie compliance popup'
+  40: 'access dashboard indicator full view'
+  41: 'create url aliases'

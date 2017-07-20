@@ -1,0 +1,4 @@
+access general configuration settings:
+  title: 'Access to general configuration page settings'
+access admin content list:
+  title: 'Access to custom contents overview'

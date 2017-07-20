@@ -1,0 +1,40 @@
+<?php
+
+/**
+ * @file
+ * Contains dashboard_project.module..
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function dashboard_project_theme($existing, $type, $theme, $path) {
+  $theme = [];
+  $theme['project'] = [
+    'render element' => 'elements',
+    'file' => 'project.page.inc',
+    'template' => 'project',
+  ];
+  $theme['project_content_add_list'] = [
+    'render element' => 'content',
+    'variables' => ['content' => NULL],
+    'file' => 'project.page.inc',
+  ];
+  return $theme;
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK().
+ */
+function dashboard_project_theme_suggestions_project(array $variables) {
+  $suggestions = [];
+  $entity = $variables['elements']['#project'];
+  $sanitized_view_mode = strtr($variables['elements']['#view_mode'], '.', '_');
+
+  $suggestions[] = 'project__' . $sanitized_view_mode;
+  $suggestions[] = 'project__' . $entity->bundle();
+  $suggestions[] = 'project__' . $entity->bundle() . '__' . $sanitized_view_mode;
+  $suggestions[] = 'project__' . $entity->id();
+  $suggestions[] = 'project__' . $entity->id() . '__' . $sanitized_view_mode;
+  return $suggestions;
+}

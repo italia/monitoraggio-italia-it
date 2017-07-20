@@ -1,0 +1,7 @@
+uuid: 75200d44-8115-4883-ba34-44db9d0fd210
+langcode: it
+status: true
+dependencies: {  }
+id: target
+label: Target
+behavior_plugins: {  }

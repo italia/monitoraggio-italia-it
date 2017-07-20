@@ -1,0 +1,7 @@
+uuid: 36082700-a4cf-4402-b8f8-f3578006237c
+langcode: it
+status: true
+dependencies: {  }
+id: monthly_values
+label: 'Monthly Values'
+behavior_plugins: {  }

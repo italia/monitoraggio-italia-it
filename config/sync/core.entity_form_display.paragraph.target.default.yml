@@ -1,0 +1,49 @@
+uuid: 35fc9a06-11cd-4c17-a0bd-3d2bd26c39c1
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.target.field_target_description
+    - field.field.paragraph.target.field_target_label
+    - field.field.paragraph.target.field_target_values
+    - field.field.paragraph.target.field_target_year
+    - paragraphs.paragraphs_type.target
+  module:
+    - dashboard_base
+id: paragraph.target.default
+targetEntityType: paragraph
+bundle: target
+mode: default
+content:
+  field_target_description:
+    weight: 4
+    settings:
+      rows: 2
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+  field_target_label:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_target_values:
+    weight: 3
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: decimal_percentage_field_widget
+  field_target_year:
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: 'Campo ad autocompletamento'
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+hidden:
+  created: true
+  status: true
+  uid: true

@@ -1,0 +1,9 @@
+services:
+  'dashboard:indicator':
+    class: Drupal\dashboard_indicator\ParamConverter\DashboardIndicatorParamConverter
+    arguments: ["@entity_type.manager"]
+    tags:
+      - { name: paramconverter }
+  dashboard_indicator.csv_manager:
+    class: Drupal\dashboard_indicator\DashboardIndicatorCsvManager
+    arguments: ["@advanced_rest.entity_decorator_factory", "@dashboard_dataset.table_builder", "@file_system"]

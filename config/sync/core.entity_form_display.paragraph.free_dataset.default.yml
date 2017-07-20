@@ -1,0 +1,29 @@
+uuid: 11e69a94-a719-4b6b-aef4-a10f83603f80
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.free_dataset.field_free_values
+    - paragraphs.paragraphs_type.free_dataset
+  module:
+    - paragraphs
+id: paragraph.free_dataset.default
+targetEntityType: paragraph
+bundle: free_dataset
+mode: default
+content:
+  field_free_values:
+    type: entity_reference_paragraphs
+    weight: 0
+    settings:
+      title: dataset
+      title_plural: datasets
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
+  uid: true

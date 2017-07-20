@@ -1,0 +1,15 @@
+uuid: 68371aba-61d9-408c-b28e-4228baf5b205
+langcode: it
+status: true
+dependencies: {  }
+name: width_150
+label: 'Width 150'
+effects:
+  781e6ce2-3015-44c1-9f0e-764c7abb2ecf:
+    uuid: 781e6ce2-3015-44c1-9f0e-764c7abb2ecf
+    id: image_scale
+    weight: 1
+    data:
+      width: 150
+      height: null
+      upscale: false

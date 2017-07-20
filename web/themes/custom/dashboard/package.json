@@ -1,0 +1,15 @@
+{
+  "name": "dashboard",
+  "version": "1.0.0",
+  "description": "Dashboard",
+  "main": "index.js",
+  "dependencies": {
+    "suitcss-preprocessor": "^4.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "suitecss": "suitecss"
+  },
+  "author": "",
+  "license": "ISC"
+}

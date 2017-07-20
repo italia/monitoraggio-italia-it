@@ -1,0 +1,20 @@
+#rest_elements_resource:
+#  GET:
+#    endpoint:
+#      options:
+#        parameters:
+#          project_key:
+#            type: 'dashboard:project'
+#      requirements:
+#        project_key: '^[a-z\_]+$'
+#    params:
+#      indicator:
+#        type: string
+#        required: false
+#        constraints:
+#          - { name: 'Regex', options: '/^[a-z\_]+$/' }
+#      dataset:
+#        type: string
+#        required: false
+#        constraints:
+#          - { name: 'Regex', options: '/^[a-z\_]+$/' }

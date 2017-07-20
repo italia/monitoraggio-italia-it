@@ -1,0 +1,12 @@
+dashboard_widget.dashboard_widget_type.*:
+  type: config_entity
+  label: 'Dashboard widget type config'
+  mapping:
+    id:
+      type: string
+      label: 'ID'
+    label:
+      type: label
+      label: 'Label'
+    uuid:
+      type: string

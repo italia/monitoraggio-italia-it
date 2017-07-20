@@ -1,0 +1,10 @@
+entity.dataset.add_form:
+  route_name: 'dataset.add_page'
+  title: 'Add Dataset'
+  appears_on:
+    - entity.dataset.collection
+entity.dataset_type.add_form:
+  route_name: 'entity.dataset_type.add_form'
+  title: 'Add Dataset type'
+  appears_on:
+    - entity.dataset_type.collection

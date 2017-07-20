@@ -1,0 +1,32 @@
+uuid: 2d6d557c-1984-40fc-aae4-5fe4d03816f1
+langcode: it
+status: true
+dependencies:
+  config:
+    - dashboard_indicator.dashboard_indicator_type.monitoring_indicator
+    - field.storage.dashboard_indicator.field_indicator_cb_title
+  module:
+    - geocoder_field
+third_party_settings:
+  geocoder_field:
+    method: none
+    field: name
+    plugins: {  }
+    dumper: wkt
+    delta_handling: default
+    failure:
+      handling: preserve
+      status_message: true
+      log: true
+id: dashboard_indicator.monitoring_indicator.field_indicator_cb_title
+field_name: field_indicator_cb_title
+entity_type: dashboard_indicator
+bundle: monitoring_indicator
+label: 'Box personalizzato - titolo'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

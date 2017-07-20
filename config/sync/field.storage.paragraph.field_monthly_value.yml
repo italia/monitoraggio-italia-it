@@ -1,0 +1,21 @@
+uuid: 511a89ca-b115-45a1-90bd-3c39c440dac0
+langcode: it
+status: true
+dependencies:
+  module:
+    - dashboard_base
+    - paragraphs
+id: paragraph.field_monthly_value
+field_name: field_monthly_value
+entity_type: paragraph
+type: decimal_percentage_field_type
+settings:
+  precision: '14'
+  scale: '2'
+module: dashboard_base
+locked: false
+cardinality: 12
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

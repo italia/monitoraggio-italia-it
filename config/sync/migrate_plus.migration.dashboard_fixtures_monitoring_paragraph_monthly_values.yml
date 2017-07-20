@@ -1,0 +1,66 @@
+uuid: 2f06caf0-0301-4212-89dd-9bbf71aec698
+langcode: it
+status: true
+dependencies: {  }
+id: dashboard_fixtures_monitoring_paragraph_monthly_values
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: dashboard_fixtures_group_paragraph
+label: 'Import paragraph monthly values'
+source:
+  plugin: url
+  data_fetcher_plugin: http
+  data_parser_plugin: google_sheets
+  urls: 'https://spreadsheets.google.com/feeds/list/1wTHZOD_Dm7yBt8xuXhU03FplHMbpPikAD9I9vpq_uI4/2/public/values?alt=json'
+  item_selector: null
+  fields:
+    -
+      name: id
+      label: id
+      selector: id
+    -
+      name: year
+      label: year
+      selector: year
+    -
+      name: monthlyvalue
+      label: monthlyvalue
+      selector: monthlyvalue
+    -
+      name: group
+      label: group
+      selector: group
+  ids:
+    id:
+      type: string
+process:
+  type:
+    plugin: default_value
+    default_value: monthly_values
+  field_group: group
+  field_monthly_value:
+    -
+      source: monthlyvalue
+      plugin: explode
+      delimiter: ','
+    -
+      plugin: decimal_percentage
+      delimiter: '|'
+  field_year:
+    plugin: migration
+    migration: dashboard_fixtures_taxonomy_years
+    source: year
+  created: '@created'
+  sticky:
+    plugin: default_value
+    default_value: 0
+  uid:
+    plugin: default_value
+    default_value: 1
+destination:
+  plugin: 'entity_reference_revisions:paragraph'
+migration_dependencies:
+  required:
+    - dashboard_fixtures_taxonomy_years

@@ -1,0 +1,7 @@
+uuid: d299d15f-8541-4e6c-92cc-664c22936535
+langcode: it
+status: true
+dependencies: {  }
+id: regional_values
+label: 'Regional Values'
+behavior_plugins: {  }

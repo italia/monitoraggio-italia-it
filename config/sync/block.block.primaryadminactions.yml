@@ -1,0 +1,20 @@
+uuid: 07ff2ded-922c-46ee-a2a8-aa98b2cb4e07
+langcode: it
+status: true
+dependencies:
+  theme:
+    - italiagov
+_core:
+  default_config_hash: 2f-kxwaiGj7ZZxPO23xEMHQhmlD9iAuE2KRj0l4o4Gw
+id: primaryadminactions
+theme: italiagov
+region: content
+weight: -2
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Azioni di amministrazione principali'
+  provider: core
+  label_display: '0'
+visibility: {  }

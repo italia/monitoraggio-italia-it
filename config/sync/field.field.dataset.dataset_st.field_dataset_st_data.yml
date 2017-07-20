@@ -1,0 +1,61 @@
+uuid: fccba509-d415-47a2-9673-9bd254384578
+langcode: it
+status: true
+dependencies:
+  config:
+    - dashboard_dataset.dataset_type.dataset_st
+    - field.storage.dataset.field_dataset_st_data
+    - paragraphs.paragraphs_type.free_dataset
+    - paragraphs.paragraphs_type.monthly_dataset
+    - paragraphs.paragraphs_type.pointer_on_map_dataset
+    - paragraphs.paragraphs_type.regional_dataset
+id: dataset.dataset_st.field_dataset_st_data
+field_name: field_dataset_st_data
+entity_type: dataset
+bundle: dataset_st
+label: Data
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      monthly_dataset: monthly_dataset
+      free_dataset: free_dataset
+      pointer_on_map_dataset: pointer_on_map_dataset
+      regional_dataset: regional_dataset
+    target_bundles_drag_drop:
+      location:
+        weight: 6
+        enabled: false
+      monthly_dataset:
+        enabled: true
+        weight: 7
+      name_values:
+        weight: 7
+        enabled: false
+      free_dataset:
+        enabled: true
+        weight: 8
+      pointer_on_map_dataset:
+        enabled: true
+        weight: 9
+      target:
+        weight: 9
+        enabled: false
+      regional_dataset:
+        enabled: true
+        weight: 11
+      free_values:
+        weight: 12
+        enabled: false
+      monthly_values:
+        weight: 15
+        enabled: false
+      regional_values:
+        weight: 18
+        enabled: false
+field_type: entity_reference

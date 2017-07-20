@@ -1,0 +1,10 @@
+uuid: a30e29db-f0e2-4491-9a3b-cfe1a611f189
+langcode: it
+status: true
+dependencies:
+  module:
+    - dashboard_dataset
+id: dataset.dataset_embedded
+label: 'Dataset embedded'
+targetEntityType: dataset
+cache: true

@@ -1,0 +1,42 @@
+uuid: 980843e5-0731-4236-a28e-7f9a32677930
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.field.node.page.field_has_social_share
+    - field.field.node.page.field_meta_tag
+    - field.field.node.page.field_page_body
+    - node.type.page
+  module:
+    - metatag
+    - text
+    - user
+id: node.page.default
+targetEntityType: node
+bundle: page
+mode: default
+content:
+  field_has_social_share:
+    type: boolean
+    weight: 2
+    label: hidden
+    settings:
+      format: boolean
+      format_custom_true: ''
+      format_custom_false: ''
+    third_party_settings: {  }
+  field_meta_tag:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
+  field_page_body:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+hidden:
+  langcode: true
+  links: true

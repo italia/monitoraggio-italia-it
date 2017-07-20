@@ -1,0 +1,23 @@
+uuid: caefdd00-7e7c-404f-9e56-ade93f973194
+langcode: it
+status: true
+dependencies:
+  config:
+    - dashboard_project.project_type.monitoring
+    - field.storage.project.field_meta_tag
+  module:
+    - metatag
+id: project.monitoring.field_meta_tag
+field_name: field_meta_tag
+entity_type: project
+bundle: monitoring
+label: 'Meta tag'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 'a:0:{}'
+default_value_callback: ''
+settings: {  }
+field_type: metatag

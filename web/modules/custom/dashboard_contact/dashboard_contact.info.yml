@@ -1,0 +1,7 @@
+name: Dashboard contact
+type: module
+description: All necessary for customisation contact form.
+core: 8.x
+package: Dashboard
+dependencies:
+  - contact

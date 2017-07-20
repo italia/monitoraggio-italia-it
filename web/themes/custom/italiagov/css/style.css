@@ -1,0 +1,40 @@
+/**
+ * @file
+ * Styles for italiagov.
+ */
+
+/* Hotfix for Form label class. */
+/* @TODO: fix for Chrome behaviour and verify toolkit behaviour. */
+.Form * {
+  box-sizing: border-box;
+}
+
+/* Elements 'details' and 'summary' */
+summary::-webkit-details-marker {
+  display: none
+}
+
+.Details[open="open"] .Icon-chevron-right:before {
+  content:  "\23f6";
+}
+
+.Details .Details-summary {
+  cursor: pointer;
+}
+
+.Details .details-title {
+  color: #000;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.Details .Details-content {
+  border: 1px solid #ccc;
+}
+
+/*
+### COOKIE BAR OVERRIDE
+ */
+.CookieBar P A {
+  color: #65dcdf;
+}

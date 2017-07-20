@@ -1,0 +1,48 @@
+uuid: 63ec7ae5-e75d-4dea-8e91-607c96dd6918
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.months.field_tax_months_acronym
+    - taxonomy.vocabulary.months
+  module:
+    - text
+id: taxonomy_term.months.default
+targetEntityType: taxonomy_term
+bundle: months
+mode: default
+content:
+  description:
+    type: text_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_tax_months_acronym:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  langcode:
+    type: language_select
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: -5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    settings: {  }
+    third_party_settings: {  }
+  translation:
+    weight: 10
+hidden: {  }

@@ -1,0 +1,29 @@
+# Add DESI config to general settings form.
+dashboard_base.block_contact_settings:
+  route_name: dashboard_base.general_config_settings
+  title: 'Block contact'
+  base_route: dashboard_base.general_config_settings
+  weight: 0
+# Admin content projects overview.
+dashboard_base.dash_admin_projects:
+  route_name: view.dash_admin_projects.page_admin_projects
+  title: 'Administer projects'
+  base_route: view.dash_admin_pages.page_admin_pages
+  weight: 0
+# Admin content pages overview.
+dashboard_base.dash_admin_pages:
+  route_name: view.dash_admin_pages.page_admin_pages
+  title: 'Administer static pages'
+  base_route: view.dash_admin_pages.page_admin_pages
+  weight: 1
+# Dashboard login tab
+dashboard_base.login:
+  route_name: dashboard_base.login
+  base_route: dashboard_base.page
+  title: 'Log in'
+  weight: -10
+# Dashboard reset password tab
+dashboard_base.pass:
+  route_name: dashboard_base.pass
+  base_route: dashboard_base.page
+  title: 'Reset your password'

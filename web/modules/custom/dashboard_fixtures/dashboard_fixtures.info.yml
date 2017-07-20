@@ -1,0 +1,11 @@
+name: dashboard fixtures
+type: module
+description: All fixtures for dashboard project.
+core: 8.x
+package: Custom
+dependencies:
+  - migrate_source_csv
+  - migrate_plus
+  - migrate_tools
+  - system (>=8.1)
+  - migrate_google_sheets

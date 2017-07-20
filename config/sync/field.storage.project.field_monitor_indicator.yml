@@ -1,0 +1,20 @@
+uuid: 5c8c801e-03c0-4a6d-8793-a6278682c61d
+langcode: it
+status: true
+dependencies:
+  module:
+    - dashboard_indicator
+    - dashboard_project
+id: project.field_monitor_indicator
+field_name: field_monitor_indicator
+entity_type: project
+type: entity_reference
+settings:
+  target_type: dashboard_indicator
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

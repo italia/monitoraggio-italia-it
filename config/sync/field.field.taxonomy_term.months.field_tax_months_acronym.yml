@@ -1,0 +1,19 @@
+uuid: 3d9a6f02-dbef-4569-9f56-f43083d966d5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_tax_months_acronym
+    - taxonomy.vocabulary.months
+id: taxonomy_term.months.field_tax_months_acronym
+field_name: field_tax_months_acronym
+entity_type: taxonomy_term
+bundle: months
+label: Acronym
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

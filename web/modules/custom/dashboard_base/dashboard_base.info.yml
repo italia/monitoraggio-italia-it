@@ -1,0 +1,11 @@
+name: dashboard_base
+type: module
+description: Base functionalities for dashboard project.
+core: 8.x
+package: Custom
+dependencies:
+  - system (>=8.1)
+project: dashboard_base
+version: '8.x-1.0'
+interface translation project: dashboard_base
+interface translation server pattern: modules/custom/dashboard_base/dashboard_base-%version.%language.po

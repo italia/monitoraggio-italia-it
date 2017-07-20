@@ -1,0 +1,39 @@
+{% extends "page.html.twig" %}
+{#
+/**
+ * @file
+ * Theme override front page.
+ *
+ * @ingroup templates
+ */
+#}
+
+{% block page_body %}
+
+  {# Help #}
+  {% if page.help|render|striptags|trim %}
+    {{ page.help }}
+  {% endif %}
+
+  {# Hero #}
+  {% if page.hero %}
+    {{ page.hero }}
+  {% endif %}
+
+  {# Page content region #}
+  <section class="MainSection MainSection--front u-layout-r-withGutter">
+    {%
+      set region_container = [
+        'u-layout-wide',
+        'u-layoutCenter',
+        'container-front',
+      ]
+    %}
+    <div{{attributes.addClass(region_container)}}>
+      <div class="MainContent--front">
+        {{ page.content }}
+      </div>
+    </div>
+  </section>
+
+{% endblock %}

@@ -1,0 +1,6 @@
+uuid: 3abc12af-d7ae-49b4-9cb7-e81685c63037
+langcode: it
+status: true
+dependencies: {  }
+id: monitoring
+label: 'Monitoring project'

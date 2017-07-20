@@ -1,0 +1,25 @@
+uuid: d187caff-88eb-413a-85ec-4ba0ec0b80f0
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_decimal_value
+    - paragraphs.paragraphs_type.free_values
+  module:
+    - dashboard_base
+id: paragraph.free_values.field_decimal_value
+field_name: field_decimal_value
+entity_type: paragraph
+bundle: free_values
+label: Value
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: ''
+  max: ''
+  prefix: ''
+  suffix: ''
+field_type: decimal_percentage_field_type

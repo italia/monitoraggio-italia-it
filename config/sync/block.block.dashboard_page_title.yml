@@ -1,0 +1,27 @@
+uuid: 4bf08d56-2134-404c-8b76-fd8950ad4efd
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - dashboard
+_core:
+  default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
+id: dashboard_page_title
+theme: dashboard
+region: content
+weight: -8
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: "/project/*\r\n<front>"
+    negate: true
+    context_mapping: {  }

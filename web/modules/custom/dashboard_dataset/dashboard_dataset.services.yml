@@ -1,0 +1,3 @@
+services:
+  dashboard_dataset.table_builder:
+    class: Drupal\dashboard_dataset\DashboardDatasetTableBuilder

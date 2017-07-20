@@ -1,0 +1,31 @@
+{#
+/**
+ * @file project.html.twig
+ * Default theme implementation to present Project data.
+ *
+ * This template is used when viewing Project pages.
+ *
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ * - attributes: HTML attributes for the container element.
+ *
+ * @see template_preprocess_project()
+ *
+ * @ingroup themeable
+ */
+#}
+{% if content %}
+  <div class="ProjectCard ProjectCard--{{ content.key_unique|field_value }} Project--{{ content.key_unique|field_value }} u-borderShadow-m u-background-white">
+    <header class="ProjectCard-header u-padding-r-all u-color-white">
+      <h2 class="u-text-r-m u-textWeight-400">{{ content.name|field_value }}</h2>
+      <h3 class="u-text-r-xxs u-margin-top-s u-textWeight-400">{{ content.field_monitor_subtitle|field_value|render|striptags }}</h3>
+    </header>
+    <div class="ProjectCard-content u-padding-r-bottom">
+      {{ content.field_monitor_indicator|field_value }}
+    </div>
+    <div class="ProjectCard-link u-padding-r-all u-textRight">
+      <a href="{{ path('entity.project.canonical', {'project': entity_id}) }}" class="u-textClean u-textWeight-600 u-text-r-xxs u-margin-r-top">{{ 'Explore'|t }} <span class="Icon Icon-chevron-right"></span></a>
+    </div>
+  </div>
+{% endif %}

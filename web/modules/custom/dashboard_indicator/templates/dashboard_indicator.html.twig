@@ -1,0 +1,22 @@
+{#
+/**
+ * @file dashboard_indicator.html.twig
+ * Default theme implementation to present Dashboard indicator data.
+ *
+ * This template is used when viewing Dashboard indicator pages.
+ *
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ * - attributes: HTML attributes for the container element.
+ *
+ * @see template_preprocess_dashboard_indicator()
+ *
+ * @ingroup themeable
+ */
+#}
+<div{{ attributes.addClass('dashboard_indicator') }}>
+  {% if content %}
+    {{- content -}}
+  {% endif %}
+</div>

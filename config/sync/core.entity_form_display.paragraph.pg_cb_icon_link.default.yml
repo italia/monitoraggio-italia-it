@@ -1,0 +1,35 @@
+uuid: 9b0e62cc-5c21-41a9-881d-42d3da5af641
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.pg_cb_icon_link.field_cb_icon_link_img
+    - field.field.paragraph.pg_cb_icon_link.field_cb_icon_link_link
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.pg_cb_icon_link
+  module:
+    - image
+    - link
+id: paragraph.pg_cb_icon_link.default
+targetEntityType: paragraph
+bundle: pg_cb_icon_link
+mode: default
+content:
+  field_cb_icon_link_img:
+    weight: 0
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+  field_cb_icon_link_link:
+    weight: 1
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+hidden:
+  created: true
+  status: true
+  uid: true

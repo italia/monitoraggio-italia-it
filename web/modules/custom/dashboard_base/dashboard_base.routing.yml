@@ -1,0 +1,50 @@
+
+# In order to to create pages it is necessary to define routes for them.
+# A route maps a URL path to a controller. It defines what function
+# or method will be called when a URL is accessed.
+# If the user accesses http://drupal8.dev/statichome, the routing
+# system will look for a route with that path. In this case it will find a
+# match, and execute the _controller callback. In this case the callback is
+# defined as a classname
+# ("\Drupal\dashboard_base\Controller\StaticPageHome")
+# and a method ("staticPage").
+dashboard_base.general_config_settings:
+  path: '/admin/config/general-settings/contact-block'
+  defaults:
+    _form: '\Drupal\dashboard_base\Form\DashGeneralSettings'
+    _title: 'General settings'
+  requirements:
+    _permission: 'access general configuration settings'
+  options:
+    _admin_route: TRUE
+
+# Enable new url to the old user login form
+dashboard_base.login:
+  path: '/dashboard/login'
+  defaults:
+    _form: '\Drupal\user\Form\UserLoginForm'
+    _title: 'Log in'
+  requirements:
+    _user_is_logged_in: 'FALSE'
+  options:
+    _maintenance_access: TRUE
+
+# Created page route as the user.page flow
+dashboard_base.page:
+  path: '/dashboard'
+  defaults:
+    _controller: 'Drupal\dashboard_base\Controller\DashboardBaseController::dashboardBasePage'
+    _title: 'My account'
+  requirements:
+    _access: 'TRUE'
+
+# Created dashboard reset password route as the user.pass flow
+dashboard_base.pass:
+  path: '/dashboard/password'
+  defaults:
+    _form: '\Drupal\user\Form\UserPasswordForm'
+    _title: 'Reset your password'
+  requirements:
+    _access: 'TRUE'
+  options:
+    _maintenance_access: TRUE

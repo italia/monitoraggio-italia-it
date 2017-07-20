@@ -1,0 +1,13 @@
+uuid: d9a11a08-835e-4264-8cc4-8fd391831c77
+langcode: it
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: JBptjnfuOMtsdKygklXxoOgeOCTMtQxlkymjnnj-cC0
+id: node_unpromote_action
+label: 'Rimozione contenuto dalla prima pagina'
+type: node
+plugin: node_unpromote_action
+configuration: {  }

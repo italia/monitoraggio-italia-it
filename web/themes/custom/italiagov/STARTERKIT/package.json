@@ -1,0 +1,15 @@
+{
+  "name": "STARTERKIT",
+  "version": "1.0.0",
+  "dependencies": {
+    "gulp": "^3.9.0",
+    "gulp-copy": "^0.0.2",
+    "del": "^2.2.2"
+  },
+  "scripts": {
+    "update-toolkit": "gulp copy_build",
+    "postupdate-toolkit": "gulp delete",
+    "update-overrides": "gulp copy_overrides"
+  },
+  "private": true
+}

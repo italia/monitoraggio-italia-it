@@ -1,0 +1,11 @@
+dashboard_contact:
+  contact_intro: 'Puoi richiedere informazioni sul monitoraggio Avanzamento crescita Digitale o sui singoli progetti selezionando un ambito di interesse nel form sottostante'
+  contact_subject: '[AGID] - Nuova richiesta di informazioni'
+  contact_text: "Richiesta di informazioni proveniente dal form di contatti della dashboard Avanzamento crescita digitale.\r\n\r\nNome: @name\r\n\r\nE-mail: @email\r\n\r\nMessage:\r\n@message"
+  contact_recipient: comunicazione@agid.gov.it
+  contact_interest_mail: "comunicazione@agid.gov.it|Spid\r\ncomunicazione@agid.gov.it  |Pago Pa\r\nalessandro.alfano@agid.gov.it|Fatturazione elettronica\r\nciasullo@agid.gov.it|Open Data\r\nstefano.vanderbyl@agid.gov.it|FSE\r\npera@agid.gov.it|ANPR\r\ncaporale@agid.gov.it|Digital Security"
+  contact_message: 'La tua richiesta è stata inoltrata, grazie.'
+  contact_message_error: 'Si è verificato un errore. Per assistenza contatta gli amministratori della piattaforma all’indirizzo assistenza@prova.it.'
+  contact_consent: 'Acconsento al trattamento dei dati.'
+  contact_select_type: '1'
+langcode: it

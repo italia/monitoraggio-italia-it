@@ -1,0 +1,9 @@
+uuid: 607ef731-0964-408a-8d97-c1194949f803
+langcode: it
+status: true
+dependencies: {  }
+name: Mesi
+vid: months
+description: 'Lista dei mesi.'
+hierarchy: 0
+weight: 0

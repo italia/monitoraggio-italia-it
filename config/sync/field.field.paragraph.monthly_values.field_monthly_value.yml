@@ -1,0 +1,25 @@
+uuid: 78251be1-1fa4-443b-808c-06d037ba56ab
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_monthly_value
+    - paragraphs.paragraphs_type.monthly_values
+  module:
+    - dashboard_base
+id: paragraph.monthly_values.field_monthly_value
+field_name: field_monthly_value
+entity_type: paragraph
+bundle: monthly_values
+label: 'Monthly value'
+description: 'To skip a month enter "-1" in the value, do not leave the field empty.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: ''
+  max: ''
+  prefix: ''
+  suffix: ''
+field_type: decimal_percentage_field_type

@@ -1,0 +1,61 @@
+uuid: a9cf2c0b-efab-4132-a196-02de0406d543
+langcode: it
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.dataset.dataset_embedded
+    - dashboard_dataset.dataset_type.dataset_st
+    - field.field.dataset.dataset_st.field_dataset_st_data
+    - field.field.dataset.dataset_st.field_dataset_st_description
+    - field.field.dataset.dataset_st.field_dataset_st_widget
+  module:
+    - text
+    - user
+id: dataset.dataset_st.dataset_embedded
+targetEntityType: dataset
+bundle: dataset_st
+mode: dataset_embedded
+content:
+  field_dataset_st_data:
+    weight: 2
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+  field_dataset_st_description:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+  field_dataset_st_widget:
+    weight: 4
+    label: hidden
+    settings:
+      view_mode: widget_label
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+  key_unique:
+    label: above
+    type: string
+    weight: -4
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  name:
+    label: above
+    type: string
+    weight: -5
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  user_id:
+    label: hidden
+    type: author
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

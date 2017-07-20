@@ -1,0 +1,5 @@
+name: dashboard_widget
+type: module
+description: All stuff for entity "Widget"
+core: 8.x
+package: Custom

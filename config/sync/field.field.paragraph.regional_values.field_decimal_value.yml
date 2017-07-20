@@ -1,0 +1,25 @@
+uuid: 405f6923-5cd2-424e-9965-39411c70da62
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_decimal_value
+    - paragraphs.paragraphs_type.regional_values
+  module:
+    - dashboard_base
+id: paragraph.regional_values.field_decimal_value
+field_name: field_decimal_value
+entity_type: paragraph
+bundle: regional_values
+label: Value
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: ''
+  max: ''
+  prefix: ''
+  suffix: ''
+field_type: decimal_percentage_field_type

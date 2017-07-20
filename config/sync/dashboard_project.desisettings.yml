@@ -1,0 +1,4 @@
+dash_desi_settings:
+  desi_link_label: 'Progetto i cui indicatori impattano sull’indice europeo DESI (The Digital Economy & Society Index)'
+  desi_link_path: '/faq#come-funziona'
+langcode: it

@@ -1,0 +1,50 @@
+<?php
+
+/**
+ * @file
+ * Contains functions to alter Drupal's markup for the Dashboard theme.
+ */
+
+/**
+ * Implements hook_preprocess_node().
+ */
+function dashboard_preprocess_node(&$variables) {
+  // Add an absolute url to available variables.
+  $variables['url_absolute'] = $variables['elements']['#node']->toUrl('canonical', ['absolute' => TRUE])->toString();
+}
+
+/**
+ * Implements template_preprocess_dataset().
+ */
+function dashboard_preprocess_dataset(array &$variables) {
+  // Get value of widget type.
+  if (!empty($variables['elements']['field_dataset_st_widget']['#object'])) {
+    $widget_id = $variables['elements']['field_dataset_st_widget']['#object']->id();
+    $widget_entity = \Drupal::entityTypeManager()->getStorage('dashboard_widget')->load($widget_id);
+    if (!empty($widget_entity)) {
+      $variables['widget_value'] = $widget_entity->get('field_highcharts_type')->value;
+    }
+    else {
+      $variables['widget_value'] = '';
+    }
+  }
+
+  $decorator = \Drupal::service('advanced_rest.entity_decorator_factory');
+  $builder = \Drupal::service('dashboard_dataset.table_builder');
+  $dataset = $decorator->get($variables['elements']['#dataset'])->toArray();
+  $build = $builder->build($dataset);
+
+  $variables['content']['field_dataset_st_data'] = [
+    '#theme' => 'table',
+    '#attributes' => [
+      'class' => [
+        'Table',
+        'Table--withBorder',
+        'Table--compact',
+        'Table--responsive',
+      ],
+    ],
+    '#header' => $build['header'],
+    '#rows' => $build['rows'],
+  ];
+}

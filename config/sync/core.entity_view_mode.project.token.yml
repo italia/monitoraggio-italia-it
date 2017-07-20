@@ -1,0 +1,10 @@
+uuid: ff43de5d-71f6-4e45-9fd3-d810e19291ef
+langcode: it
+status: true
+dependencies:
+  module:
+    - dashboard_project
+id: project.token
+label: Token
+targetEntityType: project
+cache: true

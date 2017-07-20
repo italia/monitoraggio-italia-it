@@ -1,0 +1,15 @@
+# Dataset menu items definition
+entity.dataset.collection:
+  title: 'Dataset list'
+  route_name: entity.dataset.collection
+  description: 'List Dataset entities'
+  parent: system.admin_structure
+  weight: 100
+
+# Dataset type menu items definition
+entity.dataset_type.collection:
+  title: 'Dataset type'
+  route_name: entity.dataset_type.collection
+  description: 'List Dataset type (bundles)'
+  parent: system.admin_structure
+  weight: 99

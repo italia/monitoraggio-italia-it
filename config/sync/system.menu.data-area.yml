@@ -1,0 +1,8 @@
+uuid: f4eb2d63-296b-4152-bfb5-eddb24167a16
+langcode: it
+status: true
+dependencies: {  }
+id: data-area
+label: 'Area dati'
+description: 'Links for section "area dati"'
+locked: false

@@ -1,0 +1,20 @@
+uuid: 4334cc10-8bdc-4d83-b7dc-52f6931057d1
+langcode: it
+status: true
+dependencies:
+  module:
+    - dashboard_base
+  theme:
+    - dashboard
+id: contactblock
+theme: dashboard
+region: footer_middle
+weight: -6
+provider: null
+plugin: contact_block
+settings:
+  id: contact_block
+  label: Contatti
+  provider: dashboard_base
+  label_display: visible
+visibility: {  }

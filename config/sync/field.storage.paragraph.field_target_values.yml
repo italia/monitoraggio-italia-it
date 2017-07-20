@@ -1,0 +1,21 @@
+uuid: 3994b4bf-42a5-4ee8-9465-5c114fd5ccf7
+langcode: it
+status: true
+dependencies:
+  module:
+    - dashboard_base
+    - paragraphs
+id: paragraph.field_target_values
+field_name: field_target_values
+entity_type: paragraph
+type: decimal_percentage_field_type
+settings:
+  precision: '12'
+  scale: '2'
+module: dashboard_base
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

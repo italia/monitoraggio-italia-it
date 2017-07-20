@@ -1,0 +1,51 @@
+uuid: 4f796d1d-8848-4fa9-bcf0-35dd20d8fb76
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.dashboard_indicator.indicator_row
+    - dashboard_indicator.dashboard_indicator_type.monitoring_indicator
+    - field.field.dashboard_indicator.monitoring_indicator.field_indicator_baseline_2013
+    - field.field.dashboard_indicator.monitoring_indicator.field_indicator_dataset
+    - field.field.dashboard_indicator.monitoring_indicator.field_indicator_description
+    - field.field.dashboard_indicator.monitoring_indicator.field_indicator_targets
+    - field.field.dashboard_indicator.monitoring_indicator.field_indicator_value
+    - field.field.dashboard_indicator.monitoring_indicator.field_indicator_value_descr
+    - field.field.dashboard_indicator.monitoring_indicator.field_indicator_value_title
+  module:
+    - dashboard_base
+id: dashboard_indicator.monitoring_indicator.indicator_row
+targetEntityType: dashboard_indicator
+bundle: monitoring_indicator
+mode: indicator_row
+content:
+  field_indicator_value:
+    weight: 2
+    label: hidden
+    settings:
+      thousand_separator: .
+      decimal_separator: ','
+      scale: '2'
+      prefix_suffix: '1'
+    third_party_settings: {  }
+    type: decimal_percentage_field_formatter
+  name:
+    type: string
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  field_indicator_baseline_2013: true
+  field_indicator_cb_description: true
+  field_indicator_cb_title: true
+  field_indicator_cb_value: true
+  field_indicator_dataset: true
+  field_indicator_description: true
+  field_indicator_last_update: true
+  field_indicator_targets: true
+  field_indicator_value_descr: true
+  field_indicator_value_title: true
+  key_unique: true
+  user_id: true

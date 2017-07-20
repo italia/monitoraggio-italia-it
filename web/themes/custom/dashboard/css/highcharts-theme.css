@@ -1,0 +1,907 @@
+/**
+ * @file
+ * Highcharts per-project themes.
+ */
+/*
+### OVERRIDE LABELS
+ */
+.highcharts-legend-item text {
+  font-size: 18px !important;
+  text-decoration: underline;
+}
+
+.highcharts-legend-item-hidden text, .highcharts-legend-item-hidden tspan {
+  fill:#666 !important;
+  stroke:#666 !important;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 767px) {
+  .highcharts-legend-item text {
+    font-size: 12px !important;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .highcharts-legend-item text {
+    font-size: 15px !important;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1365px) {
+  .highcharts-legend-item text {
+    font-size: 16px !important;
+  }
+}
+
+/*
+### PAGO PA THEME
+ */
+/* BASE COLOR #009540 */
+.MonitoringProject--pagopa .highcharts-color-0 {
+  fill: #009540;
+  stroke: #009540;
+}
+
+.MonitoringProject--pagopa .highcharts-color-0 .highcharts-graph,
+.MonitoringProject--pagopa .highcharts-color-0 .highcharts-tooltip-box {
+  stroke:#009540;
+}
+
+.MonitoringProject--pagopa .highcharts-legend .highcharts-color-0 .highcharts-point {
+  fill: #009540;
+}
+
+.MonitoringProject--pagopa .highcharts-color-1 {
+  fill: #053C1C;
+  stroke: #053C1C;
+}
+
+.MonitoringProject--pagopa .highcharts-color-1 .highcharts-graph,
+.MonitoringProject--pagopa .highcharts-color-1 .highcharts-tooltip-box {
+  stroke:#053C1C;
+}
+
+.MonitoringProject--pagopa .highcharts-legend .highcharts-color-1 .highcharts-point {
+  fill: #053C1C;
+}
+
+.MonitoringProject--pagopa .highcharts-color-2 {
+  fill: #385143;
+  stroke: #385143;
+}
+
+.MonitoringProject--pagopa .highcharts-color-2 .highcharts-graph,
+.MonitoringProject--pagopa .highcharts-color-2 .highcharts-tooltip-box {
+  stroke: #385143;
+}
+
+.MonitoringProject--pagopa .highcharts-legend .highcharts-color-2 .highcharts-point {
+  fill: #385143;
+}
+
+.MonitoringProject--pagopa .highcharts-color-3 {
+  fill: #21a058;
+  stroke: #21a058;
+}
+
+.MonitoringProject--pagopa .highcharts-color-3 .highcharts-graph,
+.MonitoringProject--pagopa .highcharts-color-3 .highcharts-tooltip-box {
+  stroke: #21a058;
+}
+
+.MonitoringProject--pagopa .highcharts-legend .highcharts-color-3 .highcharts-point {
+  fill: #21a058;
+}
+
+.MonitoringProject--pagopa .highcharts-color-4 {
+  fill: #85c19f;
+  stroke: #85c19f;
+}
+
+.MonitoringProject--pagopa .highcharts-color-4 .highcharts-graph,
+.MonitoringProject--pagopa .highcharts-color-4 .highcharts-tooltip-box {
+  stroke: #85c19f;
+}
+
+.MonitoringProject--pagopa .highcharts-legend .highcharts-color-4 .highcharts-point {
+  fill: #85c19f;
+}
+
+.MonitoringProject--pagopa .highcharts-color-5 {
+  fill:#007a35;
+  stroke:#007a35;
+}
+
+.MonitoringProject--pagopa .highcharts-color-5 .highcharts-graph,
+.MonitoringProject--pagopa .highcharts-color-5 .highcharts-tooltip-box {
+  stroke:#007a35;
+}
+
+.MonitoringProject--pagopa .highcharts-legend .highcharts-color-5 .highcharts-point {
+  fill:#007a35;
+}
+
+.MonitoringProject--pagopa .highcharts-color-6 {
+  fill:#0b5a2d;
+  stroke:#0b5a2d;
+}
+
+.MonitoringProject--pagopa .highcharts-color-6 .highcharts-graph,
+.MonitoringProject--pagopa .highcharts-color-6 .highcharts-tooltip-box {
+  stroke:#0b5a2d;
+}
+
+.MonitoringProject--pagopa .highcharts-legend .highcharts-color-6 .highcharts-point {
+  fill:#0b5a2d;
+}
+
+.MonitoringProject--pagopa .highcharts-color-7 {
+  fill:#2e4337;
+  stroke:#2e4337;
+}
+
+.MonitoringProject--pagopa .highcharts-color-7 .highcharts-graph,
+.MonitoringProject--pagopa .highcharts-color-7 .highcharts-tooltip-box {
+  stroke:#2e4337;
+}
+
+.MonitoringProject--pagopa .highcharts-legend .highcharts-color-7 .highcharts-point {
+  fill:#2e4337;
+}
+
+.MonitoringProject--pagopa .highcharts-color-8 {
+  fill:#1c8349;
+  stroke:#1c8349;
+}
+
+.MonitoringProject--pagopa .highcharts-color-8 .highcharts-graph,
+.MonitoringProject--pagopa .highcharts-color-8 .highcharts-tooltip-box {
+  stroke:#1c8349;
+}
+
+.MonitoringProject--pagopa .highcharts-legend .highcharts-color-8 .highcharts-point {
+  fill:#1c8349;
+}
+
+.MonitoringProject--pagopa .highcharts-color-9 {
+  fill:#6d9e83;
+  stroke:#6d9e83;
+}
+
+.MonitoringProject--pagopa .highcharts-color-9 .highcharts-graph,
+.MonitoringProject--pagopa .highcharts-color-9 .highcharts-tooltip-box {
+  stroke:#6d9e83;
+}
+
+.MonitoringProject--pagopa .highcharts-legend .highcharts-color-9 .highcharts-point {
+  fill:#6d9e83;
+}
+
+/*
+### FATTURAZIONE ELETTRONICA THEME
+ */
+/* BASE COLOR #aa3772 */
+.MonitoringProject--fatturazione_elettronica .highcharts-color-0 {
+  fill: #a12163;
+  stroke: #a12163;
+}
+
+.MonitoringProject--fatturazione_elettronica .highcharts-color-0 .highcharts-graph,
+.MonitoringProject--fatturazione_elettronica .highcharts-color-0 .highcharts-tooltip-box {
+  stroke:#a12163;
+}
+
+.MonitoringProject--fatturazione_elettronica .highcharts-legend .highcharts-color-0 .highcharts-point {
+  fill: #a12163;
+}
+
+.MonitoringProject--fatturazione_elettronica .highcharts-color-1 {
+  fill: #4F022A;
+  stroke: #4F022A;
+}
+
+.MonitoringProject--fatturazione_elettronica .highcharts-color-1 .highcharts-graph,
+.MonitoringProject--fatturazione_elettronica .highcharts-color-1 .highcharts-tooltip-box {
+  stroke:#4F022A;
+}
+
+.MonitoringProject--fatturazione_elettronica .highcharts-legend .highcharts-color-1 .highcharts-point {
+  fill: #4F022A;
+}
+
+.MonitoringProject--fatturazione_elettronica .highcharts-color-2 {
+  fill: #DB4A95;
+  stroke: #DB4A95;
+}
+
+.MonitoringProject--fatturazione_elettronica .highcharts-color-2 .highcharts-graph,
+.MonitoringProject--fatturazione_elettronica .highcharts-color-2 .highcharts-tooltip-box {
+  stroke: #DB4A95;
+}
+
+.MonitoringProject--fatturazione_elettronica .highcharts-legend .highcharts-color-2 .highcharts-point {
+  fill: #DB4A95;
+}
+
+.MonitoringProject--fatturazione_elettronica .highcharts-color-3 {
+  fill: #74274F;
+  stroke: #74274F;
+}
+
+.MonitoringProject--fatturazione_elettronica .highcharts-color-3 .highcharts-graph,
+.MonitoringProject--fatturazione_elettronica .highcharts-color-3 .highcharts-tooltip-box {
+  stroke: #74274F;
+}
+
+.MonitoringProject--fatturazione_elettronica .highcharts-legend .highcharts-color-3 .highcharts-point {
+  fill: #74274F;
+}
+
+.MonitoringProject--fatturazione_elettronica .highcharts-color-4 {
+  fill: #F47AB9;
+  stroke: #F47AB9;
+}
+
+.MonitoringProject--fatturazione_elettronica .highcharts-color-4 .highcharts-graph,
+.MonitoringProject--fatturazione_elettronica .highcharts-color-4 .highcharts-tooltip-box {
+  stroke: #F47AB9;
+}
+
+.MonitoringProject--fatturazione_elettronica .highcharts-legend .highcharts-color-4 .highcharts-point {
+  fill: #F47AB9;
+}
+
+.MonitoringProject--fatturazione_elettronica .highcharts-color-5 {
+  fill:#864365;
+  stroke:#864365;
+}
+
+.MonitoringProject--fatturazione_elettronica .highcharts-color-5 .highcharts-graph,
+.MonitoringProject--fatturazione_elettronica .highcharts-color-5 .highcharts-tooltip-box {
+  stroke:#864365;
+}
+
+.MonitoringProject--fatturazione_elettronica .highcharts-legend .highcharts-color-5 .highcharts-point {
+  fill:#864365;
+}
+
+.MonitoringProject--fatturazione_elettronica .highcharts-color-6 {
+  fill:#7c2953;
+  stroke:#7c2953;
+}
+
+.MonitoringProject--fatturazione_elettronica .highcharts-color-6 .highcharts-graph,
+.MonitoringProject--fatturazione_elettronica .highcharts-color-6 .highcharts-tooltip-box {
+  stroke:#7c2953;
+}
+
+.MonitoringProject--fatturazione_elettronica .highcharts-legend .highcharts-color-6 .highcharts-point {
+  fill:#7c2953;
+}
+
+.MonitoringProject--fatturazione_elettronica .highcharts-color-7 {
+  fill:#3a021f;
+  stroke:#3a021f;
+}
+
+.MonitoringProject--fatturazione_elettronica .highcharts-color-7 .highcharts-graph,
+.MonitoringProject--fatturazione_elettronica .highcharts-color-7 .highcharts-tooltip-box {
+  stroke:#3a021f;
+}
+
+.MonitoringProject--fatturazione_elettronica .highcharts-legend .highcharts-color-7 .highcharts-point {
+  fill:#3a021f;
+}
+
+.MonitoringProject--fatturazione_elettronica .highcharts-color-8 {
+  fill:#a0366d;
+  stroke:#a0366d;
+}
+
+.MonitoringProject--fatturazione_elettronica .highcharts-color-8 .highcharts-graph,
+.MonitoringProject--fatturazione_elettronica .highcharts-color-8 .highcharts-tooltip-box {
+  stroke:#a0366d;
+}
+
+.MonitoringProject--fatturazione_elettronica .highcharts-legend .highcharts-color-8 .highcharts-point {
+  fill:#a0366d;
+}
+
+.MonitoringProject--fatturazione_elettronica .highcharts-color-9 {
+  fill:#551d3a;
+  stroke:#551d3a;
+}
+
+.MonitoringProject--fatturazione_elettronica .highcharts-color-9 .highcharts-graph,
+.MonitoringProject--fatturazione_elettronica .highcharts-color-9 .highcharts-tooltip-box {
+  stroke:#551d3a;
+}
+
+.MonitoringProject--fatturazione_elettronica .highcharts-legend .highcharts-color-9 .highcharts-point {
+  fill:#551d3a;
+}
+
+/*
+### OPEN DATA THEME
+ */
+/* BASE COLOR #18A595 */
+.MonitoringProject--open_data .highcharts-color-0 {
+  fill: #18A595;
+  stroke: #18A595;
+}
+
+.MonitoringProject--open_data .highcharts-color-0 .highcharts-graph,
+.MonitoringProject--open_data .highcharts-color-0 .highcharts-tooltip-box {
+  stroke:#18A595;
+}
+
+.MonitoringProject--open_data .highcharts-legend .highcharts-color-0 .highcharts-point {
+  fill: #18A595;
+}
+
+.MonitoringProject--open_data .highcharts-color-1 {
+  fill: #0e2825;
+  stroke: #0e2825;
+}
+
+.MonitoringProject--open_data .highcharts-color-1 .highcharts-graph,
+.MonitoringProject--open_data .highcharts-color-1 .highcharts-tooltip-box {
+  stroke:#0e2825;
+}
+
+.MonitoringProject--open_data .highcharts-legend .highcharts-color-1 .highcharts-point {
+  fill: #0e2825;
+}
+
+.MonitoringProject--open_data .highcharts-color-2 {
+  fill: #2c514d;
+  stroke: #2c514d;
+}
+
+.MonitoringProject--open_data .highcharts-color-2 .highcharts-graph,
+.MonitoringProject--open_data .highcharts-color-2 .highcharts-tooltip-box {
+  stroke: #2c514d;
+}
+
+.MonitoringProject--open_data .highcharts-legend .highcharts-color-2 .highcharts-point {
+  fill: #2c514d;
+}
+
+.MonitoringProject--open_data .highcharts-color-3 {
+  fill: #3ed6c4;
+  stroke: #3ed6c4;
+}
+
+.MonitoringProject--open_data .highcharts-color-3 .highcharts-graph,
+.MonitoringProject--open_data .highcharts-color-3 .highcharts-tooltip-box {
+  stroke: #3ed6c4;
+}
+
+.MonitoringProject--open_data .highcharts-legend .highcharts-color-3 .highcharts-point {
+  fill: #3ed6c4;
+}
+
+.MonitoringProject--open_data .highcharts-color-4 {
+  fill: #71f7e7;
+  stroke: #71f7e7;
+}
+
+.MonitoringProject--open_data .highcharts-color-4 .highcharts-graph,
+.MonitoringProject--open_data .highcharts-color-4 .highcharts-tooltip-box {
+  stroke: #71f7e7;
+}
+
+.MonitoringProject--open_data .highcharts-legend .highcharts-color-4 .highcharts-point {
+  fill: #71f7e7;
+}
+
+.MonitoringProject--open_data .highcharts-color-5 {
+  fill:#35ead5;
+  stroke:#35ead5;
+}
+
+.MonitoringProject--open_data .highcharts-color-5 .highcharts-graph,
+.MonitoringProject--open_data .highcharts-color-5 .highcharts-tooltip-box {
+  stroke:#35ead5;
+}
+
+.MonitoringProject--open_data .highcharts-legend .highcharts-color-5 .highcharts-point {
+  fill:#35ead5;
+}
+
+.MonitoringProject--open_data .highcharts-color-6 {
+  fill:#4f5151;
+  stroke:#4f5151;
+}
+
+.MonitoringProject--open_data .highcharts-color-6 .highcharts-graph,
+.MonitoringProject--open_data .highcharts-color-6 .highcharts-tooltip-box {
+  stroke:#4f5151;
+}
+
+.MonitoringProject--open_data .highcharts-legend .highcharts-color-6 .highcharts-point {
+  fill:#4f5151;
+}
+
+.MonitoringProject--open_data .highcharts-color-7 {
+  fill:#c2d3d1;
+  stroke:#c2d3d1;
+}
+
+.MonitoringProject--open_data .highcharts-color-7 .highcharts-graph,
+.MonitoringProject--open_data .highcharts-color-7 .highcharts-tooltip-box {
+  stroke:#c2d3d1;
+}
+
+.MonitoringProject--open_data .highcharts-legend .highcharts-color-7 .highcharts-point {
+  fill:#c2d3d1;
+}
+
+.MonitoringProject--open_data .highcharts-color-8 {
+  fill:#6cd8cc;
+  stroke:#6cd8cc;
+}
+
+.MonitoringProject--open_data .highcharts-color-8 .highcharts-graph,
+.MonitoringProject--open_data .highcharts-color-8 .highcharts-tooltip-box {
+  stroke:#6cd8cc;
+}
+
+.MonitoringProject--open_data .highcharts-legend .highcharts-color-8 .highcharts-point {
+  fill:#6cd8cc;
+}
+
+.MonitoringProject--open_data .highcharts-color-9 {
+  fill:#97c1bc;
+  stroke:#97c1bc;
+}
+
+.MonitoringProject--open_data .highcharts-color-9 .highcharts-graph,
+.MonitoringProject--open_data .highcharts-color-9 .highcharts-tooltip-box {
+  stroke:#97c1bc;
+}
+
+.MonitoringProject--open_data .highcharts-legend .highcharts-color-9 .highcharts-point {
+  fill:#97c1bc;
+}
+
+/*
+### FSE THEME
+ */
+/* BASE COLOR #004181 */
+.MonitoringProject--fse .highcharts-color-0 {
+  fill: #004181;
+  stroke: #004181;
+}
+
+.MonitoringProject--fse .highcharts-color-0 .highcharts-graph,
+.MonitoringProject--fse .highcharts-color-0 .highcharts-tooltip-box {
+  stroke:#004181;
+}
+
+.MonitoringProject--fse .highcharts-legend .highcharts-color-0 .highcharts-point {
+  fill: #004181;
+}
+
+.MonitoringProject--fse .highcharts-color-1 {
+  fill: #1a344f;
+  stroke: #1a344f;
+}
+
+.MonitoringProject--fse .highcharts-color-1 .highcharts-graph,
+.MonitoringProject--fse .highcharts-color-1 .highcharts-tooltip-box {
+  stroke:#1a344f;
+}
+
+.MonitoringProject--fse .highcharts-legend .highcharts-color-1 .highcharts-point {
+  fill: #1a344f;
+}
+
+.MonitoringProject--fse .highcharts-color-2 {
+  fill: #577fa8;
+  stroke: #577fa8;
+}
+
+.MonitoringProject--fse .highcharts-color-2 .highcharts-graph,
+.MonitoringProject--fse .highcharts-color-2 .highcharts-tooltip-box {
+  stroke: #577fa8;
+}
+
+.MonitoringProject--fse .highcharts-legend .highcharts-color-2 .highcharts-point {
+  fill: #577fa8;
+}
+
+.MonitoringProject--fse .highcharts-color-3 {
+  fill: #5d6b7a;
+  stroke: #5d6b7a;
+}
+
+.MonitoringProject--fse .highcharts-color-3 .highcharts-graph,
+.MonitoringProject--fse .highcharts-color-3 .highcharts-tooltip-box {
+  stroke: #5d6b7a;
+}
+
+.MonitoringProject--fse .highcharts-legend .highcharts-color-3 .highcharts-point {
+  fill: #5d6b7a;
+}
+
+.MonitoringProject--fse .highcharts-color-4 {
+  fill: #272b30;
+  stroke: #272b30;
+}
+
+.MonitoringProject--fse .highcharts-color-4 .highcharts-graph,
+.MonitoringProject--fse .highcharts-color-4 .highcharts-tooltip-box {
+  stroke: #272b30;
+}
+
+.MonitoringProject--fse .highcharts-legend .highcharts-color-4 .highcharts-point {
+  fill: #272b30;
+}
+
+.MonitoringProject--fse .highcharts-color-5 {
+  fill:#2e6397;
+  stroke:#2e6397;
+}
+
+.MonitoringProject--fse .highcharts-color-5 .highcharts-graph,
+.MonitoringProject--fse .highcharts-color-5 .highcharts-tooltip-box {
+  stroke:#2e6397;
+}
+
+.MonitoringProject--fse .highcharts-legend .highcharts-color-5 .highcharts-point {
+  fill:#2e6397;
+}
+
+.MonitoringProject--fse .highcharts-color-6 {
+  fill:#43586f;
+  stroke:#43586f;
+}
+
+.MonitoringProject--fse .highcharts-color-6 .highcharts-graph,
+.MonitoringProject--fse .highcharts-color-6 .highcharts-tooltip-box {
+  stroke:#43586f;
+}
+
+.MonitoringProject--fse .highcharts-legend .highcharts-color-6 .highcharts-point {
+  fill:#43586f;
+}
+
+.MonitoringProject--fse .highcharts-color-7 {
+  fill:#7596b7;
+  stroke:#7596b7;
+}
+
+.MonitoringProject--fse .highcharts-color-7 .highcharts-graph,
+.MonitoringProject--fse .highcharts-color-7 .highcharts-tooltip-box {
+  stroke:#7596b7;
+}
+
+.MonitoringProject--fse .highcharts-legend .highcharts-color-7 .highcharts-point {
+  fill:#7596b7;
+}
+
+.MonitoringProject--fse .highcharts-color-8 {
+  fill:#7a8592;
+  stroke:#7a8592;
+}
+
+.MonitoringProject--fse .highcharts-color-8 .highcharts-graph,
+.MonitoringProject--fse .highcharts-color-8 .highcharts-tooltip-box {
+  stroke:#7a8592;
+}
+
+.MonitoringProject--fse .highcharts-legend .highcharts-color-8 .highcharts-point {
+  fill:#7a8592;
+}
+
+.MonitoringProject--fse .highcharts-color-9 {
+  fill:#4e5155;
+  stroke:#4e5155;
+}
+
+.MonitoringProject--fse .highcharts-color-9 .highcharts-graph,
+.MonitoringProject--fse .highcharts-color-9 .highcharts-tooltip-box {
+  stroke:#4e5155;
+}
+
+.MonitoringProject--fse .highcharts-legend .highcharts-color-9 .highcharts-point {
+  fill:#4e5155;
+}
+
+/*
+### DIGITAL SECURITY THEME
+ */
+/* BASE COLOR #CA2E55 */
+.MonitoringProject--padse .highcharts-color-0 {
+  fill:#CC7A8D;
+  stroke:#CC7A8D;
+}
+
+.MonitoringProject--padse .highcharts-color-0 .highcharts-graph,
+.MonitoringProject--padse .highcharts-color-0 .highcharts-tooltip-box {
+  stroke:#CC7A8D;
+}
+
+.MonitoringProject--padse .highcharts-legend .highcharts-color-0 .highcharts-point {
+  fill:#CC7A8D;
+}
+
+.MonitoringProject--padse .highcharts-color-1 {
+  fill:#CA2E55;
+  stroke:#CA2E55;
+}
+
+.MonitoringProject--padse .highcharts-color-1 .highcharts-graph,
+.MonitoringProject--padse .highcharts-color-1 .highcharts-tooltip-box {
+  stroke:#CA2E55;
+}
+
+.MonitoringProject--padse .highcharts-legend .highcharts-color-1 .highcharts-point {
+  fill:#CA2E55;
+}
+
+.MonitoringProject--padse .highcharts-color-2 {
+  fill:#F96389;
+  stroke:#F96389;
+}
+
+.MonitoringProject--padse .highcharts-color-2 .highcharts-graph,
+.MonitoringProject--padse .highcharts-color-2 .highcharts-tooltip-box {
+  stroke:#F96389;
+}
+
+.MonitoringProject--padse .highcharts-legend .highcharts-color-2 .highcharts-point {
+  fill:#F96389;
+}
+
+.MonitoringProject--padse .highcharts-color-3 {
+  fill:#97364F;
+  stroke:#97364F;
+}
+
+.MonitoringProject--padse .highcharts-color-3 .highcharts-graph,
+.MonitoringProject--padse .highcharts-color-3 .highcharts-tooltip-box {
+  stroke:#97364F;
+}
+
+.MonitoringProject--padse .highcharts-legend .highcharts-color-3 .highcharts-point {
+  fill:#97364F;
+}
+
+.MonitoringProject--padse .highcharts-color-4 {
+  fill:#C46A7F;
+  stroke:#C46A7F;
+}
+
+.MonitoringProject--padse .highcharts-color-4 .highcharts-graph,
+.MonitoringProject--padse .highcharts-color-4 .highcharts-tooltip-box {
+  stroke:#C46A7F;
+}
+
+.MonitoringProject--padse .highcharts-legend .highcharts-color-4 .highcharts-point {
+  fill:#C46A7F;
+}
+
+.MonitoringProject--padse .highcharts-color-5 {
+  fill:#6E3B47;
+  stroke:#6E3B47;
+}
+
+.MonitoringProject--padse .highcharts-color-5 .highcharts-graph,
+.MonitoringProject--padse .highcharts-color-5 .highcharts-tooltip-box {
+  stroke:#6E3B47;
+}
+
+.MonitoringProject--padse .highcharts-legend .highcharts-color-5 .highcharts-point {
+  fill:#6E3B47;
+}
+
+.MonitoringProject--padse .highcharts-color-6 {
+  fill:#a62646;
+  stroke:#a62646;
+}
+
+.MonitoringProject--padse .highcharts-color-6 .highcharts-graph,
+.MonitoringProject--padse .highcharts-color-6 .highcharts-tooltip-box {
+  stroke:#a62646;
+}
+
+.MonitoringProject--padse .highcharts-legend .highcharts-color-6 .highcharts-point {
+  fill:#a62646;
+}
+
+.MonitoringProject--padse .highcharts-color-7 {
+  fill:#9e495f;
+  stroke:#9e495f;
+}
+
+.MonitoringProject--padse .highcharts-color-7 .highcharts-graph,
+.MonitoringProject--padse .highcharts-color-7 .highcharts-tooltip-box {
+  stroke:#9e495f;
+}
+
+.MonitoringProject--padse .highcharts-legend .highcharts-color-7 .highcharts-point {
+  fill:#9e495f;
+}
+
+.MonitoringProject--padse .highcharts-color-8 {
+  fill:#836e74;
+  stroke:#836e74;
+}
+
+.MonitoringProject--padse .highcharts-color-8 .highcharts-graph,
+.MonitoringProject--padse .highcharts-color-8 .highcharts-tooltip-box {
+  stroke:#836e74;
+}
+
+.MonitoringProject--padse .highcharts-legend .highcharts-color-8 .highcharts-point {
+  fill:#836e74;
+}
+
+.MonitoringProject--padse .highcharts-color-9 {
+  fill:#d8b8c0;
+  stroke:#d8b8c0;
+}
+
+.MonitoringProject--padse .highcharts-color-9 .highcharts-graph,
+.MonitoringProject--padse .highcharts-color-9 .highcharts-tooltip-box {
+  stroke:#d8b8c0;
+}
+
+.MonitoringProject--padse .highcharts-legend .highcharts-color-9 .highcharts-point {
+  fill:#d8b8c0;
+}
+
+/*
+### ANAGRAFE NAZIONALE THEME
+ */
+/* BASE COLOR #007381 */
+.MonitoringProject--anpr .highcharts-color-0 {
+  fill: #007381;
+  stroke: #007381;
+}
+
+.MonitoringProject--anpr .highcharts-color-0 .highcharts-graph,
+.MonitoringProject--anpr .highcharts-color-0 .highcharts-tooltip-box {
+  stroke:#007381;
+}
+
+.MonitoringProject--anpr .highcharts-legend .highcharts-color-0 .highcharts-point {
+  fill: #007381;
+}
+
+.MonitoringProject--anpr .highcharts-color-1 {
+  fill: #004a54;
+  stroke: #004a54;
+}
+
+.MonitoringProject--anpr .highcharts-color-1 .highcharts-graph,
+.MonitoringProject--anpr .highcharts-color-1 .highcharts-tooltip-box {
+  stroke:#004a54;
+}
+
+.MonitoringProject--anpr .highcharts-legend .highcharts-color-1 .highcharts-point {
+  fill: #004a54;
+}
+
+.MonitoringProject--anpr .highcharts-color-2 {
+  fill: #1e2c2d;
+  stroke: #1e2c2d;
+}
+
+.MonitoringProject--anpr .highcharts-color-2 .highcharts-graph,
+.MonitoringProject--anpr .highcharts-color-2 .highcharts-tooltip-box {
+  stroke: #1e2c2d;
+}
+
+.MonitoringProject--anpr .highcharts-legend .highcharts-color-2 .highcharts-point {
+  fill: #1e2c2d;
+}
+
+.MonitoringProject--anpr .highcharts-color-3 {
+  fill: #43858e;
+  stroke: #43858e;
+}
+
+.MonitoringProject--anpr .highcharts-color-3 .highcharts-graph,
+.MonitoringProject--anpr .highcharts-color-3 .highcharts-tooltip-box {
+  stroke: #43858e;
+}
+
+.MonitoringProject--anpr .highcharts-legend .highcharts-color-3 .highcharts-point {
+  fill: #43858e;
+}
+
+.MonitoringProject--anpr .highcharts-color-4 {
+  fill: #439ca8;
+  stroke: #439ca8;
+}
+
+.MonitoringProject--anpr .highcharts-color-4 .highcharts-graph,
+.MonitoringProject--anpr .highcharts-color-4 .highcharts-tooltip-box {
+  stroke: #439ca8;
+}
+
+.MonitoringProject--anpr .highcharts-legend .highcharts-color-4 .highcharts-point {
+  fill: #439ca8;
+}
+
+.MonitoringProject--anpr .highcharts-color-5 {
+  fill:#2e8c97;
+  stroke:#2e8c97;
+}
+
+.MonitoringProject--anpr .highcharts-color-5 .highcharts-graph,
+.MonitoringProject--anpr .highcharts-color-5 .highcharts-tooltip-box {
+  stroke:#2e8c97;
+}
+
+.MonitoringProject--anpr .highcharts-legend .highcharts-color-5 .highcharts-point {
+  fill:#2e8c97;
+}
+
+.MonitoringProject--anpr .highcharts-color-6 {
+  fill:#2e6a73;
+  stroke:#2e6a73;
+}
+
+.MonitoringProject--anpr .highcharts-color-6 .highcharts-graph,
+.MonitoringProject--anpr .highcharts-color-6 .highcharts-tooltip-box {
+  stroke:#2e6a73;
+}
+
+.MonitoringProject--anpr .highcharts-legend .highcharts-color-6 .highcharts-point {
+  fill:#2e6a73;
+}
+
+.MonitoringProject--anpr .highcharts-color-7 {
+  fill:#465253;
+  stroke:#465253;
+}
+
+.MonitoringProject--anpr .highcharts-color-7 .highcharts-graph,
+.MonitoringProject--anpr .highcharts-color-7 .highcharts-tooltip-box {
+  stroke:#465253;
+}
+
+.MonitoringProject--anpr .highcharts-legend .highcharts-color-7 .highcharts-point {
+  fill:#465253;
+}
+
+.MonitoringProject--anpr .highcharts-color-8 {
+  fill:#659ba2;
+  stroke:#659ba2;
+}
+
+.MonitoringProject--anpr .highcharts-color-8 .highcharts-graph,
+.MonitoringProject--anpr .highcharts-color-8 .highcharts-tooltip-box {
+  stroke:#659ba2;
+}
+
+.MonitoringProject--anpr .highcharts-legend .highcharts-color-8 .highcharts-point {
+  fill:#659ba2;
+}
+
+.MonitoringProject--anpr .highcharts-color-9 {
+  fill:#65aeb7;
+  stroke:#65aeb7;
+}
+
+.MonitoringProject--anpr .highcharts-color-9 .highcharts-graph,
+.MonitoringProject--anpr .highcharts-color-9 .highcharts-tooltip-box {
+  stroke:#65aeb7;
+}
+
+.MonitoringProject--anpr .highcharts-legend .highcharts-color-9 .highcharts-point {
+  fill:#65aeb7;
+}
+
+/*
+### OVERRIDE FOR THE CUSTOM STORED SERIE
+ */
+.highchart-series-stored .highcharts-point {
+  fill:#dbdbdb !important;
+  stroke:#B6B6B6 !important;
+}

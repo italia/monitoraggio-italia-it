@@ -1,0 +1,32 @@
+domain: 'http://loc.drupal8-dashboard.agid.sparkfabrik.loc'
+domains_option: 1
+domains_list: ''
+eu_only: false
+exclude_paths: "/admin\r\n/admin/*\r\n/batch\r\n/node/add*\r\n/node/*/*\r\n/user/*/*"
+export:
+  folder: custom
+langcode: it
+popup_agreed:
+  value: '<h2>Grazie per aver accettato i cookie.</h2><p>Se vuoi puoi chiudere questo messaggio oppure puoi approfondire l''argomento sulla nostra informativa.</p>'
+  format: filtered_text
+popup_agree_button_message: 'Si, accetto'
+popup_agreed_enabled: false
+popup_bg_hex: 0779BF
+popup_clicking_confirmation: true
+popup_delay: 1
+popup_disagree_button_message: 'No, dammi maggiori informazioni'
+popup_enabled: true
+popup_find_more_button_message: 'Maggiori informazioni'
+popup_height: null
+popup_hide_agreed: false
+popup_hide_button_message: Nascondi
+popup_info:
+  value: '<h2>Questo sito utilizza i cookie per migliorare la tua esperienza.</h2><p>Cliccando su qualsiasi link in questa pagina, dai il tuo consenso al loro utilizzo.</p>'
+  format: filtered_text
+popup_link: 'http://www.agid.gov.it/privacy-policy'
+popup_link_new_window: false
+popup_position: false
+popup_text_hex: ffffff
+popup_width: 100%
+_core:
+  default_config_hash: kfXrsolOPAF-91bVNi2WkyMavN4TSaqPeL_A466DYwU

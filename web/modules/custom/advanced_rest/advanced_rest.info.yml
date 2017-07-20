@@ -1,0 +1,7 @@
+name: Advanced RESTful Web Services
+type: module
+description: Improves RESTful web API system
+core: 8.x
+package: Web services
+dependencies:
+  - rest

@@ -1,0 +1,30 @@
+uuid: 539ab3eb-fa8c-4ae2-bf9e-520cb72de1d2
+langcode: it
+status: true
+dependencies:
+  module:
+    - dashboard_project
+    - file
+    - image
+id: project.field_monitor_logo
+field_name: field_monitor_logo
+entity_type: project
+type: image
+settings:
+  uri_scheme: public
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  target_type: file
+  display_field: false
+  display_default: false
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

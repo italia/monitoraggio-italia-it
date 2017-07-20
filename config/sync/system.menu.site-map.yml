@@ -1,0 +1,8 @@
+uuid: bd3e8ab6-caea-48aa-9806-3f0abf31cfa1
+langcode: it
+status: true
+dependencies: {  }
+id: site-map
+label: 'Mappa del sito'
+description: 'Footer menu "mappa del sito"'
+locked: false

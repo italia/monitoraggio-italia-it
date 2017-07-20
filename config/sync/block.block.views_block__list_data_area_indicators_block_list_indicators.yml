@@ -1,0 +1,30 @@
+uuid: 177c2958-6cb0-45a5-a3d7-193413837b9f
+langcode: it
+status: true
+dependencies:
+  config:
+    - views.view.list_data_area_indicators
+  module:
+    - system
+    - views
+  theme:
+    - dashboard
+id: views_block__list_data_area_indicators_block_list_indicators
+theme: dashboard
+region: content
+weight: -2
+provider: null
+plugin: 'views_block:list_data_area_indicators-block_list_indicators'
+settings:
+  id: 'views_block:list_data_area_indicators-block_list_indicators'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: "/area-dati/indicatori-crescita-digitale\r\n/node/3"
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,7 @@
+# Dashboard widget type menu items definition
+entity.dashboard_widget_type.collection:
+  title: 'Dashboard widget type'
+  route_name: entity.dashboard_widget_type.collection
+  description: 'List Dashboard widget type (bundles)'
+  parent: system.admin_structure
+  weight: 99

@@ -1,0 +1,7 @@
+uuid: 076ff965-bb11-4e47-86bd-9fe7cd60121b
+langcode: it
+status: true
+dependencies: {  }
+id: free_dataset
+label: 'Free Dataset Serie'
+behavior_plugins: {  }

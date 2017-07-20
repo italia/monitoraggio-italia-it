@@ -1,0 +1,29 @@
+uuid: ef9db9e5-5ba0-49ec-839d-f36a4d8ff51b
+langcode: it
+status: true
+dependencies:
+  config:
+    - system.menu.menu-projects
+  module:
+    - system
+  theme:
+    - dashboard
+id: project_left_menu
+theme: dashboard
+region: sidebar_left
+weight: -7
+provider: null
+plugin: 'system_menu_block:menu-projects'
+settings:
+  id: 'system_menu_block:menu-projects'
+  label: Progetti
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+visibility:
+  request_path:
+    id: request_path
+    pages: '/project/*'
+    negate: false
+    context_mapping: {  }

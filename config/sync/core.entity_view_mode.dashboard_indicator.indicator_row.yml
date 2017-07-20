@@ -1,0 +1,10 @@
+uuid: accc1037-c9ff-4f5f-841f-d78cd01fd0ef
+langcode: it
+status: true
+dependencies:
+  module:
+    - dashboard_indicator
+id: dashboard_indicator.indicator_row
+label: 'Indicator row'
+targetEntityType: dashboard_indicator
+cache: true

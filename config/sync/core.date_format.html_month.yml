@@ -1,0 +1,10 @@
+uuid: 2f5b08f7-eb33-4c9f-bd98-baa2e2b7310d
+langcode: it
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: Z7KuCUwM_WdTNvLcoltuX3_8d-s-8FZkTN6KgNwF0eM
+id: html_month
+label: 'Mese HTML'
+locked: true
+pattern: Y-m

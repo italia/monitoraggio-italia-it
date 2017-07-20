@@ -1,0 +1,45 @@
+<?php
+
+/**
+ * @file
+ * Contains dashboard_fixtures.install.
+ */
+
+/**
+ * Implements hook_uninstall().
+ */
+function dashboard_fixtures_uninstall() {
+
+  $configs = [
+    'migrate_plus.migration.dashboard_fixtures_dash_images',
+    'migrate_plus.migration.dashboard_fixtures_dataset_st',
+    'migrate_plus.migration.dashboard_fixtures_menu_links',
+    'migrate_plus.migration.dashboard_fixtures_monitoring_dataset',
+    'migrate_plus.migration.dashboard_fixtures_monitoring_indicator',
+    'migrate_plus.migration.dashboard_fixtures_monitoring_paragraph_boxcustom_iconlink',
+    'migrate_plus.migration.dashboard_fixtures_monitoring_paragraph_free_dataset',
+    'migrate_plus.migration.dashboard_fixtures_monitoring_paragraph_free_values',
+    'migrate_plus.migration.dashboard_fixtures_monitoring_paragraph_location',
+    'migrate_plus.migration.dashboard_fixtures_monitoring_paragraph_monthly_dataset',
+    'migrate_plus.migration.dashboard_fixtures_monitoring_paragraph_monthly_values',
+    'migrate_plus.migration.dashboard_fixtures_monitoring_paragraph_pointer_on_map',
+    'migrate_plus.migration.dashboard_fixtures_monitoring_paragraph_regional_dataset',
+    'migrate_plus.migration.dashboard_fixtures_monitoring_paragraph_regional_values',
+    'migrate_plus.migration.dashboard_fixtures_monitoring_paragraph_target',
+    'migrate_plus.migration.dashboard_fixtures_monitoring_project',
+    'migrate_plus.migration.dashboard_fixtures_pages',
+    'migrate_plus.migration.dashboard_fixtures_taxonomy_months',
+    'migrate_plus.migration.dashboard_fixtures_taxonomy_months_en',
+    'migrate_plus.migration.dashboard_fixtures_taxonomy_years',
+    'migrate_plus.migration.dashboard_fixtures_widget_highchart',
+    'migrate_plus.migration_group.dashboard_fixtures_group_files',
+    'migrate_plus.migration_group.dashboard_fixtures_group_paragraphs',
+    'migrate_plus.migration_group.dashboard_fixtures_group_structure',
+    'migrate_plus.migration_group.dashboard_fixtures_group_taxonomies',
+  ];
+
+  foreach ($configs as $config) {
+    Drupal::configFactory()->getEditable($config)->delete();
+  }
+  drupal_flush_all_caches();
+}

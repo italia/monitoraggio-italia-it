@@ -1,0 +1,25 @@
+uuid: 430460ab-270b-434e-a915-2d719c090da7
+langcode: en
+status: true
+dependencies:
+  config:
+    - dashboard_indicator.dashboard_indicator_type.monitoring_indicator
+    - field.storage.dashboard_indicator.field_indicator_baseline_2013
+  module:
+    - dashboard_base
+id: dashboard_indicator.monitoring_indicator.field_indicator_baseline_2013
+field_name: field_indicator_baseline_2013
+entity_type: dashboard_indicator
+bundle: monitoring_indicator
+label: 'Baseline 2013'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: ''
+  max: ''
+  prefix: ''
+  suffix: ''
+field_type: decimal_percentage_field_type

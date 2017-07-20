@@ -1,0 +1,51 @@
+uuid: 38a870f0-b2bb-450d-a2f9-5c209c293876
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_location
+    - paragraphs.paragraphs_type.location
+    - paragraphs.paragraphs_type.pointer_on_map_dataset
+  module:
+    - entity_reference_revisions
+id: paragraph.pointer_on_map_dataset.field_location
+field_name: field_location
+entity_type: paragraph
+bundle: pointer_on_map_dataset
+label: Location
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      location: location
+    target_bundles_drag_drop:
+      pointer_on_map_dataset:
+        weight: 9
+        enabled: false
+      free_dataset:
+        weight: 10
+        enabled: false
+      location:
+        enabled: true
+        weight: 11
+      monthly_dataset:
+        weight: 12
+        enabled: false
+      name_values:
+        weight: 13
+        enabled: false
+      name_values_year:
+        weight: 14
+        enabled: false
+      target:
+        weight: 15
+        enabled: false
+      year_values:
+        weight: 16
+        enabled: false
+field_type: entity_reference_revisions

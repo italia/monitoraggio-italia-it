@@ -1,0 +1,20 @@
+uuid: 3e6f047f-8e7b-47bd-b5a2-66be37b8d93e
+langcode: it
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: j5zLMOdJBqC0bMvSdth5UebkprJB8g_2FXHqhfpJzow
+id: anonymous
+label: 'Utente anonimo'
+weight: 0
+is_admin: false
+permissions:
+  - 'access content'
+  - 'access site-wide contact form'
+  - 'view published dashboard indicator entities'
+  - 'view published project entities'
+  - 'view published dataset entities'
+  - 'view published dashboard widget entities'
+  - 'display eu cookie compliance popup'
+  - 'restful get project_resource'
+  - 'restful get rest_elements_resource'

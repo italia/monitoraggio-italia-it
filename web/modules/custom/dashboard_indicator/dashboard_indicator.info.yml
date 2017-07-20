@@ -1,0 +1,8 @@
+name: Dashboard Indicator
+type: module
+description: All stuff for entity "Indicator"
+core: 8.x
+package: Custom
+
+dependencies:
+  - advanced_rest

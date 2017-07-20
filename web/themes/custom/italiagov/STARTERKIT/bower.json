@@ -1,0 +1,9 @@
+{
+  "name": "STARTERKIT",
+  "version": "1.0.0",
+  "description": "Sub theme of ItaliaGov.",
+  "private": true,
+  "dependencies": {
+    "ita-web-toolkit": "https://github.com/italia/ita-web-toolkit.git#master"
+  }
+}

@@ -1,0 +1,6 @@
+dashboard_base.general_config_settings:
+  title: 'General configuration settings'
+  route_name: dashboard_base.general_config_settings
+  description: 'General settings for Dashboard'
+  parent: system.admin_config_system
+  weight: 99

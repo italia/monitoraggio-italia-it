@@ -1,0 +1,7 @@
+uuid: 89c4a0ea-f376-4e81-b8bf-87c438c48f82
+langcode: it
+status: true
+dependencies: {  }
+id: monthly_dataset
+label: 'Monthly Dataset Serie'
+behavior_plugins: {  }

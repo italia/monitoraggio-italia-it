@@ -1,0 +1,23 @@
+uuid: c930b29d-5a26-4f1a-b518-da5e4c349c01
+langcode: it
+status: true
+dependencies:
+  config:
+    - dashboard_project.project_type.monitoring
+    - field.storage.project.field_monitor_weight
+id: project.monitoring.field_monitor_weight
+field_name: field_monitor_weight
+entity_type: project
+bundle: monitoring
+label: Peso
+description: 'Il peso determina la posizione del progetto nelle liste e nell''home page. Peso minore corrisponde ad una posizione più alta nelle liste.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: -10
+  max: 10
+  prefix: ''
+  suffix: ''
+field_type: integer

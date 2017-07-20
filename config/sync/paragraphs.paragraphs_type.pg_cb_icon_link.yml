@@ -1,0 +1,7 @@
+uuid: 23d22892-73b9-45a0-9f49-fcfc91479600
+langcode: it
+status: true
+dependencies: {  }
+id: pg_cb_icon_link
+label: 'Custom box icon and link'
+behavior_plugins: {  }

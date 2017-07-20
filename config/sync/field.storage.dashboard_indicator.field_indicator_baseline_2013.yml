@@ -1,0 +1,21 @@
+uuid: 5e26e023-f297-4704-bf37-d2b6b8257b17
+langcode: en
+status: true
+dependencies:
+  module:
+    - dashboard_base
+    - dashboard_indicator
+id: dashboard_indicator.field_indicator_baseline_2013
+field_name: field_indicator_baseline_2013
+entity_type: dashboard_indicator
+type: decimal_percentage_field_type
+settings:
+  precision: '14'
+  scale: '2'
+module: dashboard_base
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

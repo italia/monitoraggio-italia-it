@@ -1,0 +1,25 @@
+add project entities:
+  title: 'Create new Project entities'
+
+administer project entities:
+  title: 'Administer Project entities'
+  description: 'Allow to access the administration form to configure Project entities.'
+  restrict access: true
+
+delete project entities:
+  title: 'Delete Project entities'
+
+edit project entities:
+  title: 'Edit Project entities'
+
+view published project entities:
+  title: 'View published Project entities'
+
+view unpublished project entities:
+  title: 'View unpublished Project entities'
+
+access project entities collection:
+  title: 'Access Project entities list'
+
+access desi configuration settings:
+  title: 'Access Desi settings'

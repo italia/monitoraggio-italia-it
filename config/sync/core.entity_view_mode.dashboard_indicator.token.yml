@@ -1,0 +1,10 @@
+uuid: bbe5426b-6a21-4601-93a0-34a72b1a0654
+langcode: it
+status: true
+dependencies:
+  module:
+    - dashboard_indicator
+id: dashboard_indicator.token
+label: Token
+targetEntityType: dashboard_indicator
+cache: true

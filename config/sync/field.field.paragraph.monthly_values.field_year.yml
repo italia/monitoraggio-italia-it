@@ -1,0 +1,28 @@
+uuid: e6a166d1-5adb-41c4-a773-41299d6e7d45
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_year
+    - paragraphs.paragraphs_type.monthly_values
+    - taxonomy.vocabulary.years
+id: paragraph.monthly_values.field_year
+field_name: field_year
+entity_type: paragraph
+bundle: monthly_values
+label: Year
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      years: years
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

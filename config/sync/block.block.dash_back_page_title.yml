@@ -1,0 +1,27 @@
+uuid: b7b55749-f59c-4da1-945a-3049f0175b45
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - dash_back
+_core:
+  default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
+id: dash_back_page_title
+theme: dash_back
+region: header
+weight: -8
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: "/project/*\r\n"
+    negate: true
+    context_mapping: {  }

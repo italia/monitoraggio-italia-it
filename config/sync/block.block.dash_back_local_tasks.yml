@@ -1,0 +1,22 @@
+uuid: d275efa9-7296-4b88-af8a-3c70f3e43e5d
+langcode: en
+status: true
+dependencies:
+  theme:
+    - dash_back
+_core:
+  default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
+id: dash_back_local_tasks
+theme: dash_back
+region: header
+weight: -6
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Primary Tabs'
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: false
+visibility: {  }

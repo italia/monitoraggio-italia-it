@@ -1,0 +1,7 @@
+# Dashboard indicator type menu items definition
+entity.dashboard_indicator_type.collection:
+  title: 'Dashboard indicator type'
+  route_name: entity.dashboard_indicator_type.collection
+  description: 'List Dashboard indicator type (bundles)'
+  parent: system.admin_structure
+  weight: 99

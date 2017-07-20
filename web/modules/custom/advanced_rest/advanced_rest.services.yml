@@ -1,0 +1,22 @@
+services:
+  plugin.manager.advanced_rest.resource:
+    class: Drupal\advanced_rest\Plugin\AdvancedRestResourcePluginManager
+    parent: default_plugin_manager
+
+  plugin.manager.advanced_rest.entity_decorator:
+    class: Drupal\advanced_rest\Plugin\AdvancedRestEntityDecoratorManager
+    parent: default_plugin_manager
+
+  advanced_rest.event_subscriber:
+    class: Drupal\advanced_rest\EventSubscriber\AdvancedRestSubscriber
+    arguments: ['@plugin.manager.advanced_rest.resource']
+    tags:
+      - { name: event_subscriber }
+
+  advanced_rest.resource_description:
+    class: Drupal\advanced_rest\ResourceDescriptionHandler
+    arguments: ['@module_handler', '@string_translation', '@controller_resolver']
+
+  advanced_rest.entity_decorator_factory:
+    class: Drupal\advanced_rest\AdvancedRestEntityDecoratorFactory
+    parent: container.trait

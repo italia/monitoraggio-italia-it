@@ -1,0 +1,15 @@
+uuid: 29a768bd-fed5-4758-8205-923f797151de
+name: Drupal
+mail: info@example.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /home
+admin_compact_mode: false
+weight_select_max: 100
+langcode: it
+default_langcode: it
+_core:
+  default_config_hash: AyT9s8OUcclfALRE_imByOMgtZ19eOlqdF6zI3p7yqo
+mail_notification: ''

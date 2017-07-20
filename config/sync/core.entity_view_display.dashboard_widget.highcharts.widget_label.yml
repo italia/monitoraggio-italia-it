@@ -1,0 +1,25 @@
+uuid: 9676e4dd-3d7c-4a7d-8ae2-1018108d7971
+langcode: it
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.dashboard_widget.widget_label
+    - dashboard_widget.dashboard_widget_type.highcharts
+    - field.field.dashboard_widget.highcharts.field_highcharts_subtitle
+    - field.field.dashboard_widget.highcharts.field_highcharts_type
+id: dashboard_widget.highcharts.widget_label
+targetEntityType: dashboard_widget
+bundle: highcharts
+mode: widget_label
+content:
+  field_highcharts_type:
+    weight: 3
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+hidden:
+  field_highcharts_subtitle: true
+  name: true
+  user_id: true

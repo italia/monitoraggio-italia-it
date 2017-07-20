@@ -1,0 +1,20 @@
+uuid: 4b62145e-4339-4404-a7c4-18680713eeeb
+langcode: it
+status: true
+dependencies:
+  module:
+    - dashboard_project
+id: project.field_monitor_weight
+field_name: field_monitor_weight
+entity_type: project
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

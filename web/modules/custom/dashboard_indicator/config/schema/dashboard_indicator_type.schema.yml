@@ -1,0 +1,15 @@
+dashboard_indicator.dashboard_indicator_type.*:
+  type: config_entity
+  label: 'Dashboard indicator type config'
+  mapping:
+    id:
+      type: string
+      label: 'ID'
+    label:
+      type: label
+      label: 'Label'
+    key_unique:
+      type: string
+      label: 'Key'
+    uuid:
+      type: string

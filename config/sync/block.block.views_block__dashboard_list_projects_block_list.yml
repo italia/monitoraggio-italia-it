@@ -1,0 +1,30 @@
+uuid: 2629d416-2071-416c-9547-d8513b8cdd13
+langcode: it
+status: true
+dependencies:
+  config:
+    - views.view.dashboard_list_projects
+  module:
+    - system
+    - views
+  theme:
+    - dashboard
+id: views_block__dashboard_list_projects_block_list
+theme: dashboard
+region: content
+weight: -3
+provider: null
+plugin: 'views_block:dashboard_list_projects-block_list'
+settings:
+  id: 'views_block:dashboard_list_projects-block_list'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: "/area-dati/indicatori-crescita-digitale\r\n/node/3"
+    negate: false
+    context_mapping: {  }

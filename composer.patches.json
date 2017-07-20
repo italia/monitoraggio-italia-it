@@ -1,0 +1,18 @@
+{
+  "patches": {
+    "drupal/entity_reference_revisions": {
+      "Migrate Patch": "https://www.drupal.org/files/issues/entityreference_migrate-2809793-15.patch"
+    },
+    "drupal/core": {
+      "Fixed multilingual install depends on locale module": "https://www.drupal.org/files/issues/drupal-2413191-21.patch",
+      "Fix contextual.js and quickedit.js": "https://www.drupal.org/files/issues/2551373-35.patch",
+      "Fix widget base validation": "patches/drupal_core-widget-base-validation.patch"
+    },
+    "drupal/config_installer": {
+      "English in Language config never considered": "https://www.drupal.org/files/issues/2807127-6.patch"
+    },
+    "drupal/metatag": {
+      "Fix drupal console command traits": "https://www.drupal.org/files/issues/metatag-2810835-48.patch"
+    }
+  }
+}

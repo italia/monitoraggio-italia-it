@@ -1,0 +1,62 @@
+uuid: 653adc11-4fa3-4f01-a461-8cf9e8377de6
+langcode: it
+status: true
+dependencies: {  }
+id: dashboard_fixtures_monitoring_paragraph_regional_values
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: dashboard_fixtures_group_paragraph
+label: 'Import paragraph regional values'
+source:
+  plugin: url
+  data_fetcher_plugin: http
+  data_parser_plugin: google_sheets
+  urls: 'https://spreadsheets.google.com/feeds/list/1wTHZOD_Dm7yBt8xuXhU03FplHMbpPikAD9I9vpq_uI4/8/public/values?alt=json'
+  item_selector: null
+  fields:
+    -
+      name: id
+      label: id
+      selector: id
+    -
+      name: regionid
+      label: regionid
+      selector: regionid
+    -
+      name: value
+      label: value
+      selector: value
+    -
+      name: color
+      label: color
+      selector: color
+  ids:
+    id:
+      type: string
+process:
+  type:
+    plugin: default_value
+    default_value: regional_values
+  field_color: color
+  field_region: regionid
+  field_decimal_value:
+    -
+      source: value
+      plugin: explode
+      delimiter: ','
+    -
+      plugin: decimal_percentage
+      delimiter: '|'
+  created: '@created'
+  sticky:
+    plugin: default_value
+    default_value: 0
+  uid:
+    plugin: default_value
+    default_value: 1
+destination:
+  plugin: 'entity_reference_revisions:paragraph'
+migration_dependencies:
+  required: {  }

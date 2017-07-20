@@ -1,0 +1,81 @@
+uuid: 08ac795b-af64-4679-8e68-0929208e9d58
+langcode: it
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_region
+field_name: field_region
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '13'
+      label: ABRUZZO
+    -
+      value: '17'
+      label: BASILICATA
+    -
+      value: '18'
+      label: CALABRIA
+    -
+      value: '15'
+      label: CAMPANIA
+    -
+      value: '8'
+      label: EMILIA-ROMAGNA
+    -
+      value: '6'
+      label: 'FRIULI VENEZIA GIULIA'
+    -
+      value: '12'
+      label: LAZIO
+    -
+      value: '7'
+      label: LIGURIA
+    -
+      value: '3'
+      label: LOMBARDIA
+    -
+      value: '11'
+      label: MARCHE
+    -
+      value: '14'
+      label: MOLISE
+    -
+      value: '1'
+      label: PIEMONTE
+    -
+      value: '16'
+      label: PUGLIA
+    -
+      value: '20'
+      label: SARDEGNA
+    -
+      value: '19'
+      label: SICILIA
+    -
+      value: '9'
+      label: TOSCANA
+    -
+      value: '4'
+      label: 'TRENTINO-ALTO ADIGE'
+    -
+      value: '10'
+      label: UMBRIA
+    -
+      value: '2'
+      label: 'VALLE D''AOSTA'
+    -
+      value: '5'
+      label: VENETO
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

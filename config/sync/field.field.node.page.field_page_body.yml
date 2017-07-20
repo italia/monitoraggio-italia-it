@@ -1,0 +1,33 @@
+uuid: ca8ce67f-3087-43f4-8f46-6196fcab3e75
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_page_body
+    - node.type.page
+  module:
+    - geocoder_field
+    - text
+third_party_settings:
+  geocoder_field:
+    method: none
+    field: title
+    plugins: {  }
+    dumper: wkt
+    delta_handling: default
+    failure:
+      handling: preserve
+      status_message: true
+      log: true
+id: node.page.field_page_body
+field_name: field_page_body
+entity_type: node
+bundle: page
+label: Corpo
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,12 @@
+dashboard_indicator.download_csv:
+  path: 'indicator/{indicator}/csv'
+  defaults:
+    _title: 'Download Indicator CSV'
+    _controller: '\Drupal\dashboard_indicator\Controller\DashboardIndicatorCsvController::download'
+  requirements:
+    indicator: '^[a-z\_]+$'
+    _permission: 'view published dashboard indicator entities'
+  options:
+    parameters:
+      indicator:
+        type: 'dashboard:indicator'

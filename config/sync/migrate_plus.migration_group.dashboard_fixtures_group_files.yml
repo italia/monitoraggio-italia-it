@@ -1,0 +1,10 @@
+uuid: c5edd591-3309-4ee3-81f8-d8b8fa9f19e7
+langcode: it
+status: true
+dependencies: {  }
+id: dashboard_fixtures_group_files
+label: 'Files migrations'
+description: 'Files migrations.'
+source_type: 'CSV file'
+module: null
+shared_configuration: null

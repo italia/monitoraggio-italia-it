@@ -1,0 +1,23 @@
+uuid: ba2d000d-45fc-4115-86a4-729ec5a75a5c
+langcode: it
+status: true
+dependencies:
+  config:
+    - dashboard_project.project_type.monitoring
+    - field.storage.project.field_monitor_hp_on
+id: project.monitoring.field_monitor_hp_on
+field_name: field_monitor_hp_on
+entity_type: project
+bundle: monitoring
+label: 'Visibile in Home Page'
+description: 'Attraverso questa opzione è possibile visualizzare oppure no il progetto in home page.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'visibile in home page'
+  off_label: 'non visibile in home page'
+field_type: boolean

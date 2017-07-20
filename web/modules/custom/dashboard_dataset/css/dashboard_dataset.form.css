@@ -1,0 +1,16 @@
+
+.field--name-field-monthly-value .tabledrag-toggle-weight-wrapper,
+.field--name-field-monthly-value td.field-multiple-drag {
+    display: none;
+}
+
+.field--name-field-monthly-value .field-multiple-table tbody tr {
+    display: inline-block;
+}
+
+.field--name-field-free-values .paragraphs-subform .form-wrapper,
+.field--name-field-regional-values .paragraphs-subform .form-wrapper {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 1em 1em 0;
+}

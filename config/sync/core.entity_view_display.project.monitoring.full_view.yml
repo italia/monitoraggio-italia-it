@@ -1,0 +1,78 @@
+uuid: ebc0f36a-234a-4aec-a10c-72dd09995eea
+langcode: it
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.project.full_view
+    - dashboard_project.project_type.monitoring
+    - field.field.project.monitoring.field_meta_tag
+    - field.field.project.monitoring.field_monitor_description
+    - field.field.project.monitoring.field_monitor_desi
+    - field.field.project.monitoring.field_monitor_indicator
+    - field.field.project.monitoring.field_monitor_link
+    - field.field.project.monitoring.field_monitor_logo
+    - field.field.project.monitoring.field_monitor_update_frequency
+    - field.field.project.monitoring.field_monitor_weight
+  module:
+    - image
+    - link
+    - text
+id: project.monitoring.full_view
+targetEntityType: project
+bundle: monitoring
+mode: full_view
+content:
+  field_monitor_description:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+  field_monitor_indicator:
+    weight: 5
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: entity_reference_entity_id
+  field_monitor_link:
+    weight: 4
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    type: link_separate
+  field_monitor_logo:
+    weight: 3
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+  key_unique:
+    label: hidden
+    type: string
+    weight: 0
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  name:
+    label: hidden
+    type: string
+    weight: 1
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  field_has_social_share: true
+  field_meta_tag: true
+  field_monitor_desi: true
+  field_monitor_hp_on: true
+  field_monitor_subtitle: true
+  field_monitor_update_frequency: true
+  field_monitor_weight: true
+  user_id: true

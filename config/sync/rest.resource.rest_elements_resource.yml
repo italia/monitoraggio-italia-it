@@ -1,0 +1,17 @@
+uuid: 6de01175-517c-47a4-bc84-163daae0f748
+langcode: it
+status: true
+dependencies:
+  module:
+    - rest_elements
+    - serialization
+    - user
+id: rest_elements_resource
+plugin_id: rest_elements_resource
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - json
+    supported_auth:
+      - cookie

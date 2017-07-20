@@ -1,0 +1,23 @@
+uuid: 04218ae3-20cd-46a8-90cf-5d0635c1e0b5
+langcode: it
+status: true
+dependencies:
+  config:
+    - dashboard_project.project_type.monitoring
+    - field.storage.project.field_monitor_desi
+id: project.monitoring.field_monitor_desi
+field_name: field_monitor_desi
+entity_type: project
+bundle: monitoring
+label: 'DESI project'
+description: 'Select this value to indicate this project is DESI.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Acceso
+  off_label: Spento
+field_type: boolean

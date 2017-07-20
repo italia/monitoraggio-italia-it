@@ -1,0 +1,34 @@
+uuid: a6194e99-5ff3-44b8-b621-f90384d25807
+langcode: it
+status: true
+dependencies:
+  module:
+    - ctools
+    - dashboard_project
+    - language
+id: monitoring_project_alias_it
+label: 'Monitoring project alias - IT'
+type: 'canonical_entities:project'
+pattern: 'progetto/[project:name]'
+selection_criteria:
+  e4c9e6dd-db68-4add-8e1e-0e69ee74f4eb:
+    id: 'entity_bundle:project'
+    bundles:
+      monitoring: monitoring
+    negate: false
+    context_mapping:
+      project: project
+    uuid: e4c9e6dd-db68-4add-8e1e-0e69ee74f4eb
+  d6d6fa36-5436-4706-8334-5742c2ef20e8:
+    id: language
+    langcodes:
+      it: it
+    negate: false
+    context_mapping:
+      language: 'project:langcode:language'
+    uuid: d6d6fa36-5436-4706-8334-5742c2ef20e8
+selection_logic: and
+weight: -10
+relationships:
+  'project:langcode:language':
+    label: Lingua

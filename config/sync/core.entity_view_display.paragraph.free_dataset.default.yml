@@ -1,0 +1,23 @@
+uuid: 42876e5b-d5d4-4265-bcaa-6f4ba42b66b2
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.free_dataset.field_free_values
+    - paragraphs.paragraphs_type.free_dataset
+  module:
+    - entity_reference_revisions
+id: paragraph.free_dataset.default
+targetEntityType: paragraph
+bundle: free_dataset
+mode: default
+content:
+  field_free_values:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+hidden: {  }

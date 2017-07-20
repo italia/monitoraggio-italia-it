@@ -1,0 +1,32 @@
+uuid: ca982fc1-975e-4b8d-a6db-4e65d88ecb4f
+langcode: it
+status: true
+dependencies:
+  config:
+    - dashboard_project.project_type.monitoring
+    - field.storage.project.field_monitor_subtitle
+  module:
+    - geocoder_field
+third_party_settings:
+  geocoder_field:
+    method: none
+    field: name
+    plugins: {  }
+    dumper: wkt
+    delta_handling: default
+    failure:
+      handling: preserve
+      status_message: true
+      log: true
+id: project.monitoring.field_monitor_subtitle
+field_name: field_monitor_subtitle
+entity_type: project
+bundle: monitoring
+label: Sottotitolo
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

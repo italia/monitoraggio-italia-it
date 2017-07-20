@@ -1,0 +1,102 @@
+{#
+/**
+ * @file project.html.twig
+ * Default theme implementation to present Project data.
+ *
+ * This template is used when viewing Project pages.
+ *
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ * - attributes: HTML attributes for the container element.
+ *
+ * @see template_preprocess_project()
+ *
+ * @ingroup themeable
+ */
+#}
+{# See https://www.drupal.org/project/twig_field_value for reasons why we are rendering the fields here #}
+{%
+  set catch_cache = [
+    content.key_unique|render,
+    content.name|render,
+    content.field_monitor_description|render,
+  ]
+%}
+{% set project_key = content.key_unique|field_raw('value') %}
+{% set project_name = content.name|field_raw('value') %}
+{% set project_summary = content.field_monitor_description|field_raw('value') %}
+{% set has_share = content.field_has_social_share|field_raw('value') %}
+{% set classes = [
+    'MonitoringProject',
+    'MonitoringProject--' ~ project_key,
+    'Project--' ~ project_key,
+    has_share ? 'MonitoringProject--withShare' : 'MonitoringProject--withoutShare',
+  ]
+%}
+{%
+  set share_variables = {
+    entity_url: entity_url,
+    entity_title: project_name,
+    entity_summary: project_summary|striptags,
+  }
+%}
+{% if content %}
+  <article{{ attributes.addClass(classes) }}>
+    {{ title_prefix }}
+    {{ title_suffix }}
+    <div class="Grid Grid--alignMiddle">
+      <div class="MonitoringProject-title Grid-cell u-size4of6 u-sm-size10of12 u-md-size10of12 u-lg-size10of12">
+        <h1 class="MonitoringProject-name u-text-r-xxl u-textWeight-600 u-padding-left-xxl u-padding-top-xl">{{ project_name }}</h1>
+      </div>
+      <div class="MonitoringProject-logo Grid-cell u-size2of6 u-sm-size2of12 u-md-size2of12 u-lg-size2of12">
+        <div class="u-padding-top-xl u-padding-right-xxl u-textRight">
+          {{ content.field_monitor_logo|field_value }}
+        </div>
+      </div>
+      {% if has_share %}
+      <div class="Grid-cell DashboardShare-at-top u-padding-left-xxl u-padding-right-xxl u-padding-top-xxl ">
+        {# Include the sharing links #}
+        {{ include('dashboard-base-share-links.html.twig', share_variables) }}
+      </div>
+      {% endif %}
+    </div>
+    <div class="MonitoringProject-description Prose u-padding-all-xxl">
+      {{ content.field_monitor_description|field_value }}
+    </div>
+    {% if content.field_monitor_desi[0]['#markup'] == 1 %}
+      <div class="MonitoringProject-desi u-padding-all-xxl u-flex u-flexAlignItemsCenter">
+        <img alt="{{ dash_desi_label }}" src="{{ '/' ~ directory ~ '/images/eu.svg' }}" />
+        <a href="{{ dash_desi_path }}" style="display: block; vertical-align: baseline;">{{ dash_desi_label }}</a>
+      </div>
+    {% endif %}
+    <div class="MonitoringProject-indicators Accordion Accordion--default fr-accordion js-fr-accordion" id="accordion-1">
+      {{ content.field_monitor_indicator|field_value }}
+    </div>
+    <footer class="Prose u-padding-all-xxl">
+      <div class="u-margin-r-top">
+          <span class="u-block">
+            <span class="Icon Icon-download u-margin-r-right u-textWeight-900 u-linkClean"></span>
+            <a href="{{ path('rest.project_resource.GET.json', {'project_key': project_key }) }}?_format=json" target="_blank">
+              {{ 'Show @project data in JSON format'|t({ '@project': project_name|upper }) }}
+            </a>
+          </span>
+      </div>
+      <div class="u-margin-r-top">
+        {{ content.field_monitor_link }}
+        <span class="MonitoringProject-datalink u-block">
+          <span class="Icon Icon-link u-margin-r-right u-textWeight-900"></span>
+          <a href="/area-dati/indicatori-crescita-digitale/#{{ content.key_unique|field_raw('value') }}">
+            {{ 'Data on Digital Indicators'|t }}
+          </a>
+        </span>
+      </div>
+      {% if has_share %}
+      <div class="DashboardShare-at-bottom u-padding-top-l u-margin-r-top u-margin-r-bottom">
+        {# Include the sharing links #}
+        {{ include('dashboard-base-share-links.html.twig', share_variables) }}
+      </div>
+      {% endif %}
+    </footer>
+  </article>
+{% endif %}

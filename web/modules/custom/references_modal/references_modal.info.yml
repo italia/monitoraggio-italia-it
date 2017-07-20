@@ -1,0 +1,5 @@
+name: References Modal
+type: module
+description: Shows referenced entity form within a modal dialog.
+core: 8.x
+package: Custom

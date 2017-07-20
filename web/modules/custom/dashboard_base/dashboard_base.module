@@ -1,0 +1,355 @@
+<?php
+
+/**
+ * @file
+ * Custom code for the dashboard_base module.
+ */
+
+use Drupal\Core\Entity\Entity;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Render\BubbleableMetadata;
+use Drupal\Core\Url;
+use Drupal\dashboard_project\Entity\DashboardProject;
+use Drupal\node\Entity\Node;
+use Drupal\user\UserInterface;
+use Symfony\Component\HttpFoundation\RedirectResponse;
+
+/**
+ * Implements hook_theme().
+ */
+function dashboard_base_theme($existing, $type, $theme, $path) {
+  $theme = [];
+  $theme['dashboard_base_share_links'] = [
+    'template' => 'dashboard-base-share-links',
+    'path' => $path . '/templates',
+    'variables' => [
+      'entity_url' => NULL,
+      'entity_title' => NULL,
+      'entity_description' => NULL,
+    ],
+  ];
+  return $theme;
+}
+
+/**
+ * Implements hook_toolbar().
+ */
+function dashboard_base_toolbar() {
+
+  $items = [];
+  $route_provider = \Drupal::service('router.route_provider');
+  $accessManager = \Drupal::service('access_manager');
+
+  if (empty($route_provider) || empty($accessManager)) {
+    throw new \Exception('Drupal service not availables');
+  }
+
+  // Create toolbar general voice for editor administration.
+  // Array with links of "Site".
+  $links_editor_admin = [
+    'dash_content_overview' => [
+      'title' => t('Content overview'),
+      'route' => 'view.dash_admin_projects.page_admin_projects',
+    ],
+    'dash_general_settings' => [
+      'title' => t('General settings'),
+      'route' => 'dashboard_base.general_config_settings',
+    ],
+    'contact_form' => [
+      'title' => t('Contact form settings'),
+      'route' => 'dashboard_contact.dashboard_contact_conf',
+    ],
+    'cookie_banner' => [
+      'title' => t('Cookie banner settings'),
+      'route' => 'eu_cookie_compliance.settings',
+    ],
+  ];
+
+  $manage_site_links = [];
+  foreach ($links_editor_admin as $key => $link) {
+    $found = $route_provider->getRoutesByNames([$link['route']]);
+    if (!empty($found) && !$accessManager->checkNamedRoute($link['route'], [])) {
+      continue;
+    }
+    $manage_site_links[$key] = [
+      'title' => $link['title'],
+      'url' => Url::fromRoute($link['route']),
+    ];
+  }
+
+  if (empty($links_editor_admin)) {
+    return;
+  }
+  $items['dash_admin_site'] = [
+    '#type' => 'toolbar_item',
+    'tab' => [
+      '#type' => 'link',
+      '#title' => t('Administer dashboard'),
+      '#url' => Url::fromRoute('system.admin_config'),
+      '#options' => [
+        'attributes' => [
+          'title' => t('Administer dashboard'),
+        ],
+      ],
+      '#attributes' => [
+        'class' => ['toolbar-icon', 'toolbar-icon-edit', 'toolbar-icon-menu'],
+      ],
+    ],
+    'tray' => [
+      '#heading' => t('Administer company elements.'),
+      'admin_content' => [
+        '#theme' => 'links__toolbar_user',
+        '#links' => $manage_site_links,
+        '#attributes' => [
+          'class' => ['toolbar-menu'],
+        ],
+      ],
+    ],
+    '#weight' => 0,
+  ];
+
+  return $items;
+
+}
+
+/**
+ * Implements hook_toolbar_alter().
+ */
+function dashboard_base_toolbar_alter(&$items) {
+
+  // Remove admin link inside toolbar if User is not 1 or administrator.
+  $user = \Drupal::currentUser();
+  $user_roles = $user->getRoles();
+  if ($user->id() != '1' && !in_array('administrator', $user_roles)) {
+    unset($items['administration']);
+  }
+}
+
+/**
+ * Implements hook_field_widget_form_alter().
+ */
+function dashboard_base_field_widget_form_alter(&$element, FormStateInterface $form_state, $context) {
+  $field_definition = $context['items']->getFieldDefinition();
+
+  switch ($field_definition->getName()) {
+    case 'key_unique':
+      $element['value']['#type'] = 'machine_name';
+      $element['value']['#machine_name']['source'] = [
+        'name',
+        'widget',
+        '0',
+        'value',
+      ];
+      $element['value']['#machine_name']['exists'] = [
+        '\Drupal\dashboard_base\MachineNameHandler',
+        'exists',
+      ];
+      break;
+
+    case 'name':
+      $element['value']['#id'] = 'edit-name-' . $element['#delta'] . '-value';
+      break;
+  }
+}
+
+/**
+ * Implements hook_user_login().
+ */
+function dashboard_base_user_login(UserInterface $account) {
+
+  $current_path = \Drupal::service('path.current')->getPath();
+  // Redirect after login to admin projects.
+  if ($current_path == '/dashboard/login') {
+    $admin_project_url = Url::fromRoute(
+      'view.dash_admin_projects.page_admin_projects'
+    )->toString();
+    $response = new RedirectResponse($admin_project_url);
+    $response->send();
+  }
+}
+
+/**
+ * Implements hook_token_info().
+ */
+function dashboard_base_token_info() {
+  $types['dashboard'] = [
+    'name' => t('Dashboard'),
+    'description' => t('Tokens related to Dashboard.'),
+  ];
+
+  $token['description:110'] = [
+    'name' => t('Description 110'),
+    'description' => t('Metatag description (word truncated at 110 characters)'),
+  ];
+  $token['description:200'] = [
+    'name' => t('Description 200'),
+    'description' => t('Metatag description (word truncated at 200 characters)'),
+  ];
+  $token['description:250'] = [
+    'name' => t('Description 250'),
+    'description' => t('Metatag description (word truncated at 250 characters)'),
+  ];
+  $token['site:url:no-language'] = [
+    'name' => t('Site url'),
+    'description' => t('Site url without the default language prefix'),
+  ];
+  $token['sharing-logo:fallback'] = [
+    'name' => t('Sharing logo'),
+    'description' => t('Sharing logo with a fallback management (actually only for project entities)'),
+  ];
+  $token['sharing-logo:fallback:twitter'] = [
+    'name' => t('Sharing logo for Twitter'),
+    'description' => t("Sharing logo with a fallback management accordingly to the Twitter\'s standard (actually only for project entities)"),
+  ];
+
+  return [
+    'types' => $types,
+    'tokens' => [
+      'dashboard' => $token,
+    ],
+  ];
+}
+
+/**
+ * Implements hook_tokens().
+ */
+function dashboard_base_tokens($type, $tokens, array $data, array $options, BubbleableMetadata $bubbleable_metadata) {
+  $replacements = [];
+  if ($type != 'dashboard') {
+    return;
+  }
+  foreach ($tokens as $name => $token_pattern) {
+    $replacement = '';
+    $match = [];
+    if (preg_match("/description:([\d]+)/i", $name, $match) && !empty($match[1])) {
+      foreach ($data as $entity) {
+        $replacement = dashboard_base_clean_values(
+          dashboard_base_get_value($entity),
+          $match[1]
+        );
+      }
+    }
+    elseif ($name == 'site:url:no-language') {
+      $replacement = \Drupal::request()->getSchemeAndHttpHost();
+    }
+    elseif ($name == 'sharing-logo:fallback') {
+      foreach ($data as $data_type => $item) {
+        $replacement = ($data_type == 'project') ? dashboard_base_project_logo_fallback($item) : '';
+      }
+    }
+    elseif ($name == 'sharing-logo:fallback:twitter') {
+      foreach ($data as $data_type => $item) {
+        $replacement = ($data_type == 'project') ? dashboard_base_project_logo_fallback($item, 'twitter') : '';
+      }
+    }
+    $replacements[$token_pattern] = $replacement;
+  }
+  return $replacements;
+}
+
+/**
+ * Function returns the value to pass to the token logic.
+ *
+ * @param \Drupal\Core\Entity\Entity $entity
+ *   Resource from which take the desired value.
+ *
+ * @return string
+ *   Desired value.
+ */
+function dashboard_base_get_value(Entity $entity) {
+  $entity_id = $entity->getEntityTypeId();
+  switch ($entity_id) {
+    case 'node':
+      return dashboard_base_node_value($entity);
+
+    case 'project':
+      return dashboard_base_project_value($entity);
+  }
+}
+
+/**
+ * Function returns the value of the passed Node entity.
+ *
+ * @param \Drupal\node\Entity\Node $node
+ *   Resource of node type from which take the value.
+ *
+ * @return string
+ *   Desired value.
+ */
+function dashboard_base_node_value(Node $node) {
+  if ($node->getType() != 'page') {
+    return '';
+  }
+  return $node->get('field_page_body')->getValue()[0]['value'];
+}
+
+/**
+ * Function returns the value of the passed DashboardProject entity.
+ *
+ * @param \Drupal\dashboard_project\Entity\DashboardProject $project
+ *   Resource of DashboardProject type from which take the value.
+ *
+ * @return string
+ *   Desired value.
+ */
+function dashboard_base_project_value(DashboardProject $project) {
+  if ($project->getType() != 'monitoring') {
+    return '';
+  }
+  return $project->get('field_monitor_description')->getValue()[0]['value'];
+}
+
+/**
+ * Function that cleans input string from html tags and new-line characters.
+ *
+ * @param string $value
+ *   Input value.
+ * @param int $length
+ *   Max-length over the which cut the input value.
+ *
+ * @return string
+ *   Cleaned input value.
+ */
+function dashboard_base_clean_values($value, $length) {
+  $match = [];
+  $out = preg_replace("/(\\r)+|(\\n)+/", " ", $value);
+  $out = preg_replace("/[\s]{1,}/", " ", $out);
+  $out = strip_tags($out);
+  if (strlen($out) > $length
+    && preg_match("/^.{1,$length}\b/s", $out, $match)
+    && !empty($match[0])
+  ) {
+    $out = $match[0];
+  }
+  return $out;
+}
+
+/**
+ * Function that returns a path of sharing logo of a project.
+ *
+ * @param \Drupal\dashboard_project\Entity\DashboardProject $project
+ *   DashboardProject resource.
+ * @param string $type
+ *   Type of social needed.
+ *
+ * @return string
+ *   Path to sharing logo.
+ */
+function dashboard_base_project_logo_fallback(DashboardProject $project, $type = 'default') {
+  $replacement = '';
+  $logo = \Drupal::service('advanced_rest.entity_decorator_factory')
+    ->get($project)
+    ->getLogo();
+  if (!empty($logo)) {
+    $replacement = $logo;
+  }
+  else {
+    $logo_type = ($type == 'twitter')
+      ? 'logo-share-twitter-1.jpg'
+      : 'logo-share-1.jpg';
+    $replacement = Drupal::request()
+      ->getSchemeAndHttpHost() . '/themes/custom/dashboard/images/' . $logo_type;
+  }
+
+  return $replacement;
+}

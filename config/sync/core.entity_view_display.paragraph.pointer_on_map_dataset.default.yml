@@ -1,0 +1,23 @@
+uuid: f75c01a4-f636-459a-99f2-4de5f880d7e4
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.pointer_on_map_dataset.field_location
+    - paragraphs.paragraphs_type.pointer_on_map_dataset
+  module:
+    - entity_reference_revisions
+id: paragraph.pointer_on_map_dataset.default
+targetEntityType: paragraph
+bundle: pointer_on_map_dataset
+mode: default
+content:
+  field_location:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+hidden: {  }

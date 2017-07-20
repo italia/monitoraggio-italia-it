@@ -1,0 +1,24 @@
+uuid: a90f37b1-63e2-489e-b5b6-92f91967e6e1
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.site-map
+  module:
+    - system
+  theme:
+    - dash_back
+id: dash_back_sitemap
+theme: dash_back
+region: '-1'
+weight: -4
+provider: null
+plugin: 'system_menu_block:site-map'
+settings:
+  id: 'system_menu_block:site-map'
+  label: 'Mappa del sito'
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+visibility: {  }

@@ -1,0 +1,22 @@
+uuid: 875c3291-6773-4103-a2f4-ffe081450668
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - dashboard
+_core:
+  default_config_hash: jQQUUWN2Uxr5qZtc9zcJKBCxpKY8orN1u2HPqYYRQDI
+id: dashboard_powered
+theme: dashboard
+region: '-1'
+weight: -7
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  provider: system
+  label_display: '0'
+visibility: {  }

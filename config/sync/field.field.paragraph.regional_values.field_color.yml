@@ -1,0 +1,32 @@
+uuid: 8b1fc0c8-154d-4b7d-bdc4-d948225d9622
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_color
+    - paragraphs.paragraphs_type.regional_values
+  module:
+    - geocoder_field
+third_party_settings:
+  geocoder_field:
+    method: none
+    field: parent_id
+    plugins: {  }
+    dumper: wkt
+    delta_handling: default
+    failure:
+      handling: preserve
+      status_message: true
+      log: true
+id: paragraph.regional_values.field_color
+field_name: field_color
+entity_type: paragraph
+bundle: regional_values
+label: Color
+description: 'Enter an hexadecimal color (Eg: #FFFFFF).'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

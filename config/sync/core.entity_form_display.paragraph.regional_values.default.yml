@@ -1,0 +1,39 @@
+uuid: 9e2c2de5-2948-461e-9db2-fb86233d4c2d
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.regional_values.field_color
+    - field.field.paragraph.regional_values.field_decimal_value
+    - field.field.paragraph.regional_values.field_region
+    - paragraphs.paragraphs_type.regional_values
+  module:
+    - dashboard_base
+id: paragraph.regional_values.default
+targetEntityType: paragraph
+bundle: regional_values
+mode: default
+content:
+  field_color:
+    weight: 1
+    settings:
+      size: 10
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_decimal_value:
+    weight: 2
+    settings:
+      size: '10'
+      placeholder: ''
+    third_party_settings: {  }
+    type: decimal_percentage_field_widget
+  field_region:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+hidden:
+  created: true
+  status: true
+  uid: true

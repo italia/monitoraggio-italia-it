@@ -1,0 +1,24 @@
+uuid: 486820e8-2b2e-47a9-93d3-e019fa4cebc4
+langcode: it
+status: true
+dependencies:
+  config:
+    - dashboard_indicator.dashboard_indicator_type.monitoring_indicator
+    - field.storage.dashboard_indicator.field_indicator_last_update
+  module:
+    - datetime
+id: dashboard_indicator.monitoring_indicator.field_indicator_last_update
+field_name: field_indicator_last_update
+entity_type: dashboard_indicator
+bundle: monitoring_indicator
+label: 'Ultimo aggiornamento'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    default_date_type: now
+    default_date: now
+default_value_callback: ''
+settings: {  }
+field_type: datetime

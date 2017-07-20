@@ -1,0 +1,57 @@
+uuid: 7477ee3b-4ec5-4c0d-bf5b-60e0044fc1ed
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_monthly_values
+    - paragraphs.paragraphs_type.monthly_dataset
+    - paragraphs.paragraphs_type.monthly_values
+  module:
+    - entity_reference_revisions
+id: paragraph.monthly_dataset.field_monthly_values
+field_name: field_monthly_values
+entity_type: paragraph
+bundle: monthly_dataset
+label: 'Monthly Values'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      monthly_values: monthly_values
+    target_bundles_drag_drop:
+      regional_values:
+        weight: -21
+        enabled: false
+      target:
+        weight: -21
+        enabled: false
+      monthly_values:
+        enabled: true
+        weight: 13
+      free_dataset:
+        weight: 14
+        enabled: false
+      free_values:
+        weight: 15
+        enabled: false
+      location:
+        weight: 16
+        enabled: false
+      pg_cb_icon_link:
+        weight: 16
+        enabled: false
+      monthly_dataset:
+        weight: 17
+        enabled: false
+      pointer_on_map_dataset:
+        weight: 20
+        enabled: false
+      regional_dataset:
+        weight: 21
+        enabled: false
+field_type: entity_reference_revisions

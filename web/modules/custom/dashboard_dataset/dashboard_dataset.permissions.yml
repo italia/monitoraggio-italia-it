@@ -1,0 +1,19 @@
+add dataset entities:
+  title: 'Create new Dataset entities'
+
+administer dataset entities:
+  title: 'Administer Dataset entities'
+  description: 'Allow to access the administration form to configure Dataset entities.'
+  restrict access: true
+
+delete dataset entities:
+  title: 'Delete Dataset entities'
+
+edit dataset entities:
+  title: 'Edit Dataset entities'
+
+view published dataset entities:
+  title: 'View published Dataset entities'
+
+view unpublished dataset entities:
+  title: 'View unpublished Dataset entities'

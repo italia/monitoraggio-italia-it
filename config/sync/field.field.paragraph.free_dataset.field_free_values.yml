@@ -1,0 +1,60 @@
+uuid: 8d078d2e-c983-4442-a732-bf00204e0bf5
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_free_values
+    - paragraphs.paragraphs_type.free_dataset
+    - paragraphs.paragraphs_type.free_values
+  module:
+    - entity_reference_revisions
+id: paragraph.free_dataset.field_free_values
+field_name: field_free_values
+entity_type: paragraph
+bundle: free_dataset
+label: 'Free Values'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      free_values: free_values
+    target_bundles_drag_drop:
+      free_values:
+        enabled: true
+        weight: 12
+      free_dataset:
+        weight: 13
+        enabled: false
+      location:
+        weight: 14
+        enabled: false
+      monthly_dataset:
+        weight: 15
+        enabled: false
+      name_values:
+        weight: 16
+        enabled: false
+      name_values_year:
+        weight: 17
+        enabled: false
+      pointer_on_map_dataset:
+        weight: 18
+        enabled: false
+      regional_dataset:
+        weight: 19
+        enabled: false
+      regional_values:
+        weight: 20
+        enabled: false
+      target:
+        weight: 21
+        enabled: false
+      year_values:
+        weight: 22
+        enabled: false
+field_type: entity_reference_revisions

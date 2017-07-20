@@ -1,0 +1,11 @@
+entity.dashboard_indicator.add_form:
+  route_name: 'dashboard_indicator.add_page'
+  title: 'Add Dashboard indicator'
+  appears_on:
+    - entity.dashboard_indicator.collection
+entity.dashboard_indicator_type.add_form:
+  route_name: 'entity.dashboard_indicator_type.add_form'
+  title: 'Add Dashboard indicator type'
+  appears_on:
+    - entity.dashboard_indicator_type.collection
+

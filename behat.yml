@@ -1,0 +1,30 @@
+default:
+  suites:
+    default:
+      contexts:
+        - FeatureContext
+        - DashboardContext
+        - Drupal\DrupalExtension\Context\DrupalContext
+        - Drupal\DrupalExtension\Context\MinkContext
+        - Drupal\DrupalExtension\Context\MessageContext
+        - Drupal\DrupalExtension\Context\DrushContext
+  extensions:
+    Behat\MinkExtension:
+      goutte: ~
+      base_url: http://drupal/
+      selenium2:
+        wd_host: "http://hub:444/wd/hub"
+      files_path: '/var/www/html/features'
+    Drupal\DrupalExtension:
+      blackbox: ~
+      api_driver: 'drupal'
+      drush_driver: 'drush'
+      drupal:
+        drupal_root: '/var/www/html/web'
+      drush:
+        root: '/var/www/html/web'
+      region_map:
+        content: ".region-content"
+      text:
+        username_field: "Nome utente"
+        log_in: "Accedi"

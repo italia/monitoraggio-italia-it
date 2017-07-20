@@ -1,0 +1,6 @@
+uuid: b6ab833b-27f4-4f84-a287-1cce3673a63e
+langcode: it
+status: true
+dependencies: {  }
+id: dataset_st
+label: 'Dataset standard'

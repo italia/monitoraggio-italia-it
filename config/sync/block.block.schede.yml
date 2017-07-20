@@ -1,0 +1,20 @@
+uuid: 634c2a73-9707-49d5-ba69-b852c8b3dc53
+langcode: it
+status: true
+dependencies:
+  theme:
+    - dash_back
+id: schede
+theme: dash_back
+region: pre_content
+weight: 0
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Secondary tabs'
+  provider: core
+  label_display: '0'
+  primary: false
+  secondary: true
+visibility: {  }

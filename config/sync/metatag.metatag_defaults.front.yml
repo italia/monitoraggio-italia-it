@@ -1,0 +1,20 @@
+uuid: a8213dc1-c2c7-4a50-8ab0-63701398032e
+langcode: it
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: yBqw6UD3j0MM1yoDSVDif7nw4SNdoS2e385nw--3ysk
+id: front
+label: 'Prima pagina'
+tags:
+  canonical_url: '[site:url]'
+  description: "Il monitoraggio dei progetti del Piano Crescita Digitale dell’Agenzia per l’Italia Digitale: SPID, fattura elettronica, ANPR, pagoPA, digital security, open data, fascicolo sanitario elettronico.\r\n"
+  title: 'Stato di avanzamento Trasformazione Digitale | Avanzamento Digitale AgID'
+  shortlink: '[site:url]'
+  og_url: '[site:url]'
+  og_site_name: '[site:name]'
+  og_title: '[site:name]'
+  twitter_cards_type: summary
+  twitter_cards_title: '[site:name]'
+  twitter_cards_site: '@AgidGov'
+  twitter_cards_page_url: '[site:url]'

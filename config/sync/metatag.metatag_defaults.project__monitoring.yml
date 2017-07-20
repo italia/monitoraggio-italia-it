@@ -1,0 +1,17 @@
+uuid: fb42fc08-0856-4d76-ab1f-a8033ccdb26f
+langcode: it
+status: true
+dependencies: {  }
+id: project__monitoring
+label: 'Project: Monitoring project'
+tags:
+  description: '[dashboard:description:200]'
+  image_src: '[dashboard:sharing-logo:fallback]'
+  title: '[project:name]'
+  og_description: '[dashboard:description:200]'
+  og_image: '[dashboard:sharing-logo:fallback]'
+  og_image_url: '[project:field_monitor_logo:entity:url]'
+  og_site_name: '[site:name]'
+  og_title: '[project:name]'
+  twitter_cards_description: '[dashboard:description:200]'
+  twitter_cards_image: '[dashboard:sharing-logo:fallback:twitter]'

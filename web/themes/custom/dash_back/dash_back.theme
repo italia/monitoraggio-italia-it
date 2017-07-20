@@ -1,0 +1,26 @@
+<?php
+
+/**
+ * @file
+ * Contains functions to alter Drupal's markup for the Dashboard backend theme.
+ */
+
+/**
+ * Implements hook_preprocess_HOOK() for html.html.twig.
+ */
+function dash_back_preprocess_html(array &$variables) {
+
+  // Add dashboard-backend class to the body.
+  $variables['attributes']['class'][] = 'dashboard-backend';
+
+  // Add a specific class for admin/not admin users.
+  $current_user = $variables['user'];
+  $current_user_roles = $current_user->getRoles();
+  $current_user_id = $current_user->id();
+  if (in_array('administrator', $current_user_roles) || $current_user_id == '1') {
+    $variables['attributes']['class'][] = 'user-is-admin';
+  }
+  else {
+    $variables['attributes']['class'][] = 'user-not-admin';
+  }
+}

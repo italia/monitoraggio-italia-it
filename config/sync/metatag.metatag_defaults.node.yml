@@ -1,0 +1,18 @@
+uuid: 9cd8b2ed-626c-4e31-aff2-7ff6bc884ec9
+langcode: it
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: ydpmSCtxLjO9xqkBxObkeYx0Bf2dkW-d8bB_6Q1Ggjs
+id: node
+label: Contenuto
+tags:
+  description: '[node:field_page_body]'
+  title: '[node:title] | [site:name]'
+  og_url: '[node:url]'
+  og_description: '[node:field_page_body]'
+  og_site_name: '[site:name]'
+  og_title: '[node:title]'
+  twitter_cards_type: summary
+  twitter_cards_title: '[node:title] | [site:name]'
+  twitter_cards_page_url: '[node:url]'

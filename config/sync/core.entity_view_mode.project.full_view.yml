@@ -1,0 +1,10 @@
+uuid: cd86bc95-ea5a-4785-ac7e-627125219cc3
+langcode: it
+status: true
+dependencies:
+  module:
+    - dashboard_project
+id: project.full_view
+label: 'Full view'
+targetEntityType: project
+cache: true

@@ -1,0 +1,29 @@
+uuid: 9faa98a7-a58a-4f62-90b4-8babdc22f2c5
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.pointer_on_map_dataset.field_location
+    - paragraphs.paragraphs_type.pointer_on_map_dataset
+  module:
+    - paragraphs
+id: paragraph.pointer_on_map_dataset.default
+targetEntityType: paragraph
+bundle: pointer_on_map_dataset
+mode: default
+content:
+  field_location:
+    type: entity_reference_paragraphs
+    weight: 0
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
+  uid: true

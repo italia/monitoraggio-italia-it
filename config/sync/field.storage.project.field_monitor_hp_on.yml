@@ -1,0 +1,18 @@
+uuid: 50e8dabf-57da-43f3-a34a-38b577ff09ff
+langcode: it
+status: true
+dependencies:
+  module:
+    - dashboard_project
+id: project.field_monitor_hp_on
+field_name: field_monitor_hp_on
+entity_type: project
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

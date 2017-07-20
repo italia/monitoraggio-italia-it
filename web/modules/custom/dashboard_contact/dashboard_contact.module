@@ -1,0 +1,227 @@
+<?php
+
+/**
+ * @file
+ * Contains dashboard_contact.module..
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Component\Render\FormattableMarkup;
+use Drupal\Component\Utility\NestedArray;
+
+/**
+ * Implements hook_help().
+ */
+function dashboard_contact_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the dashboard_contact module.
+    case 'help.page.dashboard_contact':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('All necessary for customisation contact form.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_mail().
+ */
+function dashboard_contact_mail($key, &$message, $params) {
+
+  $config = \Drupal::config('dashboard_contact.contactformconfig');
+  if (empty($config)) {
+    drupal_set_message(t('There was a problem sending your message and it was not sent.'), 'error');
+    // Logs error.
+    \Drupal::logger('dashboard_contact')->error('Contact form: configuration empty.');
+    return;
+  }
+
+  $mail_subject = '[Avanzamento crescita digitale] - nuovo contatto';
+  if (!empty($config->get('dashboard_contact.contact_subject'))) {
+    $mail_subject = $config->get('dashboard_contact.contact_subject');
+  }
+
+  $mail_text = '';
+  if (!empty($config->get('dashboard_contact.contact_text'))) {
+    $mail_text = $config->get('dashboard_contact.contact_text');
+  }
+
+  $tokens = $params['tokens'];
+  $message['body'] = [];
+
+  switch ($key) {
+    case 'dashboard_contact_form':
+
+      $message['from'] = \Drupal::config('system.site')->get('mail');
+      $message['subject'] = new FormattableMarkup($mail_subject, $tokens);
+      $message['body'][] = new FormattableMarkup($mail_text, $tokens);
+      break;
+  }
+
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function dashboard_contact_form_contact_message_contact_us_form_alter(&$form, FormStateInterface $form_state) {
+
+  $config = \Drupal::config('dashboard_contact.contactformconfig');
+  if (empty($config)) {
+    drupal_set_message(t('There was a problem sending your message and it was not sent.'), 'error');
+    // Logs error.
+    \Drupal::logger('dashboard_contact')->error('Contact form: configuration empty.');
+    return;
+  }
+
+  // Introduction text.
+  if (!empty($config->get('dashboard_contact.contact_intro'))) {
+    $form['description_text'] = [
+      '#markup' => '<div class="Prose Alert Alert--info">
+        <p>' . $config->get('dashboard_contact.contact_intro') . '</p>
+      </div>',
+      '#weight' => -10,
+    ];
+  }
+
+  // Create options for select from configuration.
+  if (!empty($config->get('dashboard_contact.contact_interest_mail')) &&
+    $config->get('dashboard_contact.contact_select_type') == '2') {
+
+    // Add specific class to form with select.
+    $form['#attributes']['class'][] = 'contact-form--WithSelect';
+
+    // Create array from string.
+    $projects_mail = dashboard_contact_select_options($config->get('dashboard_contact.contact_interest_mail'));
+
+    $form['select_projects'] = [
+      '#type' => 'select',
+      '#title' => t('Ambito di interesse'),
+      '#options' => $projects_mail,
+      '#weight' => 15,
+    ];
+  }
+  elseif (!empty($config->get('dashboard_contact.contact_interest_mail')) &&
+    $config->get('dashboard_contact.contact_select_type') == '1') {
+
+    // Add specific class to form with select.
+    $form['#attributes']['class'][] = 'contact-form--NoSelect';
+  }
+
+  // Checkbox for consent data.
+  if (!empty($config->get('dashboard_contact.contact_consent'))) {
+    $form['consent_data'] = [
+      '#type' => 'checkbox',
+      '#required' => TRUE,
+      '#title' => $config->get('dashboard_contact.contact_consent'),
+      '#weight' => 40,
+    ];
+  }
+
+  $form['actions']['preview']['#access'] = FALSE;
+
+  // Add custom action to submit.
+  $form['actions']['submit']['#submit'] = ['dashboard_contact_form_submit'];
+}
+
+/**
+ * Contact form submit handler.
+ */
+function dashboard_contact_form_submit(&$form, FormStateInterface $form_state) {
+
+  // Get form values.
+  $form_name = $form_state->getValue('name');
+  $form_mail = $form_state->getValue('mail');
+
+  $token_name = ($form_name ? $form_name : '');
+  $token_mail = ($form_mail ? $form_mail : '');
+  $token_message = NestedArray::getValue($form_state->getValues(), ['message', 0]);
+
+  // Get Contact form configuration override.
+  $config_factory = \Drupal::config('dashboard_contact.contactformconfig');
+  if (empty($config_factory)) {
+    drupal_set_message(t('There was a problem sending your message and it was not sent.'), 'error');
+    // Logs error.
+    \Drupal::logger('dashboard_contact')->error('Contact form: configuration empty.');
+    return;
+  }
+
+  // Tokens for e-mail.
+  $tokens = [
+    '@name'    => $token_name,
+    '@email'   => $token_mail,
+    '@message' => $token_message['value'],
+  ];
+
+  $params['tokens'] = $tokens;
+
+  // Mail service.
+  $mailManager = \Drupal::service('plugin.manager.mail');
+  $module = 'dashboard_contact';
+  $key = 'dashboard_contact_form';
+
+  $params['message'][] = $config_factory->get('dashboard_contact.contact_text');
+
+  $langcode = \Drupal::currentUser()->getPreferredLangcode();
+
+  // Destination from form configuration.
+  $config_recipes_str = $config_factory->get('dashboard_contact.contact_recipient');
+  $dest_config = preg_replace('/\s+/', '', $config_recipes_str);
+  $recipes_array = explode(",", $dest_config);
+
+  // Send e-mail to defult recipes.
+  foreach ($recipes_array as $destination_mail) {
+    $result = $mailManager->mail($module, $key, $destination_mail, $langcode, $params, NULL, TRUE);
+  }
+
+  // Check if select "Interest area" is shown and add all necessary
+  // to send mails to selected value.
+  if ($config_factory->get('dashboard_contact.contact_select_type') == '2') {
+    $form_select = $form_state->getValue('select_projects');
+
+    $token_select = t('No project selected');
+    if (!empty($form_select)) {
+      $token_select = $form['select_projects']['#options'][$form_select];
+    }
+
+    $tokens['@select_value'] = $token_select;
+    $params['tokens'] = $tokens;
+
+    // Send mail to recipe inside custom select.
+    $dest_select = $form_state->getValue('select_projects');
+    $mailManager->mail($module, $key, $dest_select, $langcode, $params, NULL, TRUE);
+  }
+
+  if ($result['result'] !== TRUE && !empty($config_factory->get('dashboard_contact.contact_message_error'))) {
+    drupal_set_message($config_factory->get('dashboard_contact.contact_message_error'), 'error');
+    // Logs error.
+    \Drupal::logger('dashboard_contact')->error($config_factory->get('dashboard_contact.contact_message_error'));
+  }
+  elseif ($result['result'] == TRUE && !empty($config_factory->get('dashboard_contact.contact_message'))) {
+    drupal_set_message($config_factory->get('dashboard_contact.contact_message'));
+  }
+
+}
+
+/**
+ * Helper function to select array.
+ */
+function dashboard_contact_select_options($string) {
+
+  if (empty($string)) {
+    throw new \InvalidArgumentException('String cannot be empty');
+  }
+  $first_array = explode("\r\n", $string);
+  $array = [];
+  foreach ($first_array as $array_el) {
+    $parts = explode("|", $array_el);
+
+    $key = $parts[0];
+    $array[$key] = $parts[1];
+  }
+
+  return $array;
+
+}

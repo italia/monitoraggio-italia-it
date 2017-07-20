@@ -1,0 +1,20 @@
+uuid: 8fb6fc99-3fc7-4cc0-ba11-fd595afaa069
+langcode: it
+status: true
+dependencies:
+  module:
+    - dashboard_dataset
+    - dashboard_widget
+id: dataset.field_dataset_st_widget
+field_name: field_dataset_st_widget
+entity_type: dataset
+type: entity_reference
+settings:
+  target_type: dashboard_widget
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

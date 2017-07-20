@@ -1,0 +1,29 @@
+uuid: e44dab4d-180c-4710-8779-9f70314a2cc2
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.regional_dataset.field_regional_values
+    - paragraphs.paragraphs_type.regional_dataset
+  module:
+    - paragraphs
+id: paragraph.regional_dataset.default
+targetEntityType: paragraph
+bundle: regional_dataset
+mode: default
+content:
+  field_regional_values:
+    type: entity_reference_paragraphs
+    weight: 0
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
+  uid: true

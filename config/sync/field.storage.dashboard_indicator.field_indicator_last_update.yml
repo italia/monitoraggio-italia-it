@@ -1,0 +1,20 @@
+uuid: 6ba0420a-ca4a-4dd7-9dcf-6c0a93e2ab36
+langcode: it
+status: true
+dependencies:
+  module:
+    - dashboard_indicator
+    - datetime
+id: dashboard_indicator.field_indicator_last_update
+field_name: field_indicator_last_update
+entity_type: dashboard_indicator
+type: datetime
+settings:
+  datetime_type: date
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

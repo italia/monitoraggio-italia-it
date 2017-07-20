@@ -1,0 +1,19 @@
+uuid: 90194109-9383-42a3-8aee-cb8165796d62
+langcode: it
+status: true
+dependencies:
+  module:
+    - dashboard_dataset
+    - text
+id: dataset.field_dataset_st_description
+field_name: field_dataset_st_description
+entity_type: dataset
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,24 @@
+uuid: fa801576-7ff2-4edb-acd8-524c51ab45f1
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.site-map
+  module:
+    - system
+  theme:
+    - dashboard
+id: dashboard_sitemap
+theme: dashboard
+region: footer_middle
+weight: -7
+provider: null
+plugin: 'system_menu_block:site-map'
+settings:
+  id: 'system_menu_block:site-map'
+  label: 'Mappa del sito'
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+visibility: {  }

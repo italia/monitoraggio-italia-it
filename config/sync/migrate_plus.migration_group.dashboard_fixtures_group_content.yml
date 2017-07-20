@@ -1,0 +1,12 @@
+uuid: 6630fc45-b0b0-46cd-8e3d-3599b5819a09
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: nEnGGiGiiCduLty9mq_N0mgvsu8W4g1hWE8HwBDWkho
+id: dashboard_fixtures_group_content
+label: 'Structure related migrations'
+description: 'Structure migrations, such as menu, taxonomies'
+source_type: 'CSV file'
+module: null
+shared_configuration: null

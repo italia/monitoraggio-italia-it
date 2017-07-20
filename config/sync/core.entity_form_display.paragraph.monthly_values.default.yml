@@ -1,0 +1,39 @@
+uuid: 221718c6-3341-4463-a5ac-3f71ba602b79
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.monthly_values.field_group
+    - field.field.paragraph.monthly_values.field_monthly_value
+    - field.field.paragraph.monthly_values.field_year
+    - paragraphs.paragraphs_type.monthly_values
+  module:
+    - dashboard_base
+id: paragraph.monthly_values.default
+targetEntityType: paragraph
+bundle: monthly_values
+mode: default
+content:
+  field_group:
+    weight: 2
+    settings:
+      size: 20
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_monthly_value:
+    weight: 1
+    settings:
+      size: '20'
+      placeholder: ''
+    third_party_settings: {  }
+    type: decimal_percentage_field_widget
+  field_year:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+hidden:
+  created: true
+  status: true
+  uid: true

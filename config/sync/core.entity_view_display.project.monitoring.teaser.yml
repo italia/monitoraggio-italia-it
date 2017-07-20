@@ -1,0 +1,61 @@
+uuid: e5ba7d8d-6dbb-49d3-8cb6-1dfbed3669e8
+langcode: it
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.project.teaser
+    - dashboard_project.project_type.monitoring
+    - field.field.project.monitoring.field_meta_tag
+    - field.field.project.monitoring.field_monitor_description
+    - field.field.project.monitoring.field_monitor_desi
+    - field.field.project.monitoring.field_monitor_indicator
+    - field.field.project.monitoring.field_monitor_link
+    - field.field.project.monitoring.field_monitor_logo
+    - field.field.project.monitoring.field_monitor_subtitle
+    - field.field.project.monitoring.field_monitor_update_frequency
+    - field.field.project.monitoring.field_monitor_weight
+id: project.monitoring.teaser
+targetEntityType: project
+bundle: monitoring
+mode: teaser
+content:
+  field_monitor_indicator:
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: indicator_row
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+  field_monitor_subtitle:
+    type: string
+    weight: 3
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  key_unique:
+    type: string
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  name:
+    label: hidden
+    type: string
+    weight: 0
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  field_has_social_share: true
+  field_meta_tag: true
+  field_monitor_description: true
+  field_monitor_desi: true
+  field_monitor_hp_on: true
+  field_monitor_link: true
+  field_monitor_logo: true
+  field_monitor_update_frequency: true
+  field_monitor_weight: true
+  user_id: true

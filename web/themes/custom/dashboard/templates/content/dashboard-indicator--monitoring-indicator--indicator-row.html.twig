@@ -1,0 +1,35 @@
+{#
+/**
+ * @file dashboard_indicator.html.twig
+ * Default theme implementation to present Dashboard indicator data.
+ *
+ * This template is used when viewing Dashboard indicator pages.
+ *
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ * - attributes: HTML attributes for the container element.
+ *
+ * @see template_preprocess_dashboard_indicator()
+ *
+ * @ingroup themeable
+ */
+#}
+{%
+  set classes = [
+    'ProjectCard-value',
+    'u-padding-r-all'
+  ]
+%}
+{% if content %}
+  <div{{ attributes.addClass(classes) }}>
+    <div class="Grid Grid--fit Grid--alignMiddle">
+      <div class="ProjectCard-value-label Grid-cell">
+        <span class="u-textWeight-700 u-text-r-xxs">{{ content.name|field_value }}</span>
+      </div>
+      <div class="ProjectCard-value-number Grid-cell u-textRight">
+        <span class="u-textWeight-600 u-text-r-s counterUp">{{ content.field_indicator_value|field_value }}</span>
+      </div>
+    </div>
+  </div>
+{% endif %}

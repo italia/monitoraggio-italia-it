@@ -1,0 +1,9 @@
+dashboard_project.desi_settings:
+  path: '/admin/config/general-settings/desi'
+  defaults:
+    _form: '\Drupal\dashboard_project\Form\DashDesiSettings'
+    _title: 'General settings'
+  requirements:
+    _permission: 'access desi configuration settings'
+  options:
+    _admin_route: TRUE

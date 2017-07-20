@@ -1,0 +1,52 @@
+definitions:
+  entity__project__collection:
+    weight: -77
+    menu_name: admin
+    parent: system.admin_content
+    enabled: true
+    expanded: false
+  entity__dashboard_indicator_type__collection:
+    weight: -77
+    menu_name: admin
+    parent: system.admin_structure
+    expanded: false
+    enabled: true
+  entity__dashboard_widget_type__collection:
+    weight: -77
+    menu_name: admin
+    parent: system.admin_structure
+    expanded: false
+    enabled: true
+  entity__dataset_type__collection:
+    weight: -77
+    menu_name: admin
+    parent: system.admin_structure
+    expanded: false
+    enabled: true
+  entity__project_type__collection:
+    weight: -77
+    menu_name: admin
+    parent: system.admin_structure
+    expanded: false
+    enabled: true
+  entity__dataset__collection:
+    weight: -76
+    parent: system.admin_content
+    menu_name: admin
+    expanded: false
+    enabled: true
+  dashboard_contact__dashboard_contact_conf:
+    weight: -77
+    menu_name: admin
+    parent: system.admin_config_system
+    expanded: false
+    enabled: true
+  dashboard_base__general_config_settings:
+    weight: -77
+    menu_name: admin
+    parent: system.admin_config_system
+    expanded: false
+    enabled: true
+_core:
+  default_config_hash: jdY7AU0tU-QsjmiOw3W8vwpYMb-By--_MSFgbqKUTYM
+langcode: it

@@ -1,0 +1,10 @@
+
+dashboard_contact.dashboard_contact_conf:
+  path: '/admin/config/contact-form-config'
+  defaults:
+    _form: '\Drupal\dashboard_contact\Form\ContactFormConfig'
+    _title: 'Configurazioni form di contatti'
+  requirements:
+    _permission: 'access contact block configuration'
+  options:
+    _admin_route: TRUE

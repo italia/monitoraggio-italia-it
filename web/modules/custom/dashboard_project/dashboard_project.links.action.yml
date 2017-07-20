@@ -1,0 +1,10 @@
+entity.project.add_form:
+  route_name: 'project.add_page'
+  title: 'Add monitoring project'
+  appears_on:
+    - entity.project.collection
+entity.project_type.add_form:
+  route_name: 'entity.project_type.add_form'
+  title: 'Add Project type'
+  appears_on:
+    - entity.project_type.collection

@@ -1,0 +1,102 @@
+uuid: 77ecc169-bd65-463e-bba5-a3e37c4cdd00
+langcode: it
+status: true
+dependencies:
+  config:
+    - dashboard_dataset.dataset_type.dataset_st
+    - field.field.dataset.dataset_st.field_dataset_st_data
+    - field.field.dataset.dataset_st.field_dataset_st_description
+    - field.field.dataset.dataset_st.field_dataset_st_widget
+  module:
+    - field_group
+    - inline_entity_form
+    - text
+third_party_settings:
+  field_group:
+    group_dataset:
+      children:
+        - group_dati_editoriali
+        - group_dati_analitici
+      parent_name: ''
+      weight: 0
+      format_type: tabs
+      format_settings:
+        id: ''
+        classes: ''
+        direction: vertical
+      label: Dataset
+    group_dati_editoriali:
+      children:
+        - key_unique
+        - name
+        - field_dataset_st_description
+      parent_name: group_dataset
+      weight: 7
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Dati editoriali'
+    group_dati_analitici:
+      children:
+        - field_dataset_st_data
+        - field_dataset_st_widget
+      parent_name: group_dataset
+      weight: 9
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Dati analitici'
+id: dataset.dataset_st.default
+targetEntityType: dataset
+bundle: dataset_st
+mode: default
+content:
+  field_dataset_st_data:
+    weight: 3
+    settings:
+      form_mode: default
+      override_labels: true
+      label_singular: 'Dataset Serie'
+      label_plural: 'Dataset Serie'
+      allow_new: true
+      match_operator: CONTAINS
+      allow_existing: false
+    third_party_settings: {  }
+    type: inline_entity_form_complex
+  field_dataset_st_description:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+  field_dataset_st_widget:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  key_unique:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  langcode: true
+  user_id: true

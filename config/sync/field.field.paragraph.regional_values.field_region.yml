@@ -1,0 +1,21 @@
+uuid: 02e7bba6-c19a-4854-8ea2-7ae7a90b610e
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_region
+    - paragraphs.paragraphs_type.regional_values
+  module:
+    - options
+id: paragraph.regional_values.field_region
+field_name: field_region
+entity_type: paragraph
+bundle: regional_values
+label: Region
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

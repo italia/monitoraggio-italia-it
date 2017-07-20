@@ -1,0 +1,5 @@
+name: Dashboard entity dataset
+type: module
+description: All stuff for entity "Dataset"
+core: 8.x
+package: Dashboard

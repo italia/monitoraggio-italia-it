@@ -1,0 +1,10 @@
+uuid: fe0ca4f9-3c49-4f2e-a5c9-18489c1b1ee8
+langcode: it
+status: true
+dependencies: {  }
+id: dashboard_fixtures_group_paragraphs
+label: 'Paragraph migrations'
+description: 'Paragraph migrations.'
+source_type: 'Google sheet'
+module: null
+shared_configuration: null

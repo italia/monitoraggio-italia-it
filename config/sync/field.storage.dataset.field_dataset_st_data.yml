@@ -1,0 +1,20 @@
+uuid: f8909d61-386b-4043-8605-045a9cf785fb
+langcode: it
+status: true
+dependencies:
+  module:
+    - dashboard_dataset
+    - paragraphs
+id: dataset.field_dataset_st_data
+field_name: field_dataset_st_data
+entity_type: dataset
+type: entity_reference
+settings:
+  target_type: paragraph
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

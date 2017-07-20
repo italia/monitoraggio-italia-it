@@ -1,0 +1,13 @@
+global:
+  version: VERSION
+  css:
+    theme:
+      css/STARTERKIT.css: {}
+
+ita-web-toolkit:
+  version: VERSION
+  css:
+    theme:
+      ita-web-toolkit-build/build.css: {}
+  js:
+    ita-web-toolkit-build/IWT.min.js: {}

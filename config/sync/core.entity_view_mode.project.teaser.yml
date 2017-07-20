@@ -1,0 +1,10 @@
+uuid: a891a544-22cf-4af4-9600-6f5823e81eeb
+langcode: it
+status: true
+dependencies:
+  module:
+    - dashboard_project
+id: project.teaser
+label: Teaser
+targetEntityType: project
+cache: true

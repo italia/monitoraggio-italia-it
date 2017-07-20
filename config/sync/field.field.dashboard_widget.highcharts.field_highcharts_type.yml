@@ -1,0 +1,32 @@
+uuid: a06bc171-c8a1-450a-b3dd-31a74509da28
+langcode: it
+status: true
+dependencies:
+  config:
+    - dashboard_widget.dashboard_widget_type.highcharts
+    - field.storage.dashboard_widget.field_highcharts_type
+  module:
+    - geocoder_field
+third_party_settings:
+  geocoder_field:
+    method: none
+    field: name
+    plugins: {  }
+    dumper: wkt
+    delta_handling: default
+    failure:
+      handling: preserve
+      status_message: true
+      log: true
+id: dashboard_widget.highcharts.field_highcharts_type
+field_name: field_highcharts_type
+entity_type: dashboard_widget
+bundle: highcharts
+label: Type
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

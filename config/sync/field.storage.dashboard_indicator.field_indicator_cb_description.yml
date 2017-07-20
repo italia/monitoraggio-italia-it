@@ -1,0 +1,19 @@
+uuid: fc267e52-6a55-46e3-a521-9185fe45fba1
+langcode: it
+status: true
+dependencies:
+  module:
+    - dashboard_indicator
+id: dashboard_indicator.field_indicator_cb_description
+field_name: field_indicator_cb_description
+entity_type: dashboard_indicator
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

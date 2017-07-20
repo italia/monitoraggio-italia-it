@@ -1,0 +1,34 @@
+uuid: 9284fb1c-716d-485b-a85e-02348263b5ec
+langcode: it
+status: true
+dependencies:
+  config:
+    - dashboard_project.project_type.monitoring
+    - field.storage.project.field_monitor_update_frequency
+  module:
+    - geocoder_field
+third_party_settings:
+  geocoder_field:
+    method: none
+    field: name
+    plugins: {  }
+    dumper: wkt
+    delta_handling: default
+    failure:
+      handling: preserve
+      status_message: true
+      log: true
+id: project.monitoring.field_monitor_update_frequency
+field_name: field_monitor_update_frequency
+entity_type: project
+bundle: monitoring
+label: 'Frequenza di aggiornamento'
+description: 'This field is currently not displayed on the frontend, but is printed on the JSON returned by the REST service. It is a free text field and can take any value, we recommend using a nomenclature in English.'
+required: false
+translatable: false
+default_value:
+  -
+    value: Monthly
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,10 @@
+uuid: 3afe22f7-8cfe-4486-a611-49b6c1eac117
+langcode: it
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: Q2Ra3jfoIVk0f3SjxJX61byRQFVBAbpzYDQOiY-kno8
+id: main
+label: 'Navigazione principale'
+description: 'Link per il menu principale'
+locked: true

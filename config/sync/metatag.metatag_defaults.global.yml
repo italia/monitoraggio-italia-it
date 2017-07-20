@@ -1,0 +1,20 @@
+uuid: c8731968-3104-4dbf-8a42-e66d954bae38
+langcode: it
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 5rOnjIF_aDyGBmfXNhJnkPXxQMlem0CmVmggV-TF3Fg
+id: global
+label: Globale
+tags:
+  image_src: '[dashboard:site:url:no-language]/themes/custom/dashboard/images/logo-share-1.jpg'
+  title: '[current-page:title] | [site:name]'
+  og_image: '[dashboard:site:url:no-language]/themes/custom/dashboard/images/logo-share-1.jpg'
+  og_site_name: '[site:name]'
+  og_title: '[current-page:title]'
+  og_url: '[current-page:url]'
+  twitter_cards_image: '[dashboard:site:url:no-language]/themes/custom/dashboard/images/logo-share-twitter-1.jpg'
+  twitter_cards_page_url: '[current-page:url]'
+  twitter_cards_site: '@AgidGov'
+  twitter_cards_title: '[current-page:title] | [site:name]'
+  twitter_cards_type: summary

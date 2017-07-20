@@ -1,0 +1,21 @@
+uuid: f09cb611-4183-47f6-b365-45a7d01ec82f
+langcode: it
+status: true
+dependencies:
+  module:
+    - dashboard_base
+    - dashboard_indicator
+id: dashboard_indicator.field_indicator_value
+field_name: field_indicator_value
+entity_type: dashboard_indicator
+type: decimal_percentage_field_type
+settings:
+  precision: '14'
+  scale: '0'
+module: dashboard_base
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

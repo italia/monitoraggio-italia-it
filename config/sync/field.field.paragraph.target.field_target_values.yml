@@ -1,0 +1,25 @@
+uuid: 1f246954-51ee-4c4d-9812-9caca6cc482d
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_target_values
+    - paragraphs.paragraphs_type.target
+  module:
+    - dashboard_base
+id: paragraph.target.field_target_values
+field_name: field_target_values
+entity_type: paragraph
+bundle: target
+label: Value
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: ''
+  max: ''
+  prefix: ''
+  suffix: ''
+field_type: decimal_percentage_field_type

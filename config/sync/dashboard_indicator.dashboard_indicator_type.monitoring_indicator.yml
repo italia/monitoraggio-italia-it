@@ -1,0 +1,7 @@
+uuid: 9bf4c4b1-d56e-4ef6-a423-b1838f47560a
+langcode: en
+status: true
+dependencies: {  }
+id: monitoring_indicator
+label: 'Monitoring indicator'
+key_unique: null

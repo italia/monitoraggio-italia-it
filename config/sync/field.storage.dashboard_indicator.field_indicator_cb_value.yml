@@ -1,0 +1,21 @@
+uuid: 777e7a6a-d6d4-410e-b4a8-f39b4541fcb4
+langcode: it
+status: true
+dependencies:
+  module:
+    - dashboard_indicator
+    - entity_reference_revisions
+    - paragraphs
+id: dashboard_indicator.field_indicator_cb_value
+field_name: field_indicator_cb_value
+entity_type: dashboard_indicator
+type: entity_reference_revisions
+settings:
+  target_type: paragraph
+module: entity_reference_revisions
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

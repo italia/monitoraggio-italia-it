@@ -1,0 +1,30 @@
+uuid: 855699d6-632a-4118-b1c9-735a37c36e08
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.location.field_location_coordinates
+    - field.field.paragraph.location.field_location_name
+    - paragraphs.paragraphs_type.location
+  module:
+    - geofield
+id: paragraph.location.default
+targetEntityType: paragraph
+bundle: location
+mode: default
+content:
+  field_location_coordinates:
+    weight: 1
+    label: above
+    settings:
+      output_format: wkt
+    third_party_settings: {  }
+    type: geofield_default
+  field_location_name:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+hidden: {  }

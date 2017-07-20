@@ -1,0 +1,57 @@
+uuid: f6106d5f-c4ef-4743-8e1c-674339e3c21c
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_regional_values
+    - paragraphs.paragraphs_type.regional_dataset
+    - paragraphs.paragraphs_type.regional_values
+  module:
+    - entity_reference_revisions
+id: paragraph.regional_dataset.field_regional_values
+field_name: field_regional_values
+entity_type: paragraph
+bundle: regional_dataset
+label: 'Regional Values'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      regional_values: regional_values
+    target_bundles_drag_drop:
+      regional_dataset:
+        weight: 11
+        enabled: false
+      free_dataset:
+        weight: 12
+        enabled: false
+      location:
+        weight: 13
+        enabled: false
+      monthly_dataset:
+        weight: 14
+        enabled: false
+      name_values:
+        weight: 15
+        enabled: false
+      name_values_year:
+        weight: 16
+        enabled: false
+      pointer_on_map_dataset:
+        weight: 17
+        enabled: false
+      regional_values:
+        enabled: true
+        weight: 18
+      target:
+        weight: 19
+        enabled: false
+      year_values:
+        weight: 20
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,19 @@
+uuid: bf8e62d4-8aea-4ded-a782-bea24d53c7b2
+langcode: it
+status: true
+dependencies:
+  module:
+    - dashboard_project
+    - metatag
+id: project.field_meta_tag
+field_name: field_meta_tag
+entity_type: project
+type: metatag
+settings: {  }
+module: metatag
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

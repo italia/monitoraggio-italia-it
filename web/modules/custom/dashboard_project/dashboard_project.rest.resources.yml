@@ -1,0 +1,20 @@
+project_resource:
+  GET:
+    endpoint:
+      options:
+        parameters:
+          project_key:
+            type: 'dashboard:project'
+      requirements:
+        project_key: '^[a-z0-9\_]+$'
+    params:
+      indicator:
+        type: string
+        required: false
+        constraints:
+          - { name: 'Regex', options: '/^[a-z0-9\_]+$/' }
+      dataset:
+        type: string
+        required: false
+        constraints:
+          - { name: 'Regex', options: '/^[a-z0-9\_]+$/' }

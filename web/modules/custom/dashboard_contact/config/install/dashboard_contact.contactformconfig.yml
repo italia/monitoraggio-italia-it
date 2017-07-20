@@ -1,0 +1,11 @@
+dashboard_contact:
+  contact_intro: "Puoi richiedere informazioni sul monitoraggio Avanzamento crescita Digitale o sui singoli progetti selezionando un ambito di interesse nel form sottostante."
+  contact_subject: '[Avanzamento crescita digitale] - nuovo contatto'
+  contact_text: "Testo della e-mail inviata dal form di contatti della Dashboard Avanzamento crescita digitale.\r\n\r\nNome: \r\n@name\r\n\r\nE-mail:\r\n@email\r\n\r\nMessage:\r\n@message"
+  contact_recipient: 'agid@test.loc, agid2@test.loc'
+  contact_interest_mail: "pagopa@mail.loc|Pago Pa\r\nspid@mail.loc|Spid\r\nfatt@mail.loc|Fatturazione elettronica"
+  contact_message: 'La tua richiesta è stata inoltrata, grazie.'
+  contact_message_error: 'Si è verificato un errore. Per assistenza contatta help@mail.loc.'
+  contact_consent: 'Acconsento al trattamento dei dati.'
+  contact_consent: 'Acconsento al trattamento dei dati.'
+  contact_select_type: '1'

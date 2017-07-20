@@ -1,0 +1,23 @@
+uuid: df0702a6-169b-450d-845e-a8a51337ba78
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.monthly_dataset.field_monthly_values
+    - paragraphs.paragraphs_type.monthly_dataset
+  module:
+    - entity_reference_revisions
+id: paragraph.monthly_dataset.default
+targetEntityType: paragraph
+bundle: monthly_dataset
+mode: default
+content:
+  field_monthly_values:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+hidden: {  }

@@ -1,0 +1,33 @@
+uuid: 235a6a1d-426a-4f98-ae56-16d85027a599
+langcode: it
+status: true
+dependencies:
+  config:
+    - dashboard_indicator.dashboard_indicator_type.monitoring_indicator
+    - field.storage.dashboard_indicator.field_indicator_description
+  module:
+    - geocoder_field
+    - text
+third_party_settings:
+  geocoder_field:
+    method: none
+    field: name
+    plugins: {  }
+    dumper: wkt
+    delta_handling: default
+    failure:
+      handling: preserve
+      status_message: true
+      log: true
+id: dashboard_indicator.monitoring_indicator.field_indicator_description
+field_name: field_indicator_description
+entity_type: dashboard_indicator
+bundle: monitoring_indicator
+label: Descrizione
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

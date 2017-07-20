@@ -1,0 +1,22 @@
+uuid: da3ee5ca-e996-4bfd-992e-2605af738e51
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - dashboard
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: dashboard_messages
+theme: dashboard
+region: content
+weight: -5
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

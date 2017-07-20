@@ -1,0 +1,28 @@
+uuid: ace0febd-67a9-477d-b18c-b2fe9be7a0fa
+langcode: it
+status: true
+dependencies:
+  config:
+    - dashboard_indicator.dashboard_indicator_type.monitoring_indicator
+    - dashboard_project.project_type.monitoring
+    - field.storage.project.field_monitor_indicator
+id: project.monitoring.field_monitor_indicator
+field_name: field_monitor_indicator
+entity_type: project
+bundle: monitoring
+label: Indicators
+description: 'Create a new indicator clicking on "Create Monitoring indicator", or add an existing one using the autocompletition functions of this field.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:dashboard_indicator'
+  handler_settings:
+    target_bundles:
+      monitoring_indicator: monitoring_indicator
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

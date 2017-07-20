@@ -1,0 +1,18 @@
+uuid: ee0dc4a6-2f68-42a3-86a3-01c0fac815aa
+langcode: it
+status: true
+dependencies:
+  module:
+    - menu_link_content
+id: menu_link_content.menu_link_content.changed
+field_name: changed
+entity_type: menu_link_content
+bundle: menu_link_content
+label: Modificato
+description: 'Data e ora in cui il link è stato modificato'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

@@ -1,0 +1,36 @@
+{#
+/**
+ * @file dataset.html.twig
+ * Default theme implementation to present Dataset data.
+ *
+ * This template is used when viewing Dataset pages.
+ *
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ * - attributes: HTML attributes for the container element.
+ *
+ * @see template_preprocess_dataset()
+ *
+ * @ingroup themeable
+ */
+#}
+<div{{ attributes.addClass('Grid-cell') }}>
+  <div class="ChartBox u-background-white u-margin-r-bottom u-margin-r-top u-borderRadius-s u-borderShadow-m">
+    <!-- Here the generated data chart -->
+    <header class="ChartBox-header u-padding-r-all u-borderRadius-s">
+      <h3 class="u-text-r-xs u-textWeight-600">{{ content.name|field_value }}</h3>
+    </header>
+    <div class="Dataset u-borderRadius-s" style="overflow: hidden;" data-key="{{ content.key_unique|field_value }}" data-type="{{ widget_value }}" id="dataset-{{ content.key_unique|field_value }}">
+      <!-- Here the generated data chart -->
+    </div>
+  </div>
+  <div class="u-jsHiddenVisually">
+    {# Here we have the table with the dataset's data for browsers or crawlers with JS disabled #}
+    <header>
+      <h3 class="u-text-h3 u-textWeight-600">{{ content.name|field_value }}</h3>
+      <div class="Prose">{{ content.field_dataset_st_description|field_value }}</div>
+    </header>
+    {{ content.field_dataset_st_data }}
+  </div>
+</div>

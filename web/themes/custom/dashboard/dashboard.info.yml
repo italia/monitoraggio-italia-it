@@ -1,0 +1,36 @@
+name: Dashboard
+type: theme
+description: A custom theme for Dashboard. Subtheme of Italiagov.
+package: Dashboard
+core: 8.x
+
+base theme: italiagov
+
+regions:
+  cookiebar: Cookie bar
+  header_top: Header top
+  header_branding: Header branding
+  header_search: Header search
+  offcanvas: Offcanvas
+  breadcrumb: Breadcrum
+  help: Help
+  hero: Hero
+  content: Content
+  sidebar_left: Sidebar Left
+  postscript_first: Postscript First
+  postscript_second: Postscript Second
+  postscript_third: Postscript Third
+  postscript_fourth: Postscript Fourth
+  leads : Leads
+  pre_footer : Pre Footer
+  footer_top : Footer top
+  footer_top_right : Footer top right
+  footer_middle : Footer middle
+  footer_bottom : Footer bottom
+
+libraries:
+  - dashboard/pace
+  - dashboard/counterup
+  - dashboard/highcharts
+  - dashboard/highcharts_accessibility
+  - dashboard/global

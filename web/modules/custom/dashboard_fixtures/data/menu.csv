@@ -1,0 +1,44 @@
+mlid,plid,menu_name,weight,expanded,title,link_path,language,external
+1,0,footer,1,0,Privacy,<front>,it,0
+2,0,footer,2,0,Note legali,<front>,it,0
+3,0,footer,3,0,Contatti,/contact,it,0
+4,0,footer,4,0,Footer 4,<front>,it,0
+10,0,site-map,1,0,Home,<front>,it,0
+11,0,site-map,2,0,Indicatori della crescita digitale,<front>,it,0
+12,0,site-map,3,0,Area Dowload (TBD),<front>,it,0
+13,0,site-map,4,0,Pagina informativa (TBD),<front>,it,0
+20,0,menu-projects,1,1,SPID,project/1,it,0
+21,0,menu-projects,2,1,pagoPA,/project/2,it,0
+22,0,menu-projects,3,1,Fatturazione elettronica,<front>,it,0
+23,0,menu-projects,4,1,Open Data,<front>,it,0
+24,0,menu-projects,5,1,Fascicolo sanitario Elettronico,<front>,it,0
+25,0,menu-projects,6,1,Digital Security,<front>,it,0
+30,0,main,0,1,Indicatori di Crescita digitale,<front>,it,0
+3001,30,main,1,1,SPID,<front>,it,0
+300101,3001,main,0,1,Amministrazioni attive,<front>,it,0
+300102,3001,main,0,1,Identity provider accreditati,<front>,it,0
+300103,3001,main,0,1,Servizi disponibili tramite SPID,<front>,it,0
+300104,3001,main,0,1,Identità SPID erogate,<front>,it,0
+3002,30,main,2,1,pagoPA,<front>,it,0
+300201,3002,main,0,1,PA aderenti,<front>,it,0
+300202,3002,main,0,1,PA Attive,<front>,it,0
+300203,3002,main,0,1,Prestatori servizi di pagamento,<front>,it,0
+300204,3002,main,0,1,Transazioni totali,<front>,it,0
+3003,30,main,3,1,Fatturazione elettronica,<front>,it,0
+300301,3003,main,0,1,Milioni di fatture gestite,<front>,it,0
+300302,3003,main,0,1,Uffici fatturazione elettronica su IPA,<front>,it,0
+300303,3003,main,0,1,Amministrazioni su IPA,<front>,it,0
+3004,30,main,4,1,Open Data,<front>,it,0
+300401,3004,main,0,1,Dataset,<front>,it,0
+300402,3004,main,0,1,Amministrazioni,<front>,it,0
+3005,30,main,5,1,Fascicolo sanitario Elettronico,<front>,it,0
+300501,3005,main,0,1,Regioni operative,<front>,it,0
+300502,3005,main,0,1,Regioni aderenti all'interoperabilità,<front>,it,0
+300503,3005,main,0,1,Cittadini che hanno attivato il FSE,<front>,it,0
+300504,3005,main,0,1,Referti rilasciati tramite FSE,<front>,it,0
+3006,30,main,6,1,Digital Security,<front>,it,0
+300601,3006,main,0,1,Segnalazioni gestite,<front>,it,0
+300602,3006,main,0,1,PA Servite dal CERT PA,<front>,it,0
+31,0,main,1,0,Pagina informativa,<front>,it,0
+32,0,main,2,0,Area Download,<front>,it,0
+33,0,main,2,0,Contatti,/contact,it,0

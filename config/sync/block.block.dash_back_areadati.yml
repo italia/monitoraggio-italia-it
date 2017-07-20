@@ -1,0 +1,29 @@
+uuid: 304ad723-80ab-4e08-b0ff-980ef7bb92a4
+langcode: it
+status: false
+dependencies:
+  config:
+    - system.menu.data-area
+  module:
+    - system
+  theme:
+    - dash_back
+id: dash_back_areadati
+theme: dash_back
+region: '-1'
+weight: -8
+provider: null
+plugin: 'system_menu_block:data-area'
+settings:
+  id: 'system_menu_block:data-area'
+  label: 'Area dati'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+visibility:
+  request_path:
+    id: request_path
+    pages: '/area-dati/*'
+    negate: false
+    context_mapping: {  }

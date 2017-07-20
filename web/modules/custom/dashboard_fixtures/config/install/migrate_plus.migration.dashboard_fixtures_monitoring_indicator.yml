@@ -1,0 +1,170 @@
+# Migration configuration for entity dataset.
+id: dashboard_fixtures_monitoring_indicator
+# A human-friendly description of the migration.
+label: Import monitoring indicator entity
+migration_group: dashboard_fixtures_group_content
+migration_tags: null
+status: true
+source:
+  plugin: url
+  data_fetcher_plugin: http
+  data_parser_plugin: google_sheets
+  # The feed file for the spreadsheet. The Google Spreadsheet should be either “Public” or set to “Anyone with link can
+  # view” in order for the feed to work. Note that the <SHEET> param is the order of the tabs and WILL change if the
+  # tabs are re-ordered.
+  # Template: 'https://spreadsheets.google.com/feeds/list/<KEY>/<SHEET>/public/values?alt=json'
+  urls: 'https://spreadsheets.google.com/feeds/list/1Mep6X_C2BrfgbkqxpIk_NN5n9bzPbQGgLivGTbr1ZnY/1/public/values?alt=json'
+  # Under 'fields', we list the data items to be imported. The first level keys
+  # are the source field names we want to populate (the names to be used as
+  # sources in the process configuration below). For each field we're importing,
+  # we provide a label (optional - this is for display in migration tools) and
+  # an selector (xpath) for retrieving that value. It's important to note that this xpath
+  # is relative to the elements retrieved by item_selector.
+  # For Google Spreadsheet XML feeds the actual columns are named with gsx: followed by the cleaned column name (lower,
+  # limited punctuation, etc).
+  item_selector:
+  fields:
+    -
+      name: id
+      label: 'id'
+      selector: 'id'
+    -
+      name: name
+      label: 'name'
+      selector: 'name'
+    -
+      name: uniquekey
+      label: 'uniquekey'
+      selector: 'uniquekey'
+    -
+      name: baseline
+      label: 'baseline'
+      selector: 'baseline'
+    -
+      name: dataset
+      label: 'dataset'
+      selector: 'dataset'
+    -
+      name: data
+      label: 'data'
+      selector: 'data'
+    -
+      name: description
+      label: 'description'
+      selector: 'description'
+    -
+      name: targets
+      label: 'targets'
+      selector: 'targets'
+    -
+      name: indicatorvalue
+      label: 'indicatorvalue'
+      selector: 'indicatorvalue'
+    -
+      name: valuedescription
+      label: 'valuedescription'
+      selector: 'valuedescription'
+    -
+      name: valuetitle
+      label: 'valuetitle'
+      selector: 'valuetitle'
+    -
+      name: boxtitle
+      label: 'boxtitle'
+      selector: 'boxtitle'
+    -
+      name: boxvalue
+      label: 'boxvalue'
+      selector: 'boxvalue'
+    -
+      name: boxdescription
+      label: 'boxdescription'
+      selector: 'boxdescription'
+
+  # Under 'ids', we identify source fields populated above which will uniquely
+  # identify each imported item. The 'type' makes sure the migration map table
+  # uses the proper schema type for stored the IDs.
+  ids:
+    id:
+      type: integer
+
+destination:
+  plugin: entity:dashboard_indicator
+
+process:
+  type:
+    plugin: default_value
+    default_value: 'monitoring_indicator'
+
+  name: name
+
+  # Decimal percentage field type (modulo: dashboard_base)
+  field_indicator_baseline_2013:
+    plugin: decimal_percentage
+    delimiter: '|'
+    source: baseline
+
+  field_indicator_description/value: description
+  field_indicator_description/format:
+    plugin: default_value
+    default_value: 'filtered_text'
+
+  # Decimal percentage field type (modulo: dashboard_base)
+  field_indicator_value:
+    plugin: decimal_percentage
+    delimiter: '|'
+    source: indicatorvalue
+
+  field_indicator_value_descr: valuedescription
+  field_indicator_value_title: valuetitle
+
+  # Custom box.
+  field_indicator_cb_title: boxtitle
+  field_indicator_cb_description: boxdescription
+  field_indicator_cb_value:
+    -
+      source: boxvalue
+      plugin: explode
+      delimiter: '|'
+    -
+      plugin: paragraph_migration
+      migration:
+        - dashboard_fixtures_monitoring_paragraph_boxcustom_iconlink
+
+  created: '@created'
+
+  sticky:
+    plugin: default_value
+    default_value: 0
+
+  uid:
+    plugin: default_value
+    default_value: 1
+
+  field_indicator_dataset:
+    -
+      source: data
+      plugin: explode
+      delimiter: '|'
+    -
+      plugin: migration
+      migration:
+        - dashboard_fixtures_dataset_st
+
+  field_indicator_targets:
+    -
+      source: targets
+      plugin: explode
+      delimiter: '|'
+    -
+      plugin: paragraph_migration
+      migration:
+        - dashboard_fixtures_monitoring_paragraph_target
+
+  key_unique: uniquekey
+# Required stuff.
+migration_dependencies:
+  required:
+    - dashboard_fixtures_monitoring_paragraph_target
+    - dashboard_fixtures_dataset_st
+    - dashboard_fixtures_monitoring_paragraph_boxcustom_iconlink

@@ -1,0 +1,9 @@
+uuid: adcfac6d-a61a-4748-91af-e604b4bea56d
+langcode: it
+status: true
+dependencies: {  }
+name: Anni
+vid: years
+description: 'Lista degli anni.'
+hierarchy: 0
+weight: 0

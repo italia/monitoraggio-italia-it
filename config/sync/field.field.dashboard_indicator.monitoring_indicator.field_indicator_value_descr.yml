@@ -1,0 +1,19 @@
+uuid: 4393f256-8d2a-411f-8181-0649a8517649
+langcode: it
+status: true
+dependencies:
+  config:
+    - dashboard_indicator.dashboard_indicator_type.monitoring_indicator
+    - field.storage.dashboard_indicator.field_indicator_value_descr
+id: dashboard_indicator.monitoring_indicator.field_indicator_value_descr
+field_name: field_indicator_value_descr
+entity_type: dashboard_indicator
+bundle: monitoring_indicator
+label: 'Valore - descrizione'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

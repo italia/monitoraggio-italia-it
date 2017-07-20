@@ -1,0 +1,25 @@
+uuid: 861beb3a-9a2a-41b8-b857-f6bc2d40d31b
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - dashboard
+_core:
+  default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
+id: dashboard_branding
+theme: dashboard
+region: header_branding
+weight: -5
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }

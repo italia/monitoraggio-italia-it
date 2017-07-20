@@ -1,0 +1,9 @@
+{
+  "name": "italiagov",
+  "version": "1.0.0",
+  "description": "Base theme including elements styled using the toolkit guidelines.",
+  "private": true,
+  "dependencies": {
+    "ita-web-toolkit": "https://github.com/italia/ita-web-toolkit.git#e2135b7b47fa30a112c3ef0c2f3e1dc7bca354f3"
+  }
+}

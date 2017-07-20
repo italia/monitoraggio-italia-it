@@ -1,0 +1,23 @@
+# Dashboard indicator routing definition
+entity.dashboard_indicator.canonical:
+  route_name: entity.dashboard_indicator.canonical
+  base_route: entity.dashboard_indicator.canonical
+  title: 'View'
+
+entity.dashboard_indicator.edit_form:
+  route_name: entity.dashboard_indicator.edit_form
+  base_route: entity.dashboard_indicator.canonical
+  title: Edit
+
+entity.dashboard_indicator.delete_form:
+  route_name:  entity.dashboard_indicator.delete_form
+  base_route:  entity.dashboard_indicator.canonical
+  title: Delete
+  weight: 10
+
+# Monitoring indicator listing
+entity.dashboard_indicator.collection:
+  title: 'Indicators'
+  route_name: entity.dashboard_indicator.collection
+  base_route: system.admin_content
+  weight: 2

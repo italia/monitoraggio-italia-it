@@ -1,0 +1,20 @@
+<?php
+
+
+/**
+ * Implements template_preprocess_html().
+ */
+function STARTERKIT_preprocess_html(&$variables) {
+  // Add prefix body class.
+  $variables['attributes']['class'][] = 'iwt-STARTERKIT';
+}
+
+/**
+ * Implements template_preprocess_page
+ */
+function STARTERKIT_preprocess_page(&$variables) {}
+
+/**
+ * Implements template_preprocess_node
+ */
+function STARTERKIT_preprocess_node(&$variables) {}

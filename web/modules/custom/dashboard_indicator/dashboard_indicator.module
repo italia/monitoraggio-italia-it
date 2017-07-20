@@ -1,0 +1,93 @@
+<?php
+
+/**
+ * @file
+ * Contains dashboard_indicator.module..
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Entity\EntityInterface;
+
+/**
+ * Implements hook_help().
+ */
+function dashboard_indicator_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the dashboard_indicator module.
+    case 'help.page.dashboard_indicator':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('All stuff for entity &quot;Project&quot;') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function dashboard_indicator_theme() {
+  $theme = [];
+  $theme['dashboard_indicator'] = [
+    'render element' => 'elements',
+    'file' => 'dashboard_indicator.page.inc',
+    'template' => 'dashboard_indicator',
+  ];
+  $theme['dashboard_indicator_content_add_list'] = [
+    'render element' => 'content',
+    'variables' => ['content' => NULL],
+    'file' => 'dashboard_indicator.page.inc',
+  ];
+  return $theme;
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK().
+ */
+function dashboard_indicator_theme_suggestions_dashboard_indicator(array $variables) {
+  $suggestions = [];
+  $entity = $variables['elements']['#dashboard_indicator'];
+  $sanitized_view_mode = strtr($variables['elements']['#view_mode'], '.', '_');
+
+  $suggestions[] = 'dashboard_indicator__' . $sanitized_view_mode;
+  $suggestions[] = 'dashboard_indicator__' . $entity->bundle();
+  $suggestions[] = 'dashboard_indicator__' . $entity->bundle() . '__' . $sanitized_view_mode;
+  $suggestions[] = 'dashboard_indicator__' . $entity->id();
+  $suggestions[] = 'dashboard_indicator__' . $entity->id() . '__' . $sanitized_view_mode;
+  return $suggestions;
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_update().
+ */
+function dashboard_indicator_dashboard_indicator_update(EntityInterface $entity) {
+  \Drupal::service('dashboard_indicator.csv_manager')->handleCsv($entity);
+
+  $storage = \Drupal::entityTypeManager()->getStorage('project');
+  $projects = $storage->loadByProperties([
+    'field_monitor_indicator' => $entity->id(),
+  ]);
+  foreach ($projects as $project) {
+    $project->save();
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function dashboard_indicator_preprocess_dashboard_indicator(&$variables) {
+
+  // Check we have the indicator entity.
+  if (empty($variables['elements']['#dashboard_indicator'])) {
+    return;
+  }
+  // Get the entity and check available method.
+  $entity = $variables['elements']['#dashboard_indicator'];
+  if (!method_exists($entity->_referringItem, 'getEntity')) {
+    return;
+  };
+  // Get the key of the project referencing this indicator.
+  $parent_entity = $entity->_referringItem->getEntity();
+  $variables['project_key'] = $parent_entity->getKeyUnique();
+}

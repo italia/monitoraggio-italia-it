@@ -1,0 +1,7 @@
+uuid: 7f2d9c29-c65f-456d-96e1-02c395eaddaf
+langcode: it
+status: true
+dependencies: {  }
+id: pointer_on_map_dataset
+label: 'Pointer on Map Dataset Serie'
+behavior_plugins: {  }

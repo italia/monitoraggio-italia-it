@@ -1,0 +1,20 @@
+uuid: fe046b0a-7969-4a75-b6e4-578254c1b1e0
+langcode: it
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - site-map
+      - main
+      - footer
+    parent: 'main:'
+name: Page
+type: page
+description: 'Use this content type to create static pages.'
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

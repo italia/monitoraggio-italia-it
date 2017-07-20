@@ -1,0 +1,29 @@
+uuid: 656e865e-11c9-48a5-b5b9-3915571d5a66
+langcode: it
+status: false
+dependencies:
+  config:
+    - system.menu.menu-projects
+  module:
+    - system
+  theme:
+    - dash_back
+id: dash_back_project_left_menu
+theme: dash_back
+region: '-1'
+weight: -2
+provider: null
+plugin: 'system_menu_block:menu-projects'
+settings:
+  id: 'system_menu_block:menu-projects'
+  label: Progetti
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+visibility:
+  request_path:
+    id: request_path
+    pages: '/project/*'
+    negate: false
+    context_mapping: {  }

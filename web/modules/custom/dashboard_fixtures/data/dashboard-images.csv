@@ -1,0 +1,11 @@
+id,filename,dest_dir
+101,spid.png,"monitoring/logo"
+102,pagopa.png,"monitoring/logo"
+103,open_data.png,"monitoring/logo"
+201,logo-aruba.png,"indicator/custom-box"
+202,logo-infocert.png,"indicator/custom-box"
+203,logo-poste.png,"indicator/custom-box"
+204,logo-sielte.png,"indicator/custom-box"
+205,logo-tim.png,"indicator/custom-box"
+206,logo-register.png,"indicator/custom-box"
+207,logo-namirial.png,"indicator/custom-box"

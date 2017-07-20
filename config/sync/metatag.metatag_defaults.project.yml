@@ -1,0 +1,8 @@
+uuid: 2bb6a628-5d04-489a-84fc-ff4f1095ab82
+langcode: it
+status: true
+dependencies: {  }
+id: project
+label: Project
+tags:
+  og_type: project

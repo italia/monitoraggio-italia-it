@@ -1,0 +1,20 @@
+uuid: 229725e1-35eb-47ce-80c7-92562e327da6
+langcode: it
+status: false
+dependencies:
+  module:
+    - dashboard_base
+  theme:
+    - dash_back
+id: dash_back_contactblock
+theme: dash_back
+region: '-1'
+weight: -7
+provider: null
+plugin: contact_block
+settings:
+  id: contact_block
+  label: Contatti
+  provider: dashboard_base
+  label_display: visible
+visibility: {  }
