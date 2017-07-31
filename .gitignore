@@ -1,9 +1,6 @@
-backup/*.sql
-backup/*.tar.bz2
 .DS_Store
 .idea
 .vscode
-cache
 ./vendor/
 bin/
 !bin/e
@@ -11,7 +8,6 @@ bin/
 !bin/enable-xdebug
 !bin/run
 !bin/runhttpd
-build.*.properties
 .aliases
 *.txt
 *.bz2
@@ -43,12 +39,3 @@ web/sites/sites.php
 
 # Ignore Drupal's file directory
 web/sites/default/files
-
-# Docker specific.
-docker-compose.yml
-docker-compose.services.ci.deploy.yml
-docker-compose.ci.deploy.yml
-
-node_modules
-bower_components
-*.retry
