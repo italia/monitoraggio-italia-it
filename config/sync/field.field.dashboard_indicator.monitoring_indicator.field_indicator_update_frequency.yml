@@ -1,0 +1,23 @@
+uuid: 4518ed31-7bf9-44c3-999c-9083d1af9bbe
+langcode: it
+status: true
+dependencies:
+  config:
+    - dashboard_indicator.dashboard_indicator_type.monitoring_indicator
+    - field.storage.dashboard_indicator.field_indicator_update_frequency
+  module:
+    - options
+id: dashboard_indicator.monitoring_indicator.field_indicator_update_frequency
+field_name: field_indicator_update_frequency
+entity_type: dashboard_indicator
+bundle: monitoring_indicator
+label: 'Frequenza di aggiornamento'
+description: 'Specificare la frequenza di aggiornamento dei dati dell''indicatore.'
+required: false
+translatable: false
+default_value:
+  -
+    value: monthly
+default_value_callback: ''
+settings: {  }
+field_type: list_string

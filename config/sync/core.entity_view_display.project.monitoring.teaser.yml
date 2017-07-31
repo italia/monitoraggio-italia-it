@@ -5,14 +5,15 @@ dependencies:
   config:
     - core.entity_view_mode.project.teaser
     - dashboard_project.project_type.monitoring
+    - field.field.project.monitoring.field_has_social_share
     - field.field.project.monitoring.field_meta_tag
     - field.field.project.monitoring.field_monitor_description
     - field.field.project.monitoring.field_monitor_desi
+    - field.field.project.monitoring.field_monitor_hp_on
     - field.field.project.monitoring.field_monitor_indicator
     - field.field.project.monitoring.field_monitor_link
     - field.field.project.monitoring.field_monitor_logo
     - field.field.project.monitoring.field_monitor_subtitle
-    - field.field.project.monitoring.field_monitor_update_frequency
     - field.field.project.monitoring.field_monitor_weight
 id: project.monitoring.teaser
 targetEntityType: project

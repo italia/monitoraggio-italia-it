@@ -23,7 +23,7 @@ id: dataset.dataset_st.field_dataset_st_description
 field_name: field_dataset_st_description
 entity_type: dataset
 bundle: dataset_st
-label: Descrizione
+label: Didascalia
 description: ''
 required: false
 translatable: false

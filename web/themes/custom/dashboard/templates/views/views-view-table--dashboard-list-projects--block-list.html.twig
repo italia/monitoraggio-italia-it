@@ -37,7 +37,9 @@
     sticky ? 'sticky-enabled',
     'Table',
     'Table--withBorder',
-    'Table--responsive',
+    'js-TableResponsive',
+    'tablesaw',
+    'tablesaw-stack',
     'StaticPages--table',
     'u-text-r-xs',
     'DataArea',
@@ -45,7 +47,7 @@
     'u-margin-bottom-xxl',
   ]
 %}
-<table{{ attributes.addClass(classes) }}>
+<table{{ attributes.addClass(classes) }} data-tablesaw-mode="stack">
   {% if caption_needed %}
     <caption>
     {% if caption %}

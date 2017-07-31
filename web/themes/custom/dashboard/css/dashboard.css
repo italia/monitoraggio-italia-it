@@ -26,6 +26,10 @@
   color: #003366;
 }
 
+.MainSection--internal-container.container-no-sidebar {
+  padding: 1.2rem;
+}
+
 .Header-titleLink a {
   font-weight: 600 !important;
 }
@@ -194,24 +198,8 @@ li.SidebarMenu-item--active-trail a {
 /**
  * Responsive tables customization
  */
-.Table--responsive th {
+.js-TableResponsive th {
   background: #F2F3F7;
-}
-
-/**
- * Data area tables.
- */
-.DataArea.Table--responsive th:first-child,
-.DataArea.Table--responsive td:first-child,
-.DataArea.Table--responsive th:nth-of-type(1) {
-  width: 14em;
-  max-width: 14em;
-  white-space: normal;
-}
-
-.DataArea.Table--responsive th:nth-of-type(2),
-.DataArea.Table--responsive td:nth-of-type(2) {
-  width: 12em;
 }
 
 /**
@@ -525,42 +513,70 @@ value comparison chart, we must hide the export button options*/
 /**
  * Offset: breakpoint 0.
  */
+@media screen and (max-width: 480px) {
+  .Table td,
+  .Table th {
+    padding: 1rem !important;
+  }
+
+  .Table td *,
+  .Table th * {
+    font-size: 1.475rem;
+  }
+
+  .js-TableResponsive .tablesaw-cell-label {
+    width: 40%;
+    min-width: 40%;
+  }
+
+  .js-TableResponsive .tablesaw-cell-content {
+    max-width: 58%;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .Table td *,
+  .Table th * {
+    font-size: 1.375rem !important;
+  }
+}
+
 @media screen and (max-width: 767px) {
   /**
    * Commons elements.
    */
-  .MainSection--internal-container {
+  .MainSection--internal-container.container-no-sidebar {
     margin: 0 -1.2rem 0 -1.2rem !important;
   }
-  
+
   /**
    * Home page.
    */
   .MainContent--front header {
     padding-top: 2em;
   }
-  
+
   .MainContent--front header span {
     font-size: 1.1em;
   }
-  
+
   /**
    * Project
    */
   .MonitoringProject-logo .u-padding-right-xxl {
     padding-right: 2rem !important;
   }
-  
+
   .MonitoringProject-logo img {
     max-height: 100px;
     width: auto;
   }
-  
+
   .MonitoringIndicator-description {
     padding-left: 0.6em;
     padding-right: 0.6em;
   }
-  
+
   .MonitoringProject-name.u-padding-left-xxl,
   .MonitoringProject-description.u-padding-all-xxl,
   .MonitoringProject footer.u-padding-all-xxl,
@@ -568,7 +584,7 @@ value comparison chart, we must hide the export button options*/
     padding-left: 2rem !important;
     padding-right: 2rem !important;
   }
-  
+
   /**
    * Custom box.
    */
@@ -583,6 +599,10 @@ value comparison chart, we must hide the export button options*/
  * Offset: breakpoint 1 (small).
  */
 @media screen and (min-width: 768px) and (max-width: 991px) {
+  .MainSection--internal-container.container-no-sidebar {
+    padding: 1.6rem;
+  }
+
   /**
    * Styles for the monitoring indicator component.
    */
@@ -590,7 +610,7 @@ value comparison chart, we must hide the export button options*/
     padding-left: 0.6em;
     padding-right: 0.6em;
   }
-  
+
   .MonitoringProject-name.u-padding-left-xxl,
   .MonitoringProject-description.u-padding-all-xxl,
   .MonitoringProject footer.u-padding-all-xxl,
@@ -598,7 +618,7 @@ value comparison chart, we must hide the export button options*/
     padding-left: 2rem !important;
     padding-right: 2rem !important;
   }
-  
+
   .MonitoringProject-logo .u-padding-right-xxl {
     padding-right: 2rem !important;
   }
@@ -608,6 +628,10 @@ value comparison chart, we must hide the export button options*/
  * Offset: breakpoint 2 (medium).
  */
 @media screen and (min-width: 992px) and (max-width: 1365px) {
+  .MainSection--internal-container.container-no-sidebar {
+    padding: 3rem;
+  }
+
   /**
    * Home page.
    */
@@ -615,7 +639,7 @@ value comparison chart, we must hide the export button options*/
     margin-left: -1em;
     margin-right: -1em;
   }
-  
+
   /**
    * Monitoring indicator.
    */
@@ -623,17 +647,17 @@ value comparison chart, we must hide the export button options*/
     padding-left: 4rem;
     padding-right: 4rem;
   }
-  
+
   .MonitoringProject-indicators .Accordion-header {
     padding-left: 4em !important;
     background-position: left 2.1em center;
   }
-  
+
   .MonitoringIndicator-description {
     padding-left: 0;
     padding-right: 0;
   }
-  
+
   /**
    * Custom box.
    */
@@ -646,6 +670,10 @@ value comparison chart, we must hide the export button options*/
  * Offset: breakpoint 3 (large).
  */
 @media screen and (min-width: 1366px) {
+  .MainSection--internal-container.container-no-sidebar {
+    padding: 4rem;
+  }
+
   /**
    * Home page.
    */
@@ -653,7 +681,7 @@ value comparison chart, we must hide the export button options*/
     margin-left: -1em;
     margin-right: -1em;
   }
-  
+
   /**
    * Monitoring indicator.
    */
@@ -661,22 +689,56 @@ value comparison chart, we must hide the export button options*/
     padding-left: 4rem;
     padding-right: 4rem;
   }
-  
+
   .MonitoringProject-indicators .Accordion-header {
     padding-left: 4em !important;
     background-position: left 2.1em center;
   }
-  
+
   .MonitoringIndicator-description {
     padding-left: 0;
     padding-right: 0;
   }
-  
+
   /**
    * Custom box.
    */
   .CustomBox-element-icon {
     margin-bottom: 1.6rem;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  /**
+   * Fix responsive tables behavior.
+   */
+  .js-TableResponsive.tablesaw {
+    width: auto;
+  }
+
+  /**
+   * Data area tables.
+   */
+  .DataArea.js-TableResponsive th:first-child,
+  .DataArea.js-TableResponsive td:first-child,
+  .DataArea.js-TableResponsive th:nth-of-type(1) {
+    width: 14em;
+    max-width: 14em;
+    white-space: normal;
+  }
+
+  .DataArea.js-TableResponsive th:nth-of-type(2),
+  .DataArea.js-TableResponsive td:nth-of-type(2) {
+    width: 12em;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .Table td *,
+  .Table th * {
+    font-size: 1.8rem !important;
   }
 }
 

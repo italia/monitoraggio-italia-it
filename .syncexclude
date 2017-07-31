@@ -1,6 +1,7 @@
 .dockerignore
 .env
 .git
+.gitignore
 .gitlab-ci.yml
 .syncexclude.swp
 Dockerfile
@@ -17,3 +18,4 @@ dump.sql
 kickstart.sh
 phpcs-drupal.xml
 screenshots
+migrate_plus.migration.dashboard_fixtures*

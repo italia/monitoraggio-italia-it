@@ -1,0 +1,39 @@
+uuid: 750d3342-d39f-4c8e-999b-8504785b5777
+langcode: it
+status: true
+dependencies:
+  module:
+    - dashboard_indicator
+    - options
+id: dashboard_indicator.field_indicator_update_frequency
+field_name: field_indicator_update_frequency
+entity_type: dashboard_indicator
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: daily
+      label: Giornaliera
+    -
+      value: weekly
+      label: Settimanale
+    -
+      value: monthly
+      label: Mensile
+    -
+      value: quarterly
+      label: Trimestrale
+    -
+      value: semiannual
+      label: Semestrale
+    -
+      value: annual
+      label: Annuale
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

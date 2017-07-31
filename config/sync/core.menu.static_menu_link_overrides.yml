@@ -7,26 +7,26 @@ definitions:
     expanded: false
   entity__dashboard_indicator_type__collection:
     weight: -77
-    menu_name: admin
     parent: system.admin_structure
-    expanded: false
+    menu_name: admin
     enabled: true
+    expanded: false
   entity__dashboard_widget_type__collection:
-    weight: -77
-    menu_name: admin
+    weight: -76
     parent: system.admin_structure
+    menu_name: admin
     expanded: false
     enabled: true
   entity__dataset_type__collection:
-    weight: -77
-    menu_name: admin
+    weight: -75
     parent: system.admin_structure
+    menu_name: admin
     expanded: false
     enabled: true
   entity__project_type__collection:
-    weight: -77
-    menu_name: admin
+    weight: -68
     parent: system.admin_structure
+    menu_name: admin
     expanded: false
     enabled: true
   entity__dataset__collection:
@@ -45,6 +45,60 @@ definitions:
     weight: -77
     menu_name: admin
     parent: system.admin_config_system
+    expanded: false
+    enabled: true
+  block__admin_display:
+    weight: -74
+    menu_name: admin
+    parent: system.admin_structure
+    expanded: false
+    enabled: true
+  entity__menu__collection:
+    weight: -73
+    menu_name: admin
+    parent: system.admin_structure
+    expanded: false
+    enabled: true
+  migrate_tools__menu:
+    weight: -72
+    menu_name: admin
+    parent: system.admin_structure
+    expanded: false
+    enabled: true
+  field_ui__display_mode:
+    weight: -71
+    menu_name: admin
+    parent: system.admin_structure
+    expanded: false
+    enabled: true
+  entity__contact_form__collection:
+    weight: -70
+    menu_name: admin
+    parent: system.admin_structure
+    expanded: false
+    enabled: true
+  entity__paragraphs_type__collection:
+    weight: -69
+    menu_name: admin
+    parent: system.admin_structure
+    expanded: false
+    enabled: true
+  entity__taxonomy_vocabulary__collection:
+    weight: -67
+    menu_name: admin
+    parent: system.admin_structure
+    expanded: false
+    enabled: true
+  entity__node_type__collection:
+    weight: -66
+    menu_name: admin
+    parent: system.admin_structure
+    expanded: false
+    enabled: true
+  entity__view__collection:
+    weight: -65
+    menu_name: admin
+    parent: system.admin_structure
     expanded: false
     enabled: true
 _core:

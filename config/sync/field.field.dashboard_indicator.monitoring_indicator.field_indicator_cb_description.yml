@@ -9,7 +9,7 @@ id: dashboard_indicator.monitoring_indicator.field_indicator_cb_description
 field_name: field_indicator_cb_description
 entity_type: dashboard_indicator
 bundle: monitoring_indicator
-label: 'Box personalizzato - descrizione'
+label: 'Box personalizzato - didascalia'
 description: ''
 required: false
 translatable: false

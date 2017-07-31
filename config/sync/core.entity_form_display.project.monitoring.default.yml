@@ -138,7 +138,7 @@ content:
     third_party_settings: {  }
     type: boolean_checkbox
   field_monitor_indicator:
-    weight: 7
+    weight: 12
     settings:
       match_operator: CONTAINS
       size: '60'
@@ -167,12 +167,10 @@ content:
     third_party_settings: {  }
     type: string_textfield
   field_monitor_update_frequency:
-    weight: 5
-    settings:
-      size: 60
-      placeholder: ''
+    weight: 11
+    settings: {  }
     third_party_settings: {  }
-    type: string_textfield
+    type: options_select
   field_monitor_weight:
     weight: 9
     settings:

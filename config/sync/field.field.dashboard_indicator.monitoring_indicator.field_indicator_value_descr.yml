@@ -9,7 +9,7 @@ id: dashboard_indicator.monitoring_indicator.field_indicator_value_descr
 field_name: field_indicator_value_descr
 entity_type: dashboard_indicator
 bundle: monitoring_indicator
-label: 'Valore - descrizione'
+label: 'Valore - didascalia'
 description: ''
 required: false
 translatable: false

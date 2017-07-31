@@ -4,10 +4,11 @@ status: true
 dependencies:
   config:
     - dashboard_project.project_type.monitoring
-    - field.storage.project.field_monitor_update_frequency
+    - field.storage.dashboard_indicator.field_indicator_update_frequency
   module:
     - dashboard_indicator
     - dashboard_project
+    - options
 id: list_data_area_indicators
 label: 'Data area list'
 module: views
@@ -467,11 +468,11 @@ display:
           empty_zero: false
           hide_alter_empty: false
           plugin_id: custom
-        field_monitor_update_frequency:
-          id: field_monitor_update_frequency
-          table: project__field_monitor_update_frequency
-          field: field_monitor_update_frequency
-          relationship: none
+        field_indicator_update_frequency:
+          id: field_indicator_update_frequency
+          table: dashboard_indicator__field_indicator_update_frequency
+          field: field_indicator_update_frequency
+          relationship: field_monitor_indicator
           group_type: group
           admin_label: ''
           label: 'Frequenza di aggiornamento'
@@ -507,7 +508,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: true
+          element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -516,9 +517,8 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: string
-          settings:
-            link_to_entity: false
+          type: list_default
+          settings: {  }
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -575,7 +575,7 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
       tags:
-        - 'config:field.storage.project.field_monitor_update_frequency'
+        - 'config:field.storage.dashboard_indicator.field_indicator_update_frequency'
   block_list_indicators:
     display_plugin: block
     id: block_list_indicators
@@ -590,4 +590,4 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
       tags:
-        - 'config:field.storage.project.field_monitor_update_frequency'
+        - 'config:field.storage.dashboard_indicator.field_indicator_update_frequency'

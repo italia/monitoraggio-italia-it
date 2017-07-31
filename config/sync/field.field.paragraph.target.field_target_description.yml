@@ -9,7 +9,7 @@ id: paragraph.target.field_target_description
 field_name: field_target_description
 entity_type: paragraph
 bundle: target
-label: Description
+label: Didascalia
 description: ''
 required: false
 translatable: false

@@ -1,18 +1,36 @@
-uuid: 85321875-760d-4005-9c11-4f7270da3bc2
+uuid: 49b2a3a4-118c-46cc-8e7a-8d1208ba280b
 langcode: it
 status: true
 dependencies:
   module:
     - dashboard_project
+    - options
 id: project.field_monitor_update_frequency
 field_name: field_monitor_update_frequency
 entity_type: project
-type: string
+type: list_string
 settings:
-  max_length: 255
-  is_ascii: false
-  case_sensitive: false
-module: core
+  allowed_values:
+    -
+      value: daily
+      label: Giornaliera
+    -
+      value: weekly
+      label: Settimanale
+    -
+      value: monthly
+      label: Mensile
+    -
+      value: quarterly
+      label: Trimestrale
+    -
+      value: semiannual
+      label: Semestrale
+    -
+      value: annual
+      label: Annuale
+  allowed_values_function: ''
+module: options
 locked: false
 cardinality: 1
 translatable: true

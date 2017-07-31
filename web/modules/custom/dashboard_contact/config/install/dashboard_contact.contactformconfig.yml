@@ -1,5 +1,5 @@
 dashboard_contact:
-  contact_intro: "Puoi richiedere informazioni sul monitoraggio Avanzamento crescita Digitale o sui singoli progetti selezionando un ambito di interesse nel form sottostante."
+  contact_intro: "Puoi richiedere informazioni sul monitoraggio Avanzamento Trasformazione Digitale compilando il form sottostante."
   contact_subject: '[Avanzamento crescita digitale] - nuovo contatto'
   contact_text: "Testo della e-mail inviata dal form di contatti della Dashboard Avanzamento crescita digitale.\r\n\r\nNome: \r\n@name\r\n\r\nE-mail:\r\n@email\r\n\r\nMessage:\r\n@message"
   contact_recipient: 'agid@test.loc, agid2@test.loc'

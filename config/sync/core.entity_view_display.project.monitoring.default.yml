@@ -20,6 +20,7 @@ dependencies:
     - image
     - link
     - metatag
+    - options
     - text
 id: project.monitoring.default
 targetEntityType: project
@@ -99,6 +100,12 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+  field_monitor_update_frequency:
+    weight: 11
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
   key_unique:
     label: hidden
     type: string
@@ -114,6 +121,5 @@ content:
       link_to_entity: false
     third_party_settings: {  }
 hidden:
-  field_monitor_update_frequency: true
   field_monitor_weight: true
   user_id: true

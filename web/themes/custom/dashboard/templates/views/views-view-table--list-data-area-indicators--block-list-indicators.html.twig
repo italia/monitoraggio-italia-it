@@ -37,7 +37,11 @@
     sticky ? 'sticky-enabled',
     'Table',
     'Table--withBorder',
-    'Table--responsive',
+    'Table',
+    'Table--withBorder',
+    'js-TableResponsive',
+    'tablesaw',
+    'tablesaw-stack',
     'StaticPages--table',
     'u-text-r-xs',
     'DataArea',
@@ -46,7 +50,7 @@
   ]
 %}
 <h2 class="u-margin-bottom-xl u-text-r-xl u-textWeight-600">{{ caption }}</h2>
-<table{{ attributes.addClass(classes) }}>
+<table{{ attributes.addClass(classes) }} data-tablesaw-mode="stack">
   {% if header %}
     <thead>
       <tr class="u-border-bottom-xs">

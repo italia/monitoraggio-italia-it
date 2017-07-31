@@ -12,6 +12,7 @@ dependencies:
     - field.field.dashboard_indicator.monitoring_indicator.field_indicator_description
     - field.field.dashboard_indicator.monitoring_indicator.field_indicator_last_update
     - field.field.dashboard_indicator.monitoring_indicator.field_indicator_targets
+    - field.field.dashboard_indicator.monitoring_indicator.field_indicator_update_frequency
     - field.field.dashboard_indicator.monitoring_indicator.field_indicator_value
     - field.field.dashboard_indicator.monitoring_indicator.field_indicator_value_descr
     - field.field.dashboard_indicator.monitoring_indicator.field_indicator_value_title
@@ -19,6 +20,7 @@ dependencies:
     - dashboard_base
     - datetime
     - entity_reference_revisions
+    - options
     - text
     - user
 id: dashboard_indicator.monitoring_indicator.default
@@ -86,6 +88,12 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
+  field_indicator_update_frequency:
+    weight: 19
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
   field_indicator_value:
     weight: 11
     label: above

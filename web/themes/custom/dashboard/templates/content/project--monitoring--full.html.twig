@@ -86,7 +86,7 @@
         {{ content.field_monitor_link }}
         <span class="MonitoringProject-datalink u-block">
           <span class="Icon Icon-link u-margin-r-right u-textWeight-900"></span>
-          <a href="/area-dati/indicatori-crescita-digitale/#{{ content.key_unique|field_raw('value') }}">
+          <a href="{{ path('entity.node.canonical', {'node': 3}) }}#{{ content.key_unique|field_raw('value') }}">
             {{ 'Data on Digital Indicators'|t }}
           </a>
         </span>

@@ -17,7 +17,6 @@ use Drupal\Core\Annotation\Translation;
  * )
  */
 class IndicatorMonitoringEntityDecorator extends RestEntityDecoratorBase {
-
   /**
    * {@inheritdoc}
    */
@@ -25,6 +24,7 @@ class IndicatorMonitoringEntityDecorator extends RestEntityDecoratorBase {
     return [
       'key' => $this->get('key_unique'),
       'name' => $this->get('name'),
+      'update_frequency' => $this->get('field_indicator_update_frequency'),
       'last_update' => (int) $this->get('changed'),
       'description' => $this->get('field_indicator_description', 'value'),
       'value_title' => $this->get('field_indicator_value_title'),
