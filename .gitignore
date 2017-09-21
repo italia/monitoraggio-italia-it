@@ -14,28 +14,29 @@ bin/
 *.gz
 *.zip
 tmp*
+/deploy
 
 # Drupal 8 specific.
 drush/contrib
-web/.*
-web/themes/contrib
-web/update.php
-web/autoload.php
-web/web.config
-web/robots.txt
-web/sites/*/settings*.php
-web/sites/*/files
-web/sites/*/private
-web/sites/default/services.yml
-web/core
-web/modules/contrib
-web/profiles/contrib
+/web/.*
+/web/themes/contrib
+/web/update.php
+/web/autoload.php
+/web/web.config
+/web/robots.txt
+/web/sites/*/settings*.php
+/web/sites/*/files
+/web/sites/*/private
+/web/sites/default/services.yml
+/web/core
+/web/modules/contrib
+/web/profiles/contrib
 
-web/index.php
-web/sites/default/default.settings.php
-web/sites/example.settings.local.php
-web/sites/example.sites.php
-web/sites/sites.php
+/web/index.php
+/web/sites/default/default.settings.php
+/web/sites/example.settings.local.php
+/web/sites/example.sites.php
+/web/sites/sites.php
 
 # Ignore Drupal's file directory
-web/sites/default/files
+/web/sites/default/files
