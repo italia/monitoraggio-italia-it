@@ -40,3 +40,4 @@ drush/contrib
 
 # Ignore Drupal's file directory
 /web/sites/default/files
+Makefile
